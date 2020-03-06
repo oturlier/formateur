@@ -1,0 +1,151 @@
+//
+:_public_repo_url: https://github.com/oturlier/ressources-formateurs
+:doctitle: Ressources Formateurs
+:_subtitle: Comment créer, publier, maintenir et contribuer aux ressources
+:revnumber: 1.01
+:revdate: {docdate}
+:authors: Team formateurs TEB
+:_editors: CRM Mulhouse
+:_contributors: Formateurs autres
+:_proofreaders: Marc ARMSPACH
+:_participants:
+:_summary: Ce manuel montre les outils et les méthodes employées pour contribuer aux ressources formatives TEB
+:keywords: CRM, TEB, Ressources, édition, publication, asciidoc, antora
+:_dochistory: édition initiale
+:_citation: {authors},{docyear},{doctitle}
+:_copyleft: CRM Mulhouse et auteurs de ce texte
+:_license_1: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0)
+:_license_2: GNU Free Documentation (GFDL-1.3-or-later)
+//
+
+= {productname} {productnumber}
+
+
+== Qu'est-ce que le {productname}?
+
+Ce {productname} {productnumber} montre les outils et les méthodes employées pour contribuer aux ressources formatives TEB, en version {productnumber} , version {revnumber} il correspond à la {_dochistory}.
+
+Ce dépôt est la source de la documentation constituant le {productname}.
+
+La connaissance fine de ce {productname} constitue à la fois _la base_ et à la fois _la référence_ des connaissances des formateurs en matière d'édition des ressources.
+
+
+== Types de documentation
+
+L'ensemble de ces documentations vient en complément de la *formation professionnelle TEB*. Toutes les informations que vous y trouverez servent aussi bien à compléter la formation initiale qu'à offrir un support au démarrage de la vie professionnelle.
+
+Vous trouverez :
+
+* des *Tutoriels d'initiation* : documents courts décrivant les étapes d'une tâche à effectuer, pour _mettre le pied à l'étrier_
+* des *Guides pratiques* : axés autour de la réalisation complète d’un projet, pour compréhension par analogie, en contexte professionnel
+* des *Notions* : pour compréhension globale de notions concrètes, en contexte d’apprentissage
+* des *Références techniques* : pour appui à la pratique professionnelle
+
+== Progression proposée
+
+Nous aborderons successivement les thèmes suivants :
+
+[horizontal]
+la configuration informatique du poste de travail::
+- installation & configuration d'utilitaires
+- installation & configuration de logiciels
++
+l'édition des ressources::
+- ancienne et nouvelle approche
+- conversion des anciennes ressources
+- édition des nouvelles ressources
++
+la publication des ressources::
+- publication en local sur Intranet
+- publication distante pour site web
+- publication de ressources locales & distantes
++
+la mise à jour et le partage des ressources::
+- contribution à des ressources externes
+- sauvegarde, modification et contrôle de version
+- modification & information de celle-ci à tous les participants formateurs
+
+
+
+== Documentation disponible en pdf
+
+La documentation suivante est disponible au format pdf à imprimer pour {productname} {productnumber}.
+
+. Téléchargement du {productname} {productnumber} entier (archive zip) icon:caret-right[] icon:file-archive[link="../TEB-ressources_acad-all_pdf.zip"]
++
+. Téléchargement partiel :
+[cols="<, ^", options="header"]
+|===
+| Accès au HTML | Accès au PDF
+
+| xref:tutoriels:tutoriels-intro.adoc[Tutoriels]  | icon:file-pdf[link="../pdf/TEB-ressources_acad-tuts.pdf", window="_blank" role="green"]
+| xref:guides:guides-intro.adoc[Guides] | icon:file-pdf[link="../pdf/TEB-ressources_acad-guides.pdf", window="_blank" role="green"]
+| xref:notions:notions-intro.adoc[Notions]  | icon:file-pdf[link="../pdf/TEB-ressources_acad-notions.pdf", window="_blank" role="green"]
+| xref:reference:references-intro.adoc[Références]  | icon:file-pdf[link="../pdf/TEB-ressources_acad-references.pdf", window="_blank" role="green"]
+|===
+
+// pandoc -s --atx-headers --wrap=none cc-by-nc-sa.md -t asciidoc -o cc-by-nc-sa.adoc
+
+// pandoc --atx-headers --verbose --wrap=none --toc --reference-links -s -o -t asciidoc by-nc-sa.markdown > by-nc-sa.adoc
+
+
+== Métadonnées
+
+// tag::metadata-table[]
+
+[cols="20,80"]
+|===
+| Titre                                 | {doctitle}
+ifeval::["{_subtitle}" != ""]
+| Sous-titre                              | {_subtitle}
+endif::[]
+| Version                               | {revnumber}
+ifeval::["{_revdate}" != ""]
+| Date                                  | {revdate}
+endif::[]
+ifeval::["{_editors}" != ""]
+| Éditeurs                               | {_editors}
+endif::[]
+| Auteurs                               | {authors}
+ifeval::["{_contributors}" != ""]
+| Contributeurs                          | {_contributors}
+endif::[]
+ifeval::["{_proofreaders}" != ""]
+| Vérificateurs                          | {_proofreaders}
+endif::[]
+ifeval::["{_participants}" != ""]
+| Participants                          | {_participants}
+endif::[]
+| Résumé                               | {_summary}
+| Mots-clés                              | {keywords}
+ifeval::["{_dochistory}" != ""]
+| Historique                      | {_dochistory}
+endif::[]
+| Comment citer                           | {_citation}
+| Copyleft
+a| {_copyleft}, sous la
+ifeval::["{_license_2}" == ""]
+{_license_1} license.
+endif::[]
+ifeval::["{_license_2}" != ""]
+{_license_1} license et une {_license_2} license.
+endif::[]
+
+[discrete]
+==== Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC-BY-SA-4.0)
+
+You are free to copy and redistribute the material in any medium or format, remix, transform and build upon material, for any purpose, even commercially.
+The licensor may not revoke these freedoms as long as you comply with the licence's terms.
+Under the following conditions: a) Attribution: you must provide an appropriate acknowledgement of the authorship, provide a link to the licence and state whether any changes have been made.
+You may do that in any reasonable way, but not in a way that would suggest you have the licensor's support or receive it for the use you are making; b) ShareAlike: where you remix change or create from the material, you will have to disseminate your contributions under the same licence as the original.
+There are no additional restrictions, you may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits.
+You can find full licences on the following links: https://creativecommons.org/licenses/by-sa/4.0/deed.
+
+[discrete]
+==== GNU Free Documentation Licence (GFDL-1.3-or-later)
+
+You are permitted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation Licence, version 1.3 or any other version subsequently published by the Free Software Foundation; without Invariant Sections or Front-Cover Texts, or Back-Cover Texts either.
+You can find a copy of the licence on http://www.gnu.org/copyleft/fdl.html.
+|===
+
+// end::metadata-table[]

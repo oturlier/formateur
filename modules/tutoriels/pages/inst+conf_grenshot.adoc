@@ -1,0 +1,118 @@
+//[[inst+conf-asciidoctor]]
+= Greenshot
+
+:linkattrs:
+//:dblcdr: DoubleCommander
+:grenshot: Greenshot
+:uri_grenshot: https://getgreenshot.org/
+
+
+
+{uri_grenshot}[{grenshot},window="_blank"] est un logiciel de *capture d'écran*.
+
+L'usage de {grenshot} est simple dès le premier abord et puissant lorsque configuré!
+
+
+== Installation
+
+.Procédure : installation de {grenshot}
+
+. se rendre sur {uri_grenshot}[le site web de {grenshot},window="_blank"], vous êtes de suite invités à le télécharger (clic sur le lien précédent ou sur l'image pour ouvrir un autre onglet)
+
+image::grenshot1.png[link="{uri_grenshot}",window="_blank"]
+
+. cliquez pour télécharger
+. double-cliquez pour installer en suivant les instructions
+
+
+
+
+
+== Bonnes pratiques / Configuration
+
+.usage standard
+* exécutez {grenshot} pour le lancer
+* kbd:[ImpEcran] : lance la capture d'une *région* dont vous avez à délimiter la superficie
+* kbd:[Alt+ImprEcran] lance la capture de la *fenêtre active*
+
+.Configuration
+* kbd:[Clic-droit] sur l'icône de {grenshot} située en bas à droite de votre écran, puis :
+** Préférences rapides (laisser décoché = []):
+*** [ ] capturer le pointeur de la souris
+*** Destination de la capture d'écran > [x] sélectionner la destination dynamiquement
+** Préférences :
+*** emplacement par défaut des captures d'écran : spécifier un répertoire plus approprié que le _bureau_ : link:++C:\Users\olivier\Pictures\captures++[] (remplacer _olivier_ par votre nom et créez le répertoire _captures_)
+*** Convention de nommage des captures, 2 possibilités :
+.... soit vous nommez directement, _à chaque capture_, l'image à enregistrer. Personnellement, c'est ce que je fait, en choisissant menu:Enregistrer[sous] à chaque fois. {grenshot} est assez intelligent pour se souvenir du dernier répertoire et cela vous évite de devoir retrouver le même dossier à chaque nouvelle capture ...
+.... soit vous désirez appliquer un masque de nommage, associé au répertoire par défaut et au type de fichier image. C'est ce que je fait aussi, en choisissant menu:Enregistrer[directement] ... dans le cas où je n'ai  pas _immédiatement_ d'idée où enregistrer ma capture d'écran... {grenshot} vous propose aussi de créer un répertoire par date d'enregistrement. L'onglet *Sortie* de la fenêtre de configuration des préférences permet une certaine liberté, et après avoir affiché l'aide pour comprendre, et essayé plusieurs solutions, j'en suis venu à cette configuration que je vous propose, libre à vous de la modifier (copier/coller la ligne ci-dessous). Cela va : *créer un dossier* nommé _année-mois-jour_ situé à l'intérieur du dossier par défaut, et *nommer chaque image* de capture selon ce masque : _numéro d'incrément(6 chiffres)_heure-minute-seconde_ +
+----
+${YYYY}-${MM}-${DD}\${NUM}_${hh}h-${mm}m-${ss}s
+----
+
+[width="80%",cols="^.^1a,^.^1a,^.^1a"]
+|====
+
+|image:grenshot2.png[width=128,height=128]
+|image:grenshot3.png[width=128,height=128]
+|image:grenshot4.png[width=128,height=128]
+
+|====
+
+
+
+
+
+
+
+== Test
+
+[width="50%",cols="^.^1a,^.^1a"]
+|====
+
+|image:grenshot1.png[width=128,height=128]
+|image:https://i.imgur.com/AEkqoRn.jpg[alt="not bad.",width=128,height=128]
+
+|====
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+.résultat de la commande `gem list | grep ascii* | more`
+
+image::asciidoctor1.png[]
+
+Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.
+
+
+
+
+.Windtrainer workouts
+[width="80%",cols="3,^2,^2,10",options="header"]
+|====
+|Date |Duration |Avg HR |Notes
+
+|22-Aug-08 |10:24 | 157 |
+Worked out MSHR (max sustainable heart rate) by going hard
+for this interval.
+
+|22-Aug-08 |23:03 | 152 |
+Back-to-back with previous interval.
+
+|24-Aug-08 |40:00 | 145 |
+Moderately hard interspersed with 3x 3min intervals (2min
+hard + 1min really hard taking the HR up to 160).
+
+|====
+
+
+
+//link://server/share/path%20with%20space/doc.adoc[]
+//link:++\\server\share\path with space\document.adoc++[Click here]
+link:++C:\Users\olivier\Pictures\captures++[]
+
+
+////////////////////////////////////////////////////////////////////////////////
+

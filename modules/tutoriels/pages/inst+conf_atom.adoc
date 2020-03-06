@@ -1,0 +1,167 @@
+[#inst+conf_atom]
+= Atom
+ifndef::env-site,env-github[]
+include::../_attributes.adoc[]
+endif::[]
+:linkattrs:
+// attributes
+:atom: Atom
+:subl: Sublime Text
+:vscod: Visual Studio Code
+:win10: Windows 10
+:y: icon:check[role=green]
+:n: icon:times[role=red]
+:uri_atom: https://atom.io/
+:uri_grammalecte: https://grammalecte.net/download.php?prj=fr
+
+== Installation
+
+.Site Web d'{atom} : cliquer sur *Download*
+image::atom00.png[link="{uri_atom}",window="_blank"]
+
+.Vignette pendant l'installation sur l'ordinateur
+image::atom0.png[]
+
+.Premier démarrage d'{atom}
+image::atom1.png[]
+
+== Configuration
+
+=== Installation de paquets additionnels
+
+.Ce qu'il va falloir configurer (flèches [red]#*rouges*# : en *priorité*, flèches [yellow]#*jaunes*# : *après*)
+image::atom2.png[]
+
+.Installation des "paquets" *asciidoc*
+image::atom3.png[]
+
+
+.Francisation des menus d'{atom}
+image::atom9.png[link="_images/atom9.png"]
+
+* thème : *One Light*
+* syntaxe : *One Light*
+* [red]#panneaux# :
+[roman]
+.. *navigateur* de fichiers (menu:Fichier[Ouvrir un dossier])
+.. panneau *édition* (autant d'onglets que de fichiers ouverts)
+.. panneau *prévisualisation* affichage soit par le menu menu:Packages[Asciidoc Preview > Toggle preview], soit par kbd:[Ctrl+Maj+A]
+* {atom} est git [yellow]#_aware_# : si on ouvre un répertoire local versionné avec git, les modification locales par rapport au dépôt *git* _distant_ sont affichées en orange (flèches et surlignage [yellow]#en jaune# sur la capture d'écran suivante)
+
+.Apercu d'{atom} après les premières configs
+image::atom4.png[link="_images/atom4.png"]
+
+=== Correction [.underline]#aorthogaphiique# (<- oups) avec ATOM
+
+.Constat d'absence d'un dictionnaire français disponible "globalement" sur {win10}
+Bien que l'on ai francisé l'interface, le correcteur orthographique d'{atom} ne fonctione pas, un message d'alerte nous le signale à chaque ouverture du logiciel. +
+Comme ce problème a été récurrent avec la configuration de {subl} et {vscod}, il est temps de trouver une méthode plus *globale*
+
+.Méthode d'installation globale de dictionnaire français
+. télécharger les dictionnaires français sur {uri_grammalecte}[Grammalecte^]
+. décompresser l'archive *hunspell-french-dictionaries-v6.4.1.zip* dans *C:/DictionnaireFR* (répertoire à créér)
+. Indiquer à {atom} l'emplacement de ces fichiers :
+** menu:Fichier[Préférences] cliquer sur l'onglet *Packages* à gauche
+** Descendre jusqu'au paquet *spell-check* et cliquer sur *Settings*
+** cocher (si ce n'est pas fait) *Use Locales* et indiquer *fr-FR* puis indiquer l'emplacement des dictionnaires *C/DictionnaireFR*
+** redémarrer {atom}
+. cette méthode _devrait_ porter ses fruits pour {subl} et {vscod} ...
+
+NOTE: la correction orthographique _logicielle_ reste inexacte dans tous les softs d'édition... +
+Ici, dans {atom}, on a le strict minimum : pas de correction grammaticale, ni othographique pour les titres ou les termes de spécifiques asciidoc...
+
+.Accès au paquet "correcteur orthographique" d'{atom}
+image::atom11.png[link="_images/atom11.png"]
+
+.Configuration pour avoir le français en correction orthographique, avec une installation de dictionnaires français dans C:/DictionnaireFR, l'archive contenant les fichiers ayant été téléchargée depuis {uri_grammalecte}
+image::atom10.png[link="_images/atom10.png"]
+
+
+=== AsciidocPreview
+
+Le paramétrage additionnel du paquet *AsiidocPreview* améliore l'export en `.html` et en `.pdf` à partir du panneau de prévisualisation, en effectuant un clic-droit dessus.
+Les étapes nécessaires sont peu nombreuses :
+
+*Export en html* :
+
+* menu:Fichier[Préférences>Packages] +
+* Choix : *asciidoc-preview* -> *Paramètres*
+** [x]  _Synchronise preview pane_
+** [x] _Show title_
+** [x] _Always enable Asciidoctor experimental extensions_ +
+(pour avoir le rendu de ces macros asciidoc :) +
+`menu:Fichier[Ouvrir]` -> menu:Fichier[Ouvrir] +
+`kbd:[Ctrl+Alt+Suppr]` -> kbd:[Ctrl+Alt+Suppr] +
+`btn:[F13]` -> btn:[F13]
++
+** [x] _Always enable compatibility mode_
+** [x] _Safe Mode_ : sélectionner le mode _unsafe_
+** [x] _Save as HTML_ -> _Open the generated HTML file in your default browser_
++
+*Export en pdf* :
++
+** [x] _Enable PDF export using Asciidoctor PDF_ +
+WARNING: il faut avoir installé au préalable *asciidoctor-pdf* (voir la page dédiée : xref:inst+conf_asciidoctor.adoc#inst-asciidoctor-pdf[Installation de asciidoctor-pdf])
++
+** [x] _Automatically opne the PDF after the generation with the default PDF viewer
+
+En images :
+
+image::atom12.png[alt]
+
+image::atom13.png[link="_images/atom13.png"]
+
+image::atom14.png[link="_images/atom14.png"]
+
+
+
+== Utilisation courante
+
+. *Édition* d'un document texte au format _asciidoc_ :
+** enregistré avec l'extension `.adoc`
+** utilisant la syntaxe idoine, `*gras*` pour *gras*, `_italique_` pour _italique_, etc.
++
+. *Prévisualisation* sur le panneau de droite, en le demandant à {atom} :
+** _soit_ menu:Packages[AsciiDoc Preview > Toggle]  _soit_  kbd:[Ctrl+Maj+A]
++
+. *Export* aux formats `.html` et `.pdf` (optionnel avec Antora footnote:[Antora génère automatiquement le html]  ) :
+** se positionner sur le panneau de prévisualisation
+** *html* : Clic droit et menu:Save As[HTML] ou   kbd:[Ctrl+Maj+S]
+** *pdf* : Clic droit et menu:Export As[PDF]
+image:atom15.png[link="_images/atom15.png"]
+
+
+
+// Cochez les items dont vous partagez le sens. En fin de phrase, vous avez mon avis...
+//
+// [%interactive]
+// * [x] édition & prévisualisation _similaire_ à {vscod} {y}
+//
+// ._vraiment_ similaire?
+// [%collapsible]
+// ====
+// _naah_ ... rien ne remplace icon:heart[] _{vscod}_ icon:heart[] icon:smile-o[]
+// ====
+// * [x] intégration avec GIT {y}
+// * [ ] aisance édition, coloration syntaxique, rapidité similaire à {subl} {n}
+
+
+//icon:comment[] This is a comment icon +
+//icon:file[] And a file icon +
+//icon:battery-full[] And a battery icon
+//icon:check[role=green] OK!
+//:y: icon:check[role=green]
+//{y}
+//icon:times[role=red] NOK!
+//:n: icon:times[role=red]
+//{n}
+//[red]#*and*# this
+//[.line-through]#ten#
+//[.small]#small print#
+//
+//.Title
+//[%collapsible]
+//====
+//Normal asciidoc markup here
+//====
+//

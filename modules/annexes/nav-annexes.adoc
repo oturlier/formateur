@@ -1,0 +1,83 @@
+// Annexes édition ressources : liste navigation Antora (web & pdf)
+// WEB
+ifndef::backend-pdf[]
+
+* Annexes
+** xref:annexes-intro.adoc[Introduction]
+** Ressources TEB
+*** xref:ressources-TEB-constat.adoc[Constat inadaptation]
+**** xref:ressources-TEB-propo.adoc[Proposition changement]
+*** xref:ressources-TEB-exemple.adoc[Exemple]
+** Flux éditorial
+*** xref:outils-informatiques.adoc[Préalable : outils]
+*** xref:conversion-existant.adoc[Conversion ressources existantes]
+*** xref:edition-asciidoc.adoc[Edition en Asciidoc]
+*** xref:export-html-pdf.adoc[Export local en HTML et en PDF]
+*** xref:publication-html-pdf.adoc[Publication distante en HTML et en PDF]
+//GFDL
+** xref:common_gfdl1.2_i.adoc[License]
+
+endif::[]
+
+
+// PDF
+ifdef::backend-pdf[]
+= Annexes
+include::./branding/pdf/entities.adoc[]
+:toclevels: 3
+:doctype: book
+
+// License
+include::modules/annexes/pages/common_gfdl1.2_i.adoc[leveloffset=+1]
+
+// Introduction
+include::modules/annexes/pages/annexes-intro.adoc[leveloffset=+1]
+
+== Ressources TEB
+
+
+// General Requirements
+include::modules/annexes/pages/general-requirements.adoc[leveloffset=+2]
+
+// Hardware Requirements
+include::modules/annexes/pages/hardware-requirements.adoc[leveloffset=+2]
+
+
+
+// Network Requirements
+include::modules/annexes/pages/network-requirements.adoc[leveloffset=+2]
+
+include::modules/annexes/pages/ports.adoc[leveloffset=+3]
+
+// Client Requirements
+include::modules/annexes/pages/client-requirements.adoc[leveloffset=+2]
+
+// Public Cloud Requirements
+include::modules/annexes/pages/pubcloud-requirements.adoc[leveloffset=+2]
+
+== Flux éditorial
+
+//ifeval::[{productname} == "SUSE Manager"]
+
+include::modules/annexes/pages/install-server-unified.adoc[leveloffset=+2]
+
+include::modules/annexes/pages/install-proxy-unified.adoc[leveloffset=+2]
+
+//endif::[]
+
+// Install the VM
+//ifeval::[{suma-content} == true]
+
+include::modules/annexes/pages/install-vm.adoc[leveloffset=+2]
+//endif::[]
+
+
+include::modules/annexes/pages/install-uyuni.adoc[leveloffset=+2]
+
+
+// Install Proxy
+include::modules/annexes/pages/install-proxy.adoc[leveloffset=+2]
+
+
+// Install on IBM Z
+include::modules/annexes/pages/install-ibmz.adoc[leveloffset=+2]

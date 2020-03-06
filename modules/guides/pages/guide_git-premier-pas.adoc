@@ -1,0 +1,46 @@
+[#git-first]
+= Git : premiers pas
+
+Git est un outil de versionnement (_versioning_) et de synchronisation de fichier.
+
+Pourquoi utiliser Git plutôt que Dropbox ? Quand on travaille à plusieurs sur des dossiers complexes, il est utile de documenter nos faits et gestes pour que chacun sache ce qui a été fait. Cela permet de limiter les erreurs, de mieux se répartir les tâches, de rapidement vérifier et valider le travail de chacun.
+
+Par ailleurs, contrairement à une Dropbox, Git n'enregistre d'une version à l'autre que les éléments qui ont été modifiés.
+
+Git gère ainsi un registre, dans lequel toute modification de fichier est inscrite et documentée. Cela permet notamment d'écrire de manière collaborative sur du code source, mais aussi sur du texte.
+
+Dans cet atelier, nous n'exploiterons pas toutes les possibilités de Git, notamment le principe du fork ou de la branche, car chacun travaillera sur son propre répertoire.
+
+.Quelques commandes de base :
+- `git clone [repertoire]` : clone un "répertoire distant" dans un "répertoire local". +
+Exemple : `git clone https://framagit.org/marviro/tutorielmdpandoc.git` va créer le répertoire *tutorielmdpandoc* et y cloner le contenu du péretoire distant
+- `git add .` : ajoute **tous** les fichiers à l'index pour préparer un "commit".
+- `git add fichier.md` : ajoute **un** fichier à l'index pour préparer un "commit" ciblé.
+- `git commit -m "message pour documenter la modification"` : valide un commit avec un message d'information, et donc déclare et inscrit les modifications au registre Git.
+- `git pull` : synchronise le répertoire local depuis le répertoire distant, ce qui permet de récupérer des modifications faites par d'autres contributeurs (on _tire_ les modifications des autres depuis le serveur).
+- `git push` : synchronise le répertoire distant à partir du répertoire local, ce qui permet de partager son travail avec d'autres contributeurs (on _pousse_ ses modifications vers le serveur).
+- `git status` : présente un état du répertoire : quels fichiers ont été ajoutés, modifiés, supprimés, non ajoutés au registre, etc.
+- `git diff` : présente les changements de chaque fichier modifié.
+- `git log` : présente une liste de commit. C'est l'état du registre, une forme d'historique des modifications.
+
+== Exercice - créer son premier répertoire
+
+Vous allez créer un premier répertoire. Allons-y pas à pas :
+
+1. ouvrez un terminal.
+Par défaut, le terminal s'ouvre dans votre dossier personnel.
+Lancez la commande `ls` pour vous en assurer.
+2. créer un dossier gitlab : `mkdir gitlab` et naviguez dedans `cd gitlab`. Le terminal est maintenant positionné dans le répertoire `gitlab`.
+3. dans votre navigateur, allez sur https://framagit.org/ur-masterhn/ puis cliquer sur [New Project]. Renseigner le _Project name_ avec votre prénom (sans accents), puis cochez la case "Initialize repository with a README", et enfin le bouton [Create project].
+4. vous venez de créer un projet git. Vous allez maintenant le cloner, c'est-à-dire récupérer le répertoire sur votre machine en local. Pour cela, commencez par copier-coller l'url de clonage en cliquant sur le bouton bleu [Clone] en haut à droite, et en copiant l'url HTTPS.
+5. dans le terminal, lancez la commande `git clone https://framagit.org/ur-masterhn/monprenom.git` en remplaçant `monprenom.git` par votre prénom..
+6. Git télécharge le répertoire et crée un nouveau répertoire [monprenom] dans le répertoire gitlab. Naviguez dans ce nouveau répertoire `cd monprenom`.
+7. `ls` ou `ls -a` ou encore `ll` permet de lister tous les fichiers du répertoire. Pour le moment, il n'y a pas grand chose.
+8. nous allons récupérer les sources de votre article édité sur Stylo en lançant un export ZIP. Une fois le dossier compressé téléchargé, décompressez le et copier les trois fichiers dans votre répertoire [monprenom]. Renommez les fichiers selon une bonne nomenclature.
+9. nous pouvons maintenant ajouter ces fichiers à l'index Git : `git add .`, puis générer un premier commit pour ajouter ces fichiers au registre : `git commit -m "initialisation de l'article"`. On peut vérifier le registre avec `git log`.
+10. essayons maintenant de synchroniser les modifications en local avec le serveur : `git push`. Sur le site de framagit, votre répertoire est maintenant mis-à-jour.
+
+Vous êtes maintenant en mesure de faire des modifications et de les synchroniser avec le serveur framagit. Pendant le travail d'édition, vous pouvez régulièrement valider les modifications et synchroniser avec le serveur. Il suffit pour cela de répéter les opérations 9 et 10 :
+  - `git add .`
+  - `git commit -m "message"`
+  - `git push origin master`

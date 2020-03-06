@@ -1,0 +1,49 @@
+//[[inst+conf-git]]
+= Git
+
+:linkattrs:
+:git: Git
+:uri_git: https://git-scm.com/
+:uri_help-git: https://rogerdudler.github.io/git-guide/index.fr.html
+
+
+{git} est un logiciel de gestion de versions décentralisé dont la principale tâche est de gérer l'évolution du contenu d'une "arborescence" de fichiers/répertoires. Ces "versions" s'appliquent aussi bien à de code source d'un logiciel (but premier) qu'un simple texte ou un gros fichier "binaire" (=compilé) comme un fichier {word}.
+Dès le début, {git} a été pensé dans le but de fonctionner de façon décentralisée. Il suffit de _forker_ un projet ou de le _cloner_ pour commencer à travailler dessus (avec tout l'historique du projet en local) et ensuite de proposer sa contribution (_pull request_) au dépôt principal (mainteneur principal du projet).
+
+Pour les ressources formatives TEB :
+
+* {git} permet de travailler en mode collaboratif puisque chacun peut _cloner_ le dépôt distant au début et le mettre à jour ensuite ...
+* {git} constitue une brique logicielle du système https://antora.org/[Antora] qui permet de générer un site web comme celui-ci à partir de documents au format {asc}
+
+== Installation
+
+.Procédure : installation de {git} sur Windows 10
+
+. Se rendre sur le {uri_git}[site web {git},window="_blank"]. Une magnifique télévision verte vous propose de télécharger la version la plus récente et adaptée à votre machine : cliquez!
+
+.(clic ->) Site Web pour télécharger l'exécutable {win} de {git}
+image::git1.png[link="{uri_git}",window="_blank"]
+
+. suivez les instructions suivantes en les cochant au besoin :
+.. choix éditeur : laisser le choix par defaut : *vim*
+.. use git and optional Unix tools from  the command prompt
+.. use the openssl librarycheckout windows style, commit unix-style line endings
+.. use MinTTy
+.. enable file system caching, git credential helper, symbolic links
+
+
+== Test
+
+. Redémarrez la ligne de commande +
+_(fermeture puis ré-ouverture avec kbd:[F9] depuis {dblcdr})_
+
+. testez l'installation en affichant le numéro de version de {git}
+----
+git --version
+----
+
+
+.Résultat test post-install de {git} : OK
+image::git2.png[]
+
+// Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

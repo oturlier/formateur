@@ -1,0 +1,314 @@
+ifdef::env-github,backend-html5[]
+//Admonitions
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:linkattrs:
+endif::[]
+// Asciidoctor Front Matter
+:doctype: book
+:sectlinks:
+:icons: font
+:experimental:
+//:sourcedir: .
+//:imagesdir: images
+//
+:_public_repo_url: https://gitlab.com/tebim/formateurs
+:doctitle: Ressources Formateurs
+:_subtitle: Comment créer, publier, maintenir et contribuer aux ressources
+:revnumber: 1.01
+:revdate: {docdate}
+:authors: Team formateurs TEB
+:_editors: CRM Mulhouse
+:_contributors: Formateurs autres
+:_proofreaders: Marc ARMSPACH
+:_participants:
+:_summary: Ce manuel montre les outils et les méthodes employées pour contribuer aux ressources formatives TEB
+:keywords: CRM, TEB, Ressources, édition, publication, asciidoc, antora
+:_dochistory: édition initiale
+:_citation: {authors},{docyear},{doctitle}
+:_copyleft: CRM Mulhouse et auteurs de ce texte
+:_license_1: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0)
+:_license_2: GNU Free Documentation (GFDL-1.3-or-later)
+//
+
+= {doctitle}
+
+[.lead]
+{_subtitle}
+
+[abstract]
+{_summary}
+
+[doc.intro]
+== Introduction
+Ce dépôt est la source de la documentation constituant le manuel de ressources  pour les formateurs.
+
+Vous y trouverez des :
+
+* *tutoriels* pour débuter
+* *guides* pour réaliser pas à pas
+* *notions* pour comprendre
+* *références* pour
+
+Pour contribuer à ces ressources, veuillez vous reporter à <<Première contribution>>
+
+
+== Métadonnées
+
+// tag::metadata-table[]
+
+[cols="20,80"]
+|===
+| Titre                                 | {doctitle}
+ifeval::["{_subtitle}" != ""]
+| Sous-titre                              | {_subtitle}
+endif::[]
+| Version                               | {revnumber}
+ifeval::["{_revdate}" != ""]
+| Date                                  | {revdate}
+endif::[]
+ifeval::["{_editors}" != ""]
+| Éditeurs                               | {_editors}
+endif::[]
+| Auteurs                               | {authors}
+ifeval::["{_contributors}" != ""]
+| Contributeurs                          | {_contributors}
+endif::[]
+ifeval::["{_proofreaders}" != ""]
+| Vérificateurs                          | {_proofreaders}
+endif::[]
+ifeval::["{_participants}" != ""]
+| Participants                          | {_participants}
+endif::[]
+| Résumé                               | {_summary}
+| Mots-clés                              | {keywords}
+ifeval::["{_dochistory}" != ""]
+| Historique                      | {_dochistory}
+endif::[]
+| Comment citer                           | {_citation}
+| Copyleft
+a| {_copyleft}, sous la
+ifeval::["{_license_2}" == ""]
+{_license_1} license.
+endif::[]
+ifeval::["{_license_2}" != ""]
+{_license_1} license et une {_license_2} license.
+endif::[]
+
+[discrete]
+==== Creative Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0)
+
+You are free to copy and redistribute the material in any medium or format, remix, transform and build upon material, for any purpose, even commercially.
+The licensor may not revoke these freedoms as long as you comply with the licence's terms.
+Under the following conditions: a) Attribution: you must provide an appropriate acknowledgement of the authorship, provide a link to the licence and state whether any changes have been made.
+You may do that in any reasonable way, but not in a way that would suggest you have the licensor's support or receive it for the use you are making; b) ShareAlike: where you remix change or create from the material, you will have to disseminate your contributions under the same licence as the original.
+There are no additional restrictions, you may not apply legal terms or technological measures that legally restrict others from doing anything the licence permits.
+You can find full licences on the following links: https://creativecommons.org/licenses/by-sa/4.0/deed.
+
+[discrete]
+==== GNU Free Documentation Licence (GFDL-1.3-or-later)
+
+You are permitted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation Licence, version 1.3 or any other version subsequently published by the Free Software Foundation; without Invariant Sections or Front-Cover Texts, or Back-Cover Texts either.
+You can find a copy of the licence on http://www.gnu.org/copyleft/fdl.html.
+|===
+
+// end::metadata-table[]
+
+
+
+
+[#first.contribution]
+== Première contribution
+
+Pour contribuer :
+
+. Clone the repository to your local machine:
++
+----
+git clone https://github.com/uyuni-project/uyuni-docs.git
+----
+
+. Check out the ``/master`` branch:
++
+----
+git checkout master
+----
+
+. Create a new working branch for your changes:
++
+----
+git checkout -b branchname
+----
+
+. Navigate to the [path]``adoc`` directory and make your changes using your preferred text editor.
+
+. Ensure your changes build locally. This step requires that you have your local environment set up correctly.
+ <!-- TODO: add environment setup instructions -->
+
+. Add the updated files to your commit:
++
+----
+git add .
+----
+
+. Commit your changes:
++
+----
+git commit -m "Commit message here"
+----
+
+. Push your changes:
++
+----
+git push
+----
++
+If git prompts you to set an upstream in order to push, use this command:
++
+----
+git push --set-upstream origin <branchname>
+----
+
+. Create a pull request (PR) by navigating to https://gitlab.com/tebim/formateurs and clicking on [btn]``Compare and Create Pull Request``.
+Write an informative commit message detailing your changes, choose reviewers, and save your PR.
+If you haven't yet finished the work you want to do, make sure you create a Draft PR by selecting it from the drop down box in the github web UI.
+This lets your reviewers know that you haven't finished work yet, while still being transparent about what you are working on, and making sure we all understand current progress.
+
+
+[NOTE]
+====
+Choose your reviewers carefully! +
+If you have made changes to the technical detail of the documentation, choose an appropriate subject matter expert (SME) to review those changes.
+Additionally, every change requires at least one documentation team member to approve.
+====
+
+
+.Review Standards
+
+These standards ensure that our documentation is accurate, that PRs are not left to age, and that the source code remains clean.
+Ensure you follow these standards if you are participating in the Uyuni documentation repository.
+
+* If you are still working on a PR, add ``[WIP]`` to the title of your PR.
+This allows people to review the PR, but notifies reviewers that you have not completed work.
+* Only the original author should merge PRs, do not merge other author's PRs unless you have express permission from them to do so.
+* _Do not_ merge a PR until you have received the following approvals:
+** For a technical change, approval from at least one SME
+** For all changes, approval from at least one other member of the documentation team
+
+[#second.contribution]
+== Seconde contribution
+
+Once you have checked out the repo and want to keep working on things, you need to ensure that your local copy of the repo remains up to date.
+If you don't do this, you *will* end up with merge conflicts.
+
+Every day, before you begin work, update your copy of master:
+
+. Check out the ``/master`` branch:
++
+----
+git checkout master
+----
+You will get a message like this:
++
+----
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+----
++
+[IMPORTANT]
+====
+BEWARE! This is usually a lie!
+====
++
+. Fetch all current branches:
++
+----
+git fetch --all
+----
+. Update your local copy to match the remotes:
++
+----
+git pull -ff
+----
+
+Now you can go ahead and check out the branch you are working on.
+
+Doing this regularly as you are working will mean you keep your local copies up to date and avoid conflicts.
+You should do it at least every day before you begin work, and again whenever you switch branches.
+
+For example, you are working on two separate pieces of content, one in the ``feature_1`` branch, and the other in the ``feature_2`` branch:
+
+. Start your day by checking out master, fetching the branches, and updating your local copy:
++
+----
+git checkout master
+git fetch --all
+git pull -ff
+----
+. Begin work on the first piece of content by creating a new feature branch:
++
+----
+git checkout -b feature_1
+----
+. Make your changes for Feature 1, then commit them to your branch:
++
+----
+git commit -m "Content for Feature 1"
+git push
+----
+. Make a PR for Feature 1, by navigating to https://github.com/SUSE/doc-susemanager and clicking on [btn]``Compare and Create Pull Request``.
+Write an informative commit message detailing your changes, choose reviewers, and save your PR.
+If you haven't yet finished the work you want to do on Feature 1, make sure you create a Draft PR by selecting it from the drop down box in the github web UI.
+That way, you can come back to Feature 1 later on.
+. Switch your local copy back to master, and update your local copy again:
++
+----
+git checkout master
+git fetch --all
+git pull -ff
+----
+. Now you can start work on Feature 2:
++
+----
+git checkout -b feature_2
+----
+. When you're finished on Feature 2, commit your changes and create another PR, just the same as you did for Feature 1.
+
+[WARNING]
+====
+Never leave feature branches lying around on your local system.
+Create your PR as soon as possible, and make liberal use of the Draft feature.
+Commit to your feature branch early and often!
+Update your local copy from master whenever you switch branches.
+====
+
+
+
+[docs.team]
+== L'équipe Ressources TEB
+
+* Olivier Turlier @oturlier
+* Marc Armspach @marco
+
+
+
+// = Ressources Formateurs TEB + BIM
+
+// Ce project regroupe l'essentiel des informations pour éditer et publier les ressouces formatives, et ce de manière *collaborative*.
+
+// Les informations seront regoupées sous les grand thèmes suivants :
+
+// * *Ecosystème logiciel* : installation et configuration des logiciels nécéssaires pour éditer, collaborer, etc.
+// * *Edition de ressources* : 
+// ** ce qu'il _faudrait_ faire ... et notamment *édition au format `asciidoc`* pour préduire et du `.html` et du `.pdf` à partir d'une source unique.
+// ** publication avec la plateforme *Antora* (site web de documentation), aussi bien en _interne_ que sur le web, avec l'aide de _gitlab_ ...
+// * *Partage des ressources* : travail en mode collaboratif
+// * etc.
+
+// Nous attendons vos suggestions, remarques et autres idées constructives...
+
+// Merci de vous intéresser à ce projet.
+

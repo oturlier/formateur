@@ -1,0 +1,180 @@
+[[tutoriels-intro]]
+= Introduction
+// :imagesdir: ../assets/images
+:experimental:
+:linkattrs:
+:imagik: Imagemagick
+:uri_imagick: https://imagemagick.org/index.php
+
+L'ensemble des tutoriels montrent pas à pas comment gagner en compétence dans le {productname}.
+
+Il s'agit avant tout de *pratiquer*.
+
+// [plantuml, bob, svg]
+// ----
+// alice -> bob
+// bob -> alice
+// ----
+
+
+////
+[cols="1,1,1", options="header"]
+|===
+| VirtIO Storage Disks | Name      | Sizing
+| VirtIO Disk 2        | spacewalk | 101{nbsp}GB
+| VirtIO Disk 3        | pgsql     | 50{nbsp}GB
+| VirtIO Disk 4        | swap      | 4{nbsp}GB
+|===
+////
+
+
+* [x] Nous commencerons par installer une suite de divers logiciels utilitaires, certains accessibles uniquement depuis la ligne de commande/{pwrshl} (_dépourvus d'interface graphique_).
+* [x] Nous poursuivrons par l'installation de divers éditeurs de texte.
+* [x] Nous terminerons par de brefs tests pour voir si toute la procédure d'installation s'est bien déroulée.
+
+
+== Ligne de commande
+
+*{pwrshl}* remplace l'antique ligne de commande de Windows, cela permet de se rapprocher des fonctionnalités bien pratiques que l'on peut avoir sur linux.
+
+=== Lancement
+Ces tutoriels impliquent l'usage de la ligne  de commande/{pwrshl}, *le moyen le plus simple* consiste à lancer l'invite de commande grâce  à la touche kbd:[F9] lorsque l'explorateur *{dblcdr}* est démarré.
+Cela aura pour effet d'activer l'invite dans le dossier spécifié, sans que vous n'ayez à parcourir tout le *chemin* pour y aboutir.
+
+.lancement de {pwrshl} avec kbd:[F9] depuis {dblcdr}
+image::dblcdr-f9.png[]
+
+_On peut aussi lancer {pwrshl} en tapant `cmd` dans la barre d'adresse de l'explorateur {win}_.
+
+[#config-cli]
+=== Configuration
+
+Pour faciliter l'utilisation de ce logiciel récemment modernisé (cmd.exe -> {pwrshl} en 2017), il faut désactiver le mode de compatibilité avec l'ancienne version et autoriser les raccourcis Ctrl+C & Ctrl+V, comme ceci (cocher et décocher les cases comme sur la capture d'écran).
+
+TIP: On obtient la boîte de propriétés en faisant un kbd:[clic droit] sur le bandeau supérieur.
+
+// grid="all", frame="none",grid="all",stripes="none"
+[cols="1a,1a",frame="all"]
+|===
+
+|image::cli2.png[] |image::cli3.png[]
+|===
+
+
+On peut y ajouter un peu de transparence aussi, à votre guise, ça se passe dans les onglets suivant de la boîte Propriétés
+
+=== Copier-coller
+
+Les commandes à taper sont précises à la virgule près, une erreur est vite commise... Le moyen *le plus simple* consiste à effectuer un *copier/coller* entre le texte de ce site web et la fenêtre de ligne de commande que vous aurez ouverte comme précédemment.
+
+. *copier*
+** *surlignage* de la commande avec la souris
+** *copie* avec le raccourci kbd:[Ctrl+C]
+. *coller*
+* kbd:[Ctrl+V] ou kbd:[Clic Droit] sur la ligne de commande
+
+Les commandes à copier auront l'aperçu ci-dessous ("texte" _incompréhensible_ avec police à chasse fixe, quelquefois coloré et sur fond grisé)
+//, il peut y avoir des explications identifiées par des n^°^ de légende (qui eux en seront pas copiés pour ne pas interférer avec la commande à exécuter ... :
+
+=== Exemples de copier/coller
+
+.Visualisation des fichiers, dossiers et de leur propriétés
+[source]
+----
+ls -la
+----
+
+.Conversion d'une image transparente `.png`  en  `.jpg` avec {imagik}
+[source]
+----
+convert 10.png -background black -alpha remove  10.jpg
+----
+* La commande prend environ 0.3 secondes à être exécutée, comparer cette durée avec l'utilisation d'un logiciel graphique ...
+* il faut avoir installé la suite d'outils de conversion graphique {imagik} au préalable pour que cette commande fonctionne : _voir le tuto dédié_ -> xref:inst+conf_imagick.adoc[Installation d'ImageMagick] (après lecture, faites un _retour arrière_ avec le navigateur pour revenir à cette page, dans _Firefox_ c'est le raccourci kbd:[Alt+Flèche gauche] _évident_ non?)
+
+.Non prise en compte des numéros d'aide en fin de ligne lors de la copie
+[source]
+----
+ceci est une longue commande ctrl + C # <.>
+découpée en plusieurs lignes crtl + V # <.>
+pour une meilleure compréhension C:// # <.>
+et il faut uniquement copier ligne par ligne V:// # <.>
+----
+<.> eh oui !
+<.> ben ça alors...
+<.> sûrement !
+<.> sinon ça dézingue PowerShell...
+
+Vous pouvez essayer de copier une ligne entière en la _surlignant_ avec la souris : vous ne capterez pas les numéros, et c'est tant mieux.
+
+
+////
+=== tabs test
+
+[source,groovy,indent=0,subs="verbatim,attributes",role="primary"]
+.Groovy
+----
+docker {
+    registryCredentials {
+        url = 'https://gcr.io'
+        username = '_json_key'
+        password = file('keyfile.json').text
+    }
+}
+----
+
+[source,kotlin,indent=0,subs="verbatim,attributes",role="secondary"]
+.Kotlin
+----
+docker {
+    registryCredentials {
+        url.set("https://gcr.io")
+        username.set("_json_key")
+        password.set(file("keyfile.json").readText())
+    }
+}
+----
+
+
+autre tabs test
+
+
+[source,xml,indent=0,role="primary"]
+.Maven
+----
+<dependency>
+    <groupId>com.example</groupId>
+    <artifactId>some-library</artifactId>
+    <version>1.2.3</version>
+</dependency>
+----
+
+[source,indent=0,role="secondary"]
+.Gradle
+----
+compile 'com.example:some-library:1.2.3'
+----
+////
+
+////////////////////////////////////////////////////////////////////////////////
+
+Pour un *motif pédagogique*, il peut être intéressant de *découper la commande en lignes*, dans ce cas, le retour forcé à la ligne est représenté par un +\+ *anti-slash*, à taper avec btn:[AltGr+8] et y ajouter des *explications* avec des numéros de renvoi.
+La commande précédente prendra cette forme, le résultat sera identique
+
+.commande complexe, à copier (ctrl+C puis clic-droit) + explications & retour à la ligne
+[source]
+----
+convert  \ # <.>
+10.png \ # <.>
+-background black \ # <.>
+-alpha remove  \ # <.>
+10.jpg <.>
+----
+<.> commande du logiciel *ImageMagick* pour convertir un format d'image vers un autre
+<.> image `*.png` d'origine
+<.> fond de l'image en noir
+<.> suppression du canal `alpha` car le jpg ne peut pas en contenir
+<.> image `*.jpg` de destination
+
+NOTE: le surlignage n'intègre pas les numéros de renvoi _automagiquement_
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,239 @@
+[#inst+conf_antora]
+= Antora
+
+:partials:
+:experimental:
+:linkattrs:
+:icons: font
+:warning-caption: Attention
+:tip-caption: Conseil
+:note-caption: Info
+//:dblcdr: DoubleCommander
+:anto: Antora
+:uri_anto: https://antora.org/
+:uri_anto-win-prereq: https://docs.antora.org/antora/2.2/install/windows-requirements/
+:uri_anto-inst: https://docs.antora.org/antora/2.2/install/install-antora/
+
+
+
+//[.right.text-left]
+//image::vscode1.png[150,150,role="right"]
+
+image:antora2.png[150,150,role="related thumb right",link="{uri_anto}"^] {uri_anto}[{anto}^] est la *plateforme* que nous utiliserons pour compiler/assembler toutes les ressources éditées au format `.adoc`. Après installation, ce "logiciel" prendra la forme d'une commande à exécuter en ligne de commande, du genre `antora <nom-du-fichier-de-config-global-du-site>.yml` 
+
+WARNING: L'installation d'{anto} n'est pas aisée, surtout sur {win}. Risque de confusion avérée entre termes, concepts, objectifs ...(node, nvm, lts, choco...)  _ça rappelle le BIM non ?_ +
+Merci de (tenter de) suivre & appliquer scrupuleusement les infos ci-dessous, et en cas d'erreur, de faire un retour pour qu'elles soient mises à jour.
+
+
+
+[#prereq-win-anto]
+== Prérequis {win}
+
+NOTE: Les infos ci-dessous font référence à la page {uri_anto-win-prereq}[Prérequis {anto} pour {win}^]. Si vous lisez le Shakespearien n'hésitez pas à vous y rendre, les informations risqueront d'être plus à jour qu'ici.
+
+:url-choco: https://chocolatey.org
+:url-node-releases: https://nodejs.org/en/about/releases/
+:url-nvm-windows: https://github.com/coreybutler/nvm-windows
+:version-node-major: 12
+:version-node: {version-node-major}.13.0
+
+Nous verrons :
+
+* [x] Comment installer *Chocolatey*, un installateur de _paquets_ en ligne de commande, reproduisant un environnement logiciel complet.
+* [x] Comment installer *Node*
+
+Vous avez besoin de passer par ces étapes préalables avant d'installer {anto} et de l'utiliser pour générer un site de documentation.
+
+=== Node
+
+Nous recommandons d'utiliser la version étiquetée "Long Term Support" (LTS) de la version de Node, car {anto} est seulement testée sur ces versions spécifiques, voir {url-node-releases}[active LTS releases^]. Comme nous sommes le {localdate}, la version LTS de Node.js est donc *node.js v12* (version LTS -> numéro pair) image:antora3.png[]
+
+Vous avez peut-être Node installé, vérifions le en ouvrant PowerShell et en tapant :
+
+ node --version
+
+Vous devriez voir des numéros de version, comme :
+
+[subs=attributes+]
+....
+v{version-node}
+....
+
+Si *la commande échoue avec une erreur* c'est que Node n'est pas installé.
+La meilleure façon d'installer Node sur votre machine est avec *Chocolatey*.
+Et si vous n'avez pas installé Chocolatey auparavant, allez à <<install-choco,Installation de Chocolatey>> pour l'obtenir et l'installer.
+Sinon, sautez directement à <<install-nvm,Installation nvm et Node>>.
+
+Si *la commande renvoie un numéro de version qui n'est pas une version LTS active*, _upgrader/downgrader_ à la version LTS de Node la plus récente <<upgrade-node,avec nvm>> pour assurer une compatibilité _maximale_ avec {anto}. + 
+Dans la pratique, ça "marche" aussi avec des versions de Node non LTS..., sur mon ordinateur, la commande `node --version` me renvoie `v13.0.1` et jusque ici, {anto} fonctionne... Mais il vaut mieux respecter les directives à la version LTS près!
+
+Si *la commande renvoie une version Node LTS active*, vous êtes bon pour <<install-anto,installer {anto}>>.
+
+[#install-choco]
+=== Chocolatey
+
+La meilleure façon d'installer *Node Version Manager* (nvm) et *Node* est avec {url-choco}[Chocolatey^], le manageur de paquets pour {win}.
+
+. Ouvrez un terminal *{pwrshl}* en *mode administrateur* (clic-droit sur l'icône et choix menu:Exécuter en tant qu'administrateur[])
+
+. Copier/coller la commande suivante dans le terminal {pwrshl} admin (il faut avoir activé la fonction de copier/coller au préalable, voir la page : xref:tutoriels-intro.adoc#config-cli[configuration ligne de commande]
+
+ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+Vous êtes maintenant prêts à installer nvm et Node.
+
+[#install-nvm]
+=== Installation nvm et Node
+
+. Ouvrez un terminal {pwrshl} en mode administrateur (clic-droit sur l'icône et choix menu:Exécuter en tant qu'administrateur[])
++
+TIP: Si vous venez juste d'installer Chocolatey en suivant les instructions ci-dessous, utilisez le même terminal (exécuté en mode admin) que vous avez déjà ouvert.
+
+. Pour installer {url-nvm-windows}[Node Version Manager (nvm) pour {win}^], entrer la commande suivante dans le terminal :
+
+ choco install -y nvm
+
+. Fermer le terminal.
+
+. Ouvrir un nouveau terminal, sans droit administrateur, et installer Node avec nvm (qui vient d'être installé juste auparavant).
++
+--
+[subs=attributes+]
+ nvm install {version-node}
+
+IMPORTANT: Quand on utilise nvm pour {win}, on doit spécifier le numéro de version exact de Node (e.g., `{version-node}`) jusqu'à ce que le problème {url-nvm-windows}/issues/214[nvm-windows#214^] soit résolu.
+--
+
+
+Maintenant que Node est installé, on est prêt à <<install-anto,installer {anto}>>
+
+.nvm et les environments en ligne de commande
+****
+Vous pouvez installer la version LTS de Node directement, sans installer nvm, en entrant la commande suivante dans un terminal {pwrshl} :
+
+ choco install -y nodejs-lts
+
+Cependant, beaucoup d'environnements utiisent nvm pour installer la version de Node utilisée pour la compilation.
+En utilisant nvm, on s'assure de suivre scrupuleusement la configuration utilisée pour générer et publier le site de documentation avec {anto}
+****
+
+[#upgrade-node]
+=== Upgrade/downgrade Node en utilisant nvm
+
+Si vous avez installé nvm mais que votre version de Node n'est pas étiquetée "LTS" (doit être débuter par un numéro pair, vérifiable avec `node --version`), taper la commande suivante dans le terminal :
+
+[subs=attributes+]
+ nvm install {version-node}
+
+IMPORTANT: Quand on utilise nvm pour {win}, on doit spécifier le numéro de version exact de Node (_i.e._ `nvm install {version-node}`).
+
+
+
+[#install-anto]
+== Installation d'{anto}
+
+Pour générer et publier un site web de documentation avec {anto}, on doit disposer des interfaces en ligne de commande {anto} et de la suite logicielle permttant la génération de site.
+
+Suppositions :
+
+* [x] Vous avez installé une version active LTS de Node sur votre machine <<prereq-win-anto, {win}>>
+
+Dans cette section, vous apprendrez :
+
+* [x] Comment installer {anto} globalement. (recommandé)
+* [x] Comment installer les paquets ligne de commande {anto} et générateur de site dans un répertoire sécifique à un projet.
+
+Nous vous recommandons d'installer Antora à l'échelle globale, surtout si vous gérez plusieurs sites de documentation.
+Lorsque nous disons «globalement» ici, cela n'implique pas à l'échelle du système (mode Administrateur).
+Cela signifie l'emplacement où Node est installé.
+Si vous avez utilisé nvm pour installer Node, cet emplacement se trouvera dans votre répertoire personnel (ne nécessitant donc pas d'autorisations élevées).
+Cependant, vous pouvez également installer Antora dans un répertoire de projet si vous préférez.
+
+=== Installer Antora globalement en utilisant npm (niveau : on doit l'atteindre!)
+
+Pour installer globalement (niveau utilisateur seulement) Antora CLI et les packages de générateur de site, ouvrez un terminal et tapez :
+
+[subs = attributes+]
+ npm i -g @ antora / cli @ {page-component-version} @ antora / site-generator-default @ {page-component-version}
+
+IMPORTANT: le `@` au début du nom du package est important.
+Il indique à `npm` que le paquet `cli` est situé dans le groupe `antora`.
+Si vous omettez ce caractère, `npm` supposera que le nom du package est le nom d'un référentiel git sur GitHub.
+Le second `@` compense le numéro de version demandé.
+Seuls les segments majeurs et mineurs sont spécifiés pour vous assurer de recevoir la dernière mise à jour du correctif.
+
+Vérifiez que la commande `antora` est disponible sur votre PATH en exécutant:
+
+ version antora
+
+Si l'installation a réussi, la commande doit signaler la version d'Antora (où `.x` représente le dernier numéro de correctif).
+
+
+[subs=attributes+]
+ antora version
+ {page-component-version}.x
+
+CAUTION: Si vous utilisez une installation de Node installée en mode administrateur, vous risquez de rencontrer des problèmes d'autorisation lors de l'installation globale des packages.
+Dans ce cas, vous devrez <<install-dir, installer Antora dans un répertoire de projet >>.
+
+
+
+[#install-dir]
+=== Installer Antora dans un répertoire de projet (niveau : gourou/freejazz)
+
+Vous pouvez choisir d'installer Antora dans un répertoire de projet, tel que le répertoire où sont stockés les fichiers `playbook.yml` de votre site.
+
+Lorsque cela est possible, nous vous recommandons d'installer globalement Antora CLI afin que la commande `antora` soit disponible sur votre PATH.
+Vous pouvez ensuite installer les packages du générateur de site dans un répertoire de projet.
+
+Pour installer *uniquement* la Ligne de commande globalement, tapez:
+
+
+[subs=attributes+]
+ npm i -g @antora/cli@{page-component-version}
+
+Ou, pour installer la ligne de commande dans un répertoire de projet, accédez à votre répertoire de projet et tapez :
+
+[subs=attributes+]
+ npm i @antora/cli@{page-component-version}
+
+La suppression de l'indicateur `-g` installe le package dans le dossier [.path] _node_modules_ du répertoire en cours.
+
+Vérifiez que la commande `antora` est disponible sur votre PATH en exécutant `antora -v`.
+Si vous avez installé le package sans l'indicateur `-g`, vous devrez préfixer la commande avec `(npm bin)/` .
+
+.Si installé globalement
+ antora version
+
+.Si installé dans un répertoire de projet
+ (npm bin)/antora version
+
+La commande doit signaler la version Antora CLI dans le terminal (où `.x` représente le dernier numéro de patch).
+
+[subs=attributes+]
+ {page-component-version}.x
+
+Si vous avez installé la CLI globalement, accédez au répertoire du projet avant d'installer le générateur de site.
+
+Ensuite, installez le package du générateur de site.
+
+[subs=attributes+]
+ npm i @antora/site-generator-default@{page-component-version}
+
+Le fichier `@ antora / site-generator-default` et ses packages dépendants seront installés dans le dossier [.path] _node_modules_ de votre projet.
+La commande `antora` recherchera ces packages avant de chercher dans le dossier d'installation global.
+
+// == Ensuite
+
+// Now that Antora is installed, you're ready to:
+
+//* Set up your own xref:playbook:index.adoc[playbook] or use the Demo playbook.
+//* Organize a xref:ROOT:component-structure.adoc[documentation component repository] or use Antora's Demo docs components.
+//* xref:ROOT:run-antora.adoc[Run Antora] and generate a documentation site.
+
+// TODO indiquer le lien d'accès web au site "herbergé" sur dropbox : https://www.dropbox.com/s/raawplu0s6b26vm/index.html (marche pô...)
+// ou googledrive : 
+
+//TODO re test install antora sur une machine win ...
+
+

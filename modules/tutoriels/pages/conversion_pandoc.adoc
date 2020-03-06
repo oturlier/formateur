@@ -1,0 +1,20 @@
+[[conversion-pandoc]]
+= Tests Pandoc
+
+
+
+== Conversion {word} -> {asc}
+
+[source]
+----
+pandoc --from=docx --to=asciidoc --wrap=none --atx-headers --extract-media=. AT4-D19.docx > AT4-D19.adoc
+----
+
+{pdoc} ne peut convertir que des fichiers `.docx` et pas `.doc` ou `.odt` et être dans une version récente (v. 2.9.1.1 au 02/02/2020 ...)
+
+== Recup page {htm} -> {asc}
+
+[source]
+----
+n.a.d.a. ...
+----

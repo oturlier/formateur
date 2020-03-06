@@ -1,0 +1,211 @@
+[#inst+conf_ascidocfx]
+= AsciiDocFX
+ifndef::env-site,env-github[]
+include::../_attributes.adoc[]
+endif::[]
+:experimental:
+:linkattrs:
+:icons: font
+// attributes
+:ascfx: AsciiDocFX
+:subl: Sublime Text
+:vscod: Visual Studio Code
+:win10: Windows 10
+:y: icon:check[role=green]
+:n: icon:times[role=red]
+:uri_ascfx: https://asciidocfx.com/
+:uri_graphviz: https://www.graphviz.org/
+:uri_dl-graphviz: https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi
+
+
+== Description
+
+{ascfx} est un éditeur *très complet*, _spécialement_ dédié à l'**édition** de documents au format {asc}, leur *export* aux formats `.html`, `.pdf`, `.mobi` ou `.epub` et `.docbook` si 'lon veut rajouter la possibilité d'export vers un format {word}.
+
+Il possède _out of the box_, la possibilité de créer des graphiques.
+
+Il est parfait pour débuter dans l'édition de documents au format {asc}, car tout y intégré _par défaut_ et l'on peut retrouver ce qui manque lorsque l'on abandonne {word} : des boutons pour cliquer dessus...
+
+.Aperçu d'{ascfx} pour l'édition de cette ressource (clic sur l'image pour zoom)
+image::ascidocfx2.png[link="_images/ascidocfx2.png"]
+
+
+== Installation
+
+=== Téléchargement
+
+Vous trouverez *AsciidocFX_Windows.exe* vers le haut de ce {uri_ascfx}[site Web^]
+
+.Site Web d'{ascfx} : clic sur l'image pour y accéder (ouvre un autre onglet)
+image::ascidocfx1.png[link="{uri_ascfx}",window="_blank"]
+
+=== Installation
+
+L'installation est de type menu:Clic[Clic>Clic], on devrait s'en sortir ...
+
+L'éditeur vous proposera d'effectuer une _mise à jour_ au besoin, en détectant s'il y a une diffréence de numéros de version (ça a été le cas pour moi, l'installateur est en version 1.7.0 et la version _up to date_ étant la  1.7.1, une mise à jour a été faite).
+
+== Configuration
+
+On accède à la personnalisation de l'**interface** (éditeur, prévisualisation) comme de l'**export** en cliquant sur l'onglet vertical _Settings_ situé dans le coin droit supérieur -> image:ascidocfx3.png[width=150,height=150]
+
+
+=== Paramétrages supplémentaires
+
+[NOTE]
+====
+Dans les images à cliquer ci-dessous, quelques _détails_ peuvent êtres ajoutés. +
+Ces réglages ne sont pas prioritaires, l'éditeur fonctionne parfaitement sans
+====
+
+.Config supplémentaire d'{ascfx}
+[width="100%"]
+[cols="^.^1,^.^1"]
+|===
+|image:ascidocfx4.png[400,350,link="_images/ascidocfx4.png"] |
+image:ascidocfx5.png[400,350,link="_images/ascidocfx5.png"]
+
+|image:ascidocfx71.png[400,350,link="_images/ascidocfx71.png"] |
+image:ascidocfx72.png[400,350,link="_images/ascidocfx72.png"]
+
+|image:ascidocfx6.png[400,350,link="_images/ascidocfx72.png"] |
+n.a.d.a.
+
+|===
+
+
+
+=== Installation de logiciel supplémentaire
+
+
+Pour profiter pleinement des possibilités de création graphique de cet éditeur, il faut installer un logiciel supplémentaire *Graphiz* qui permettra de construire les graphiques. Un fichier d'exemple (voir ci-dessous <<cheatset-ascidocfx,le fichier démo>> )
+
+* {uri_dl-graphviz}[téléchargement^]
+* installation
+
+
+== Utilisation courante
+
+Cet éditeur est livré avec des modèles de fichiers, un forum, un chat en ligne ... accessibles en cliquant sur cette icône, en haut à gauche -> image:ascidocfx8.png[width=300,height=150]
+
+[#cheatset-ascidocfx]
+=== Démo 1 : texte + graphiques
+
+Le fichier `cheatset.adoc` (que l'on ouvre avec en choisissant Asciidoc Cheatset après avoir cliqué sur le bouton ci-dessus) est riche d'enseignements...
+
+NOTE: Il n'y a que {ascfx} qui puisse réaliser la _prouesse_ de proposer autant de fonctionalités avec si peu de configuration post-installation! Utiliser cet éditeur est un *excellent moyen de découverte* des possibilités & avantages à éditer un fichier texte pour en exporter une sortie html, pdf, et même word (plus compliqué mais possible). +
+Qui n'a pas de difficultés à éditer un document de 60 pages contenant 40 photos avec {word}?
+
+[WARNING]
+.Non "portabilité" de code spécifique à {ascfx}
+====
+Les possibilités d'{ascfx} sont bien *plus étendues* que les autres éditeurs, notamment pour les créations **graphiques**. Tant que l'on se cantonne à éditer un document unique `.adoc` pour l'exporter en `.html` ou `.pdf` tout va pour le meilleur des mondes... +
+Si l'on souhaite intégrer ce document dans un système de publication *Antora*, certaines fonctionnalités vont manquer à l'appel, tous les zolis graphiques produits _on the fly_ ne seront pas visibles... tous ceux faisant partie des _JavaFX Charts Extension_ , _PlantUML Extension_, _MathJAX Extension_ et _Filesystem Tree Viewers_ (lignes 271 à 470 du fichier `cheatset.adoc`...)
+====
+
+L'ouverture de ce fichier créera automatiquement un dossier `cheatsetxxxxxxxx` contenant le fichier éponyme et un sous-dossier contenant les images crées automatiquement au lancement du fichier.
+
+
+.JavaFXextensions : Pie Chart, Area Chart,etc. -> Attention à ne pas en devenir dépendant...
+image::ascidocfx16.png[link="_images/ascidocfx16.png"]
+
+
+
+
+=== Démo 2 : présentation
+
+. Faire un *clic-droit* dans le panneau d'**explorateur** de fichier _à gauche_
+. menu:New[New Slide]
+. choisir un nom de dossier dans lequel seront créés les fichiers nécéssaires, par exemple *slid2*
+. {ascfx} crée pour nous toucekifo : le fichier à éditer et son _environnement_ logiciel ...
+
+Il n'y a plus qu'à transformer le fichier `slide1.adoc` selon le "message" que l'on veut transmettre ...
+
+
+[NOTE]
+.Vive les présentations!
+====
+Ce éditeur nous montre encore ses capacités étendues... et ses limites! Il devient très dur de modifier plus en avant les paramètres de la présentation ... +
+Contentons-nous de ce que cet éditeur nous propose pour nous initier, puis tentons l'aventure avec d'autres éditeurs ensuite, si le coeur nous en dit...
+====
+
+[width="100%",options="header"]
+[cols=".^1,^.^1"]
+|====
+
+| fichier `slide1.adoc` d'origine  | prévisualisation
+
+a|
+----
+ include::_settings_reveal.adoc[]
+
+ // include::_settings_deck.adoc[]
+
+ = Slide Title
+
+ == Slide 1
+
+ Slide 1 Content
+
+ == Slide 2
+
+ Slide 2 Content
+----
+| image:ascidocfx14.png[width=450,]
+
+|====
+
+
+
+Après _modification_ du fichier (renommage/écriture des points clés développés plus avant dans le tuto/guide/notion = ressource formative)
+
+. renommage _explicite_ (slide1.adoc -> pres_tebim_RE2020.adoc)
+. modification du _contenu_
+. _extension_ -> copie de la structure
+. _hiérarchie_  des sections :
+.. seuls les titres des slides de [underline]#niveau *1*# apparaissent à l'écran (-> `== Slide  1`), la navigation est _horizontale_ (flèches icon:chevron-left[] et icon:chevron-right[]) ce sont des *chapitres*
+.. les titres de [underline]#niveau *2*# (-> `=== Slide 1.1`) sont des *sections* appartenants à chaque chapitre, la navigation est _verticale_ (flèche icon:chevron-down[] puis icon:chevron-right[] pour passer au "chapitre" suivant)
+
+.Présentation à finir pour ce soir ...
+image::ascidocfx15.png[link="_images/ascidocfx15.png"]
+
+
+// == Tabs
+
+// [tabs]
+// ====
+// tab1:
+// +
+// --
+// include::tab-doc1.adoc[]
+// --
+// tab2:
+// +
+// --
+// :a: 1
+// :b: 2
+// :c: 3
+// include::tab-doc2.adoc[]
+// --
+// ====
+
+// tab-doc1.adoc
+// =====
+
+// = Tab 1
+
+// Asciidoc is awesome.
+
+// =====
+
+// tab-doc1.adoc
+// =====
+
+// = Tab 2
+
+// [source,bash,subs="attributes"]
+// ----
+// {a} + {b} = {c}
+// ----
+
+// =====

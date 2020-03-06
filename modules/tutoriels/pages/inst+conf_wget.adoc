@@ -1,0 +1,54 @@
+//[[inst+conf-pandoc]]
+= Wget
+
+:linkattrs:
+:wget: Wget
+:uri_wget: https://www.gnu.org/software/wget/
+:uri_dl-wget: https://eternallybored.org/misc/wget/
+
+
+{uri_wget}[{wget},window="_blank"] est un utilitaire de téléchargement en ligne de commande. Il a de nombreux atouts, parmi lesquels :
+
+* téléchargements très rapides et stables, avec possibilité de les reprendre après interruption
+* téléchargement/copie miroir de sites web entiers, ou seulement une partie ou seulement un certain type de fichier dans ce site (des images ou des fichiers word par exemple)...
+
+
+
+== Installation 100% "manuelle"
+
+.Procédure : installation de {wget} sur Windows 10
+
+. Se rendre sur le {uri_dl-wget}[site web eternally bored,window="_blank"]. Cherchez le fichier `.zip` ou `.exe` pour un ordinateur en `64-bit`, c'est en haut de page, et cliquez dessus pour télécharger l'une ou l'autre version.
+
+.(clic ->) Site Web pour télécharger l'exécutable {win} de {wget}
+image::wget1.png[link="{uri_dl-wget}",window="_blank"]
+
+. Identifiez le "chemin" des fichiers exécutables pour savoir ou copier les fichiers téléchargés
+[source,bash]
+----
+path
+----
+
+.commande "path" permettant de savoir ou copier {wget}
+image::wget2.png[]
+
+. Copiez {wget} dans le dossier `c:\Windows\System32` (soit le fichier `{wget}.exe` directement téléchargé, soit celui situé dans l'archive `.zip`)
+
+
+== Test de l'installation
+
+. Redémarrez la ligne de commande +
+_(fermeture puis ré-ouverture avec kbd:[F9] depuis {dblcdr})_
+
+. testez l'installation en affichant l'aide intégrée, page par page +
+_(la barre verticale `|` est obtenue par kbd:[AltGr + 6] si vous tapez la commande au lieu de la copier/coller)_
+[source,bash]
+----
+wget -h | more
+----
+
+.. Si une première page d'aide s'affiche, c'est que _l'installation_ est effective.
+.. kbd:[Espace] : passez d'une page à l'autre par appui sur la barre d'espace pour lire les nombreuses possibilités (_en cas d'insomnie seulement ..._)
+.. kbd:[Q] : quittez l'aide de {wget}
+
+// Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

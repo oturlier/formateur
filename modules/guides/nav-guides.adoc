@@ -1,0 +1,120 @@
+// Client Configuration Guide Antora Navivation List
+ifndef::backend-pdf[]
+* Guides pratiques
+** xref:guide_git-premier-pas[Git : premier pas]
+** xref:guide_plantuml.adoc[PlantUML]
+//*** xref:supported-features-sles.adoc[SLES Supported Features]
+//*** xref:supported-features-es.adoc[SLES-ES Supported Features]
+endif::[]
+// PDF Client Configuration Guide
+ifdef::backend-pdf[]
+// = Client Configuration Guide: {productname} {productnumber}
+// include::./branding/pdf/entities.adoc[]
+// :toclevels: 3
+
+include::modules/guides/pages/guide_git-premier-pas[leveloffset=+1]
+
+include::modules/guides/pages/guide_plantUML.adoc[leveloffset=+2]
+// include::modules/guides/pages/supported-features-sles.adoc[leveloffset=+3]
+// include::modules/guides/pages/supported-features-es.adoc[leveloffset=+3]
+// include::modules/guides/pages/supported-features-rh.adoc[leveloffset=+3]
+// include::modules/guides/pages/supported-features-centos.adoc[leveloffset=+3]
+// include::modules/guides/pages/supported-features-ubuntu.adoc[leveloffset=+3]
+// ifeval::[{uyuni-content} == true]
+// include::modules/guides/pages/supported-features-debian.adoc[leveloffset=+3]
+// endif::[]
+
+// // Manual Registration
+
+// include::modules/guides/pages/registration-overview.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/registration-webui.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/registration-bootstrap.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/clients-and-activation-keys.adoc[leveloffset=+2]
+
+// // Clients on a Proxy
+
+// include::modules/guides/pages/client-proxy.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/salt-client-proxy.adoc[leveloffset=+2]
+// include::modules/guides/pages/cli-client-proxy.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/script-client-proxy.adoc[leveloffset=+2]
+
+// // Automated Installation
+
+// include::modules/guides/pages/autoinstallation-methods.adoc[leveloffset=+1]
+// include::modules/guides/pages/client-automating-preparation.adoc[leveloffset=+1]
+// include::modules/guides/pages/client-automating-installation.adoc[leveloffset=+1]
+
+// // include::modules/guides/pages/autoyast.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/kickstart.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/cobbler.adoc[leveloffset=+2]
+
+
+// // Non-SUSE Clients
+
+// include::modules/guides/pages/non-suse-clients.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/clients-sleses.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/clients-rh.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/clients-centos.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/clients-ubuntu.adoc[leveloffset=+2]
+
+// // Virtualization
+// include::modules/guides/pages/virtualization.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/virt-xenkvm.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/virt-vmware.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/virt-file.adoc[leveloffset=+2]
+
+// // VHMs
+// include::modules/guides/pages/vhm.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/vhm-azure.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/vhm-aws.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/vhm-gce.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/vhm-kubernetes.adoc[leveloffset=+2]
+
+// // include::modules/guides/pages/vhm-caasp.adoc[leveloffset=+2]
+
+// // Client Admin Tasks
+// include::modules/guides/pages/channels.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/creating-a-tools-repository.adoc[leveloffset=+1]
+
+// // Contact Methods
+// include::modules/guides/pages/contact-methods-intro.adoc[leveloffset=+1]
+
+// include::modules/guides/pages/contact-methods-rhnsd.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/contact-methods-pushssh.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/contact-methods-saltssh.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/contact-methods-osad.adoc[leveloffset=+2]
+
+// include::modules/guides/pages/using-ssm.adoc[leveloffset=+1]
+
+// // Troubleshooting
+// include::modules/guides/pages/tshoot-clients.adoc[leveloffset=+1]
+
+// // Appendices
+// include::modules/guides/pages/autoyast-example.adoc[leveloffset=+1]
+
+// // Licence
+// include::modules/guides/pages/common_gfdl1.2_i.adoc[leveloffset=+1]
+
+endif::[]

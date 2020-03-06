@@ -1,0 +1,1870 @@
+//[[inst+conf-subl]]
+= Sublime Text
+
+:linkattrs:
+//:dblcdr: DoubleCommander
+:subl: Sublime Text
+:uri_subl: https://www.sublimetext.com/
+:uri_dl-subl: https://download.sublimetext.com/Sublime%20Text%20Build%203211%20x64%20Setup.exe
+
+
+
+{uri_subl}[{subl},window="_blank"] est un *éditeur de texte* puissant, beau & efficace! C'est celui que je préfère!
+
+
+
+
+[NOTE]
+====
+Malgré l’efficacité de {subl} , cet éditeur ne propose pas de panneau de pré-visualisation du texte comme d'autres éditeurs que nous installerons par la suite : *Atom*, *Visual code* ou *AsciidocFX*
+
+Nous pourrons pallier à ça en installant des _plugins_ dans les navigateurs internet *Firefox* ou *Google Chrome*
+
+{subl} n'est pas gratuit! *80 $* pour un usage personnel ... mais dans la grande magnificence de l'auteur, pour pouvez continuer à l'utiliser _gratuitement_ si vous supportez de fermer le pop-up qui vous demande régulièrement de passer à la caisse ...
+====
+
+== Installation
+
+.Procédure : installation de {subl}
+
+. se rendre sur {uri_subl}[le site web de {subl},window="_blank"] (clic sur le lien précédent ou sur l'image pour ouvrir un autre onglet).
+
+image::subl1.png[link="{uri_subl}",window="_blank"]
+
+. cliquez sur *Download for Windows* pour télécharger la dernière version adaptée
+
+. double-cliquez pour installer en suivant les instructions
+
+
+
+== Bonnes pratiques / Configuration
+
+Ci-dessous quelques infos utiles pour éditer des ressources au format {asc}.
+
+[#mise-en-forme-englobante]
+.Mise en forme du texte "`englobante`"
+[options="compact"]
+* _après édition_, la mise en forme de texte est moins _agréable_ qu'avec {word} car il faut _l'écrire_ au lieu de sélectionner une mise en forme à la souris ou par raccoucis clavier (kbd:[Ctrl+I] _italique_ ; kbd:[Ctrl+G] ou kbd:[Ctrl+B] _gras_ ; et kbd:[Ctrl+U] _souligné_). +
+{subl} permet de faire la même chose :
+.. sélectionner le mot/la phrase (double-clic ou à la souris)
+.. taper #`+_+`# -> {subl}  *entoure* le mot/la phrase par des "tirets bas" : +
+\_italique_ -> _italique_
+.. taper #`+*+`# -> {subl}  *entoure* le mot/la phrase par des "étoiles" : +
+\*étoile* -> *étoile*
++
+* _lors de l'édition_ : {subl} conserve le principe des _caractères englobant_ . avant d'écrire un mot en _italique_, il _suffit_ de taper le caractère de mise en forme requis et {subl} va automatiquement en écrire 2, puis placer le curseur au centre... il suffit d'écrire à l'intérieur de ces caractères de lise en forme pour l’obtenir _à la volée_ (ce texte a été mis en forme _à la volée_... garanti par l'auteur!)
+
+.Correction orthographique en Français
+* Installation du dictionnaire
+** kbd:[Maj+Ctrl+P] puis `install package`
+** tapez `french` & sélectionnez `Langage French` puis kbd:[Entrée]
+* Activation de la correction orthographique
+** menu:View[Dictionnary > Langage - French > fr-FR]
+** menu:View[Spell Check] ou le raccourci kbd:[F6]
+
+.En cas de problèmes, vous pouvez procéder à l'installation manuelle ci-dessous
+* téléchargez les fichiers de correction orthographique pour le Français _directement_ :
+** `French.txt` icon:download[ici,link="{attachmentsdir}/French.txt"]
+** `French.dic` icon:download[ici,link="{attachmentsdir}/French.dic"]
+** `French.aff` icon:download[ici,link="{attachmentsdir}/French.aff"]
+* enregistrez-les dans : `C:\Users\olivier\AppData\Roaming\Sublime Text 3\Packages\User\Dict-FR`  C:\Users\olivier\AppData\Roaming\Sublime Text 3\Packages\User\Dict-FR[Dict-FR] (à créer)
+* éditez les préférences de {subl} avec menu:Preferences[Settings]
+** une autre fenêtre de {subl} s'ouvre, c'est le panneau de droite qu'il faut éditer (preferences.sublime.user.settings)
+** ajouter la ligne "dictionary" camme dans la capture d'écran suivante :
+
+image::subl3.png[link="_images/subl3.png"]
+
+// * icon:download[link="https://rubygems.org/downloads/asciidoctor-1.5.2.gem"]
+// * link:{attachmentsdir}/example.raml[Download the RAML example] and run it
+
+
+.Ajout de plugins pour {asc}
+* kbd:[Ctrl+Maj+P] ouvre la "pallette" de commande
+* tapez `install package`
+* tapez (dans la nouvelle fenêtre) `asciido` et {subl} vous proposera d'installer tout ce qui est dispo pour le format {asc}
+
+.Sélection multiple
+* sélectionner un fragment de texte/mot
+* kbd:[Ctrl+D] successif sélectionnera _successivement_ les instances suivantes du même mot, qu'il sera possible d'éditer en même temps...
+
+.Sélection en mode colonne
+* kbd:[ClicDroit+Maj]
+
+.Recherche mot sur plusieurs fichiers
+* kbd:[Ctrl+Maj+F] : un bandeau bas apparaît avec le texte à chercher
+* kbd:[Entrée] : cela cherchera le texte dans tous les fichiers du répertoire (on peut aussi configurer l'étendue de la recherche en cliquant sur la barre médiane)
+* {subl} listera les résultats dans un nouveau fichier
+
+.GoTo Anything
+* kbd:[Ctrl+P] puis la chaîne de texte : {subl} trouvera de suite dans quel fichier cette chaîne de texte est située!
+
+.Themes
+* kbd:[Ctrl+Maj+P] (_command_ palette)
+* tapez `Themes` et choisissez celui qui vous est proposé dans la liste
+* vous pouvez en installer d'autres :
+** kbd:[Ctrl+Maj+P] + `install package`
+** tapez `theme` et choisissez un (essai avec _Elementary_, puis kbd:[Entrée]
+** kbd:[Ctrl+Maj+P] + `theme` -> choix `Elementary`
+
+
+.Sublime Merge
+* Client *Git* qui affiche les fichiers modifiés par rapport au dépôt distant
+
+.Projets
+* Si vous ouvrez un dossier (ou plusieurs dossiers) à l'intérieur de Sublime Text, vous pouvez enregistrer cette collection de dossiers en tant que projet.
+* à l'aide du raccourci kbd:[Ctrl+P], une fenêtre de tous les fichiers contenus dans ce dossier s'affichera, et il vous suffira de le sélectionner dans la liste déroulante, sans avoir à naviguer dans un explorateur de fichier.
+* _NB_ si vous avez affiché la *Side Bar* (soit par menu:View[Side Bar > Shox Side Bar] ou par kbd:[Ctrl+B]), vous pouvez aussi cliquer sur un fichier dans la liste ...
+* vous pouvez ajouter des dossiers à ce projet (donc vus dans la "Side Bar"), même s'ils ne sont pas enregistrés au même endroit. Très pratique pour utiliser des fichiers comme exemple sans les copier dans le dossier de travail ...
+** Ajout d'un dossier au projet en cours : menu:Project[Add Folder to Project]
+** retrait d'un dossier au projet en cours : menu:Project[Remove Folder from Project] : Attention! cette commande est _vraiment_ différente de `supprimer` le dossier... qui le... supprimera du disque dur!
+
+.Partition d'écran
+* Devient pratique avec les écrans au format 16:9^ème^
+* menu:View[Layout > Columns: 2]
+
+.Config de {subl} : et voilà le travail!
+image::subl2.png[link="_images/subl2.png"]
+
+
+//TODO : exemple édition
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+=== Comparo asciidoc -> asciidoctor
+
+[cols="2m,^1,^1,5"]
+|===
+|Name |AsciiDoc |Asciidoctor |Notes
+
+d|`90` (icon)
+|{n}
+|{y}
+|
+
+d|`180` (icon)
+|{n}
+|{y}
+|
+
+d|`270` (icon)
+|{n}
+|{y}
+|
+
+d|`2x` (icon)
+|{n}
+|{y}
+|
+
+d|`4x` (icon)
+|{n}
+|{y}
+|
+
+|a
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro.
+
+|abstract
+|{y}
+|{y}
+|
+
+|admonition
+|{y}
+|{y}
+|
+
+d|`align` (image)
+|{y}
+|{y}
+|
+
+d|`align` (table)
+|{y}
+|{n}
+|
+
+d|`all` (table)
+|{y}
+|{y}
+|Value for frame
+
+d|`all` (table)
+|{y}
+|{y}
+|Value for grid
+
+|allow-uri-read
+|{n}
+|{y}
+|
+
+d|`alt` (icon)
+|{c}
+|{y}
+|
+
+d|`alt` (image, link)
+|{y}
+|{y}
+|
+
+|appendix
+|{y}
+|{y}
+|
+
+|aqua
+|{y}
+|{y}
+|
+
+|arabic
+|{y}
+|{y}
+|
+
+|article
+|{y}
+|{y}
+|
+
+|ascii-ids
+|{y}
+|{n}
+|See https://aerostitch.github.io/misc/asciidoc/asciidoc-title_uft8.html[Using UTF-8 titles (in dblatex) with a2x]
+
+|asciidoctor
+|N/A
+|{y}
+|
+
+|asciidoctor-safe
+|N/A
+|{y}
+|
+
+|asciidoctor-version
+|N/A
+|{y}
+|
+
+|asciimath
+|{y}
+|{y}
+|
+
+|attribute-missing
+|{n}
+|{y}
+|
+
+|attribute-undefined
+|{n}
+|{y}
+|
+
+|attributes
+|{y}
+|{y}
+|Value for `subs`
+
+|attribution
+|{y}
+|{y}
+|
+
+|$$audio::$$
+|{y}
+|{y}
+|
+
+|author
+|{y}
+|{y}
+|
+
+|authorgroup
+|{n}
+|{y}
+|
+
+|authorinitials
+|{y}
+|{y}
+|
+
+|autoplay
+|{y}
+|{y}
+|
+
+d|`autowidth` (table)
+|{y}
+|{y}
+|
+
+d|`backend`, `-b`
+|{y}
+|{y}
+|
+
+d|`-background` (quoted text)
+|{y}
+|{y}
+|
+
+d|`--base-dir`, `-B`
+|{y}
+|{y}
+|
+
+|bibliography
+|{y}
+|{y}
+|
+
+|big
+|{y}
+|{y}
+|
+
+|black
+|{y}
+|{y}
+|
+
+d|`_blank`, `^` (link)
+|{n}
+|{y}
+|
+
+|blue
+|{y}
+|{y}
+|
+
+|book
+|{y}
+|{y}
+|
+
+d|`bottom` (table)
+|{y}
+|{y}
+|Value for valign
+
+d|`breakable` (table, example, block image)
+|{y}
+|{y}
+|
+
+|`brvbar`
+|{c}
+|{y}
+|
+
+|btn
+|{c}
+|{y}
+|
+
+|c
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro
+
+|cache-uri
+|{n}
+|{y}
+|
+
+d|`callouts` (subs)
+|{y}
+|{y}
+|
+
+|caption
+|{y}
+|{y}
+|
+
+|CAUTION
+|{y}
+|{y}
+|
+
+|caution-caption
+|{n}
+|{y}
+|
+
+d|`center` (image)
+|{y}
+|{y}
+|
+
+d|`center` (table)
+|{y}
+|{n}
+|Value for align
+
+d|`center` (table)
+|{y}
+|{n}
+|Value for halign
+
+d|`[*]`, `[X]` (checked)
+|{n}
+|{y}
+|
+
+|circle
+|{n}
+|{y}
+|Requires default Asciidoctor stylesheet or custom stylesheet to render properly.
+
+|citetitle
+|{y}
+|{y}
+|
+
+|coderay
+|{n}
+|{y}
+|
+
+|coderay-css
+|{n}
+|{y}
+|
+
+|coderay-linenums-mode
+|{n}
+|{y}
+|
+
+|colophon
+|{y}
+|{y}
+|
+
+|cols
+|{y}
+|{y}
+|
+
+d|`cols` (table)
+|{y}
+|{y}
+|Value for grid
+
+d|`comment`, `//`, `////`
+|{y}
+|{y}
+|
+
+d|`compact` (list)
+|{y}
+|{n}
+|
+
+d|`conf-file`, `-f`
+|{y}
+|{n}
+|
+
+|controls
+|{y}
+|{y}
+|
+
+|copycss
+|{n}
+|{y}
+|
+
+|csv
+|{y}
+|{y}
+|
+
+d|`,` (csv shorthand)
+|{c}
+|{y}
+|
+
+|data-item-complete
+|{n}
+|{y}
+|
+
+|data-uri
+|{y}
+|{y}
+|
+
+|decimal
+|{y}
+|{y}
+|
+
+|dedication
+|{y}
+|{y}
+|
+
+|description
+|{y}
+|{y}
+|
+
+|disc
+|{n}
+|{y}
+|Requires default Asciidoctor stylesheet or custom stylesheet to render properly.
+
+|discrete
+|{n}
+|{y}
+|
+
+d|`docbook`, `docbook45`
+|{y}
+|{y}
+|
+
+|docbook5
+|{n}
+|{y}
+|
+
+|docdate
+|{y}
+|{y}
+|
+
+|docdatetime
+|{y}
+|{y}
+|
+
+|docdir
+|{y}
+|{y}
+|
+
+|docfile
+|{y}
+|{y}
+|
+
+|docname
+|{y}
+|{y}
+|
+
+|docinfo
+|{y}
+|{y}
+|
+
+|doctest
+|{y}
+|{n}
+|
+
+|doctime
+|{y}
+|{y}
+|
+
+|doctitle
+|{y}
+|{y}
+|
+
+d|`doctype`, `-d`
+|{y}
+|{y}
+|
+
+|drop
+|{n}
+|{y}
+|
+
+|drop-line
+|{n}
+|{y}
+|
+
+|dsv
+|{y}
+|{y}
+|
+
+d|`:` (dsv shorthand)
+|{c}
+|{y}
+|
+
+d|`dump-conf`, `-c`
+|{y}
+|{n}
+|
+
+|email
+|{y}
+|{y}
+|
+
+|embedded
+|TBD
+|{y}
+|
+
+|encoding
+|{y}
+|{y}
+|
+
+|endif
+|{y}
+|{y}
+|
+
+d|`example`, `====`
+|{y}
+|{y}
+|
+
+|example-caption
+|{y}
+|{y}
+|
+
+|experimental
+|{c}
+|{y}
+|
+
+d|`external` (role, link)
+|TBD
+|{y}
+|
+
+d|`pass:[```]` (fenced code block)
+|{c}
+|{y}
+|AsciiDoc does not support syntax highlighting on fenced code blocks
+
+|figure-caption
+|{y}
+|{y}
+|
+
+|filter
+|{y}
+|{n}
+|
+
+d|`filter` (table)
+|{y}
+|{n}
+|
+
+|firstname
+|{y}
+|{y}
+|
+
+d|`flip` (icon)
+|{n}
+|{y}
+|
+
+d|`float` (section title)
+|{y}
+|{y}
+|
+
+d|`float` (image)
+|{c}
+|{y}
+|
+
+d|`float` (table)
+|{y}
+|{n}
+|
+
+|font
+|{c}
+|{y}
+|
+
+d|`format` (data)
+|{y}
+|{y}
+|
+
+|frame
+|{y}
+|{y}
+|
+
+d|`footer` (table)
+|{y}
+|{y}
+|
+
+|fuschia
+|{y}
+|{y}
+|
+
+|glossary
+|{y}
+|{y}
+|
+
+|graphviz
+|{y}
+|{n}
+|
+
+|gray
+|{y}
+|{y}
+|
+
+|green
+|{y}
+|{y}
+|
+
+|grid
+|{y}
+|{y}
+|
+
+d|`halign` (table)
+|{y}
+|TBD
+|
+
+|hardbreaks
+|{n}
+|{y}
+|
+
+d|`header` (implicit, table)
+|{n}
+|{y}
+|
+
+d|`header` (table)
+|{y}
+|{y}
+|
+
+d|`height` (icon)
+|{n}
+|{y}
+|
+
+d|`height` (image, video)
+|{y}
+|{y}
+|
+
+|highlightjs
+|{y}
+|{y}
+|
+
+d|`horizontal` (icon)
+|{n}
+|{y}
+|
+
+d|`horizontal` (list)
+|{y}
+|{y}
+|
+
+d|`html`, `html5`
+|{y}
+|{y}
+|
+
+|icon
+|{y}
+|{y}
+|
+
+|icons
+|{y}
+|{y}
+|
+
+|iconsdir
+|{y}
+|{y}
+|
+
+|icontype
+|{n}
+|{y}
+|
+
+|id
+|{y}
+|{y}
+|
+
+d|`#` (id shorthand)
+|{n}
+|{y}
+|
+
+|idprefix
+|{y}
+|{y}
+|
+
+|idseparator
+|{n}
+|{y}
+|
+
+|ifdef
+|{y}
+|{y}
+|
+
+|ifeval
+|{y}
+|{y}
+|Asciidoctor constrains it to strictly comparing the values of attributes.
+
+|imagesdir
+|{y}
+|{y}
+|
+
+|IMPORTANT
+|{y}
+|{y}
+|
+
+|important-caption
+|{n}
+|{y}
+|
+
+|include
+|{y}
+|{y}
+|
+
+|incremental
+|{y}
+|{y}
+|
+
+d|`indent` (include)
+|{n}
+|{y}
+|
+
+|index
+|{y}
+|{y}
+|
+
+d|`inline` (doctype)
+|{n}
+|{y}
+|
+
+|interactive
+|{n}
+|{y}
+|
+
+|kbd:
+|{c}
+|{y}
+|
+
+|keywords
+|{y}
+|{y}
+|
+
+|lang
+|{y}
+|{y}
+|
+
+d|`large` (icon)
+|{n}
+|{y}
+|
+
+|lastname
+|{y}
+|{y}
+|
+
+|latex
+|{y}
+|{n}
+|
+
+|latexmath
+|{n}
+|{y}
+|
+
+|lead
+|{n}
+|{y}
+|Requires default Asciidoctor stylesheet or custom stylesheet to render properly.
+
+d|`left` (image)
+|{y}
+|{y}
+|Value for align, float, role
+
+d|`left` (table)
+|{y}
+|{n}
+|Value for align, halign
+
+d|`left` (ToC)
+|{n}
+|{y}
+|
+
+|level
+|{y}
+|{y}
+|
+
+|leveloffset
+|{y}
+|{y}
+|
+
+|lime
+|{y}
+|{y}
+|
+
+d|`lines` (include)
+|{n}
+|{y}
+|
+
+|link
+|{y}
+|{y}
+|
+
+d|`link` (icon)
+|TBD
+|{y}
+|
+
+d|`link` (image)
+|{y}
+|{y}
+|
+
+|linkattrs
+|{c}
+|{y}
+|Removed in Asciidoctor 1.5.7.
+Attribute parsing is now implicit.
+
+|linkcss
+|{y}
+|{y}
+|
+
+d|`listing`, `pass:[----]`
+|{y}
+|{y}
+|
+
+|listing-caption
+|{y}
+|{y}
+|
+
+d|`literal`, `pass:[....]`
+|{y}
+|{y}
+|
+
+|line-through
+|{y}
+|{y}
+|
+
+|localdate
+|{y}
+|{y}
+|
+
+|localdatetime
+|{y}
+|{y}
+|
+
+|localtime
+|{y}
+|{y}
+|
+
+|loop
+|{y}
+|{y}
+|
+
+|loweralpha
+|{y}
+|{y}
+|
+
+|lowergreek
+|{n}
+|{y}
+|
+
+|lowerroman
+|{y}
+|{y}
+|
+
+|m
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro.
+
+|macros
+|{y}
+|{y}
+|
+
+|manpage
+|{y}
+|{y}
+|
+
+|maroon
+|{y}
+|{y}
+|
+
+d|`max-width` (document)
+|{y}
+|{y}
+|
+
+|menu
+|{c}
+|{y}
+|
+
+d|`middle` (table)
+|{y}
+|TBD
+|Value for valign
+
+|music
+|{y}
+|{n}
+|
+
+|navy
+|{y}
+|{y}
+|
+
+|no-bullet
+|{n}
+|{y}
+|Requires default Asciidoctor stylesheet or custom stylesheet to render properly.
+
+d|`no-conf`, `-e`
+|{y}
+|{n}
+|
+
+|nocontrols
+|{y}
+|{y}
+|
+
+d|`no-header-footer`, `-s`
+|{y}
+|{y}
+|
+
+|no-highlight
+|{y}
+|{y}
+|
+
+d|`none` (subs)
+|{y}
+|{y}
+|
+
+d|`none` (table)
+|{y}
+|{y}
+|Value for frame, grid
+
+|normal
+|{y}
+|{y}
+|
+
+|NOTE
+|{y}
+|{y}
+|
+
+|note-caption
+|{n}
+|{y}
+|
+
+|notitle
+|{y}
+|{y}
+|
+
+|xmlns
+|{n}
+|{y}
+|
+
+|numbered
+|{y}
+|{y}
+|
+
+|olive
+|{y}
+|{y}
+|
+
+d|`open`, `--`
+|{y}
+|{y}
+|
+
+|options
+|{y}
+|{y}
+|
+
+d|`opts` (options alias)
+|TBD
+|{y}
+|
+
+d|`%` (options shorthand)
+|TBD
+|{y}
+|
+
+d|`out-file`, `-o`
+|{y}
+|TBD
+|
+
+|overline
+|{y}
+|{y}
+|
+
+|p
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro.
+
+|partintro
+|{y}
+|{y}
+|
+
+|`pass:[++++]`
+|{y}
+|{y}
+|
+
+d|`pass` (open block, paragraph)
+|{y}
+|{y}
+|
+
+|pdf
+|{y}
+|Pending
+|
+
+|pgwide
+|{y}
+|{n}
+|
+
+|plaintext
+|{y}
+|{n}
+|
+
+|post_replacements
+|{n}
+|{y}
+|Replaces AsciiDoc.py's `replacements2`.
+
+|postsubs
+|{y}
+|{n}
+|This attribute is not necessary in Asciidoctor.
+
+|poster
+|{y}
+|{y}
+|
+
+d|`preamble` (ToC)
+|{c}
+|{y}
+|
+
+|preface
+|{y}
+|{y}
+|
+
+|presubs
+|{y}
+|{n}
+|This attribute is not necessary in Asciidoctor.
+
+|prettify
+|{n}
+|{y}
+|
+
+|properties
+|
+|{y}
+|Where did I get this attr/value from?????
+
+|psv
+|{y}
+|{y}
+|
+
+|purple
+|{y}
+|{y}
+|
+
+|pygments
+|{y}
+|{y}
+|
+
+|pygments-css
+|{n}
+|{y}
+|
+
+|pygments-linenums-mode
+|{n}
+|{y}
+|
+
+|pygments-style
+|{n}
+|{y}
+|
+
+|q
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro.
+
+|quanda
+|{y}
+|{y}
+|
+
+d|`quote`, `pass:[____]`
+|{y}
+|{y}
+|
+
+d|`quote` (air quotes)
+|{c}
+|{y}
+|
+
+d|`quote` (Markdown-style)
+|{c}
+|{y}
+|
+
+d|`quote` (quoted paragraph)
+|{c}
+|{y}
+|
+
+d|`quotes` (substitution)
+|{y}
+|{y}
+|
+
+|r
+|{n}
+|{y}
+|Can only be assigned to the inline pass macro.
+
+|red
+|{y}
+|{y}
+|
+
+|reftext
+|{y}
+|{y}
+|
+
+d|`related`, `rel`
+|{n}
+|{y}
+|
+
+|replacements
+|{y}
+|{y}
+|
+
+|replacements2
+|{y}
+|{n}
+|In Asciidoctor, use `post_replacements`.
+
+|revdate
+|{y}
+|{y}
+|
+
+|revnumber
+|{y}
+|{y}
+|
+
+|revremark
+|{y}
+|{y}
+|
+
+d|`right` (image)
+|{y}
+|{y}
+|Value for align, float, role
+
+d|`right` (table)
+|{y}
+|{n}
+|Value for align
+
+d|`right` (table)
+|{y}
+|{n}
+|Value for halign
+
+d|`right` (ToC)
+|{n}
+|{y}
+|
+
+|role
+|{y}
+|{y}
+|
+
+d|`.` (role shorthand)
+|TBD
+|{y}
+|
+
+d|`rotate` (icon)
+|{n}
+|{y}
+|
+
+d|`rows` (table)
+|{y}
+|{y}
+|Value for grid
+
+d|`--safe`
+|{y}
+|{y}
+|
+
+d|`SAFE`, `1`
+|TBD
+|{y}
+|
+
+|`--safe-mode`, `-S`
+|TBD
+|{y}
+|
+
+|safe-mode-<integer or name>
+|{n}
+|{y}
+|
+
+d|`scaled` (image)
+|{y}
+|{n}
+|
+
+d|`scaledwidth` (image)
+|{y}
+|{n}
+|
+
+|scriptsdir
+|{y}
+|{y}
+|
+
+|sectanchors
+|{n}
+|{y}
+|
+
+|sectids
+|{y}
+|{y}
+|
+
+|sectlinks
+|
+|{y}
+|// Where did I get this attribute from?
+
+d|`sectnum`, `section-numbers`, `n`
+|{y}
+|{y}
+|
+
+|`sectnumlevels`
+|TBD
+|{y}
+|
+
+d|`SECURE`, `20`
+|TBD
+|{y}
+|
+
+|separator
+|{y}
+|TBD
+|
+
+d|`SERVER`, `10`
+|TBD
+|{y}
+|
+
+|sgml
+|{y}
+|{n}
+|
+
+|showcomments
+|{y}
+|{n}
+|
+
+|showtitle
+|TBD
+|{y}
+|
+
+d|`sidebar`, `pass:[****]`
+|{y}
+|{y}
+|
+
+d|`sides` (table)
+|{y}
+|{y}
+|Value for frame
+
+|silver
+|{y}
+|{y}
+|
+
+d|`size` (icon)
+|{n}
+|{y}
+|
+
+|skip
+|{n}
+|{y}
+|
+
+|small
+|{y}
+|{y}
+|
+
+d|`source`, `pass:[----]`
+|TBD
+|{y}
+|
+
+|source-highlighter
+|{y}
+|{y}
+|
+
+d|`specialchars`, `specialcharacters`
+|{y}
+|{y}
+|
+
+|specialwords
+|{y}
+|{n}
+|
+
+|square
+|{n}
+|{y}
+|Requires default Asciidoctor stylesheet or custom stylesheet to render properly.
+
+|start
+|{y}
+|{y}
+|
+
+|stem
+|TBD
+|{y}
+|
+
+|step
+|TBD
+|{y}
+|
+
+d|`strong` (description list)
+|{y}
+|{y}
+|
+
+|stylesdir
+|{y}
+|{y}
+|
+
+|stylesheet
+|{y}
+|{y}
+|
+
+|subs
+|{y}
+|{y}
+|
+
+|synopsis
+|{y}
+|{y}
+|
+
+|table-caption
+|{y}
+|{y}
+|
+
+|tabsize
+|{y}
+|{n}
+|
+
+|teal
+|{y}
+|{y}
+|
+
+|template
+|{y}
+|{y}
+|
+
+|template-dirs
+|{y}
+|{y}
+|
+
+|template-engine
+|{y}
+|{y}
+|
+
+|theme
+|{y}
+|{n}
+|
+
+d|`thumb`, `th`
+|{n}
+|{y}
+|
+
+|TIP
+|{y}
+|{y}
+|
+
+|tip-caption
+|{n}
+|{y}
+|
+
+d|`title` (icon)
+|{n}
+|{y}
+|
+
+d|`title` (image)
+|{y}
+|{y}
+|
+
+|toc
+|{y}
+|{y}
+|
+
+|toc2
+|{y}
+|{y}
+|
+
+|toclevels
+|{y}
+|{y}
+|
+
+|toc-placement
+|{y}
+|{y}
+|
+
+|toc-postion
+|{n}
+|{y}
+|
+
+|toc-title
+|{y}
+|{y}
+|
+
+d|`top` (table)
+|{y}
+|{n}
+|Value for valign
+
+d|`topbot` (table)
+|{y}
+|{y}
+|Value for frame
+
+|unbreakable
+|{y}
+|{y}
+|
+
+|underline
+|{y}
+|{y}
+|
+
+d|`unfloat` (image)
+|{y}
+|{y}
+|
+
+|upperalpha
+|{y}
+|{y}
+|
+
+|upperroman
+|{y}
+|{y}
+|
+
+d|`[ ]` (unchecked)
+|{n}
+|{y}
+|
+
+d|`UNSAFE`, `0`
+|TBD
+|{y}
+|
+
+d|`valign` (table)
+|{y}
+|{n}
+|
+
+|`vbar`
+|{c}
+|{y}
+|
+
+|verbatim
+|{y}
+|{y}
+|Composite value for `subs`
+
+d|`verse`, `pass:[____]`
+|{y}
+|{y}
+|
+
+d|`vertical` (icon)
+|{n}
+|{y}
+|
+
+|`video::`
+|{y}
+|{y}
+|
+
+|WARNING
+|{y}
+|{y}
+|
+
+|warning-caption
+|{n}
+|{y}
+|
+
+d|`width` (icon)
+|{n}
+|{y}
+|
+
+d|`width` (image, video, table)
+|{y}
+|{y}
+|
+
+d|`window` (icon)
+|TBD
+|{y}
+|
+
+d|`window` (link)
+|TBD
+|{y}
+|
+
+|white
+|{y}
+|{y}
+|
+
+|xhtml11
+|{y}
+|{y}
+|
+
+|xmlns
+|{y}
+|{y}
+|
+
+|yellow
+|{y}
+|{y}
+|
+
+|===
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+.résultat de la commande `gem list | grep ascii* | more`
+
+image::asciidoctor1.png[]
+
+Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.
+
+
+
+
+.Windtrainer workouts
+[width="80%",cols="3,^2,^2,10",options="header"]
+|====
+|Date |Duration |Avg HR |Notes
+
+|22-Aug-08 |10:24 | 157 |
+Worked out MSHR (max sustainable heart rate) by going hard
+for this interval.
+
+|22-Aug-08 |23:03 | 152 |
+Back-to-back with previous interval.
+
+|24-Aug-08 |40:00 | 145 |
+Moderately hard interspersed with 3x 3min intervals (2min
+hard + 1min really hard taking the HR up to 160).
+
+|====
+
+
+
+//link://server/share/path%20with%20space/doc.adoc[]
+//link:++\\server\share\path with space\document.adoc++[Click here]
+link:++C:\Users\olivier\Pictures\captures++[]
+
+
+////////////////////////////////////////////////////////////////////////////////
+

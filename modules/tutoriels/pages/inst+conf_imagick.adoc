@@ -1,0 +1,32 @@
+
+[#inst+conf_imagick]
+= Image Magick
+
+:linkattrs:
+:imagik: Imagemagick
+:uri_imagick: https://imagemagick.org/index.php
+
+
+{uri_imagick}[ImageMagick,window="_blank"] est le *couteau suisse* du traitement d'images en ligne de commande. Les possibilités sont assez vastes pour s'y perdre, aussi nous concentrerons sur quelques unes :
+
+* compresser des images sans les détruire
+* convertir des images d'un format vers un autre
+* créer des gifs animés
+* ...
+
+
+== Installation
+
+.Procédure : installation d'ImageMagick sur Windows 10
+
+. Se rendre sur le {uri_imagick}[site web d'{imagik},window="_blank"]. Allez à l'onglet *Download* et cherchez le mot *Windows* en haut de page pour cliquer dessus.
+
+.Site Web {imagik}, onglet "Download", en bas de page
+image::imagik1.png[link="{uri_pdoc}",window="_blank"]
+
+. Téléchargez la version adaptée `{imagik}..Q16..x64..dll`, située en tête de liste `ImageMagick-7.0.9-21-Q16-x64-dll.exe` sur votre disque dur
+
+. Installez {imagik} en double-cliquant sur le fichier `.exe` et suivez les instructions à l'écran
+
+
+// Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

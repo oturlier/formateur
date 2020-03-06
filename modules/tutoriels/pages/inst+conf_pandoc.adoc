@@ -1,0 +1,27 @@
+//[[inst+conf-pandoc]]
+= Pandoc
+
+:linkattrs:
+
+{uri_pdoc}[{pdoc},window="_blank"] est le *couteau suisse* de la conversion de documents texte d'un format à l'autre.
+
+Il peut nous être utile pour :
+
+* convertir un fichier {word} vers le format {asc} utilisé pour bâtir ce site Web, en conservant les images dans un sous-répertoire
+* récupérer une page Web et la convertir du format {htm} vers le {asc}
+
+
+== Installation
+
+.Procédure : installation de {pdoc} sur Windows 10
+
+. Se rendre sur le {uri_pdoc}[site web de {pdoc},window="_blank"]. Allez à l'onglet *Installing* et vous devriez apercevoir le lien de téléchargement de la version la plus récente et adaptée à votre système.
+
+.Site Web {pdoc}, onglet "Installing"
+image::pandoc1.png[link="{uri_pdoc}",window="_blank"]
+
+. Téléchargez `Pandoc.x.x.x.msi` sur votre disque dur :  image:pandoc2.png[250,150,float="right"]
+
+. Installez {pdoc} en double-cliquant sur le fichier `.msi` et suivez les instructions à l'écran
+
+Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

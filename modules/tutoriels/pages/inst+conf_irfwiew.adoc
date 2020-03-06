@@ -1,0 +1,168 @@
+//[[inst+conf-asciidoctor]]
+= IrfanView
+
+:linkattrs:
+//:dblcdr: DoubleCommander
+:irfanview: IrfanView
+:uri_irfanview: https://www.irfanview.com/
+
+
+
+{uri_irfanview}[{irfanview},window="_blank"] est un logiciel de *visualisation d'images*.
+
+L'usage d'{irfanview} est simple dès le premier abord et puissant lorsque configuré!
+
+
+== Installation
+
+.Procédure : installation de {irfanview}
+[.compact]
+. se rendre sur {uri_irfanview}[le site web de {irfanview},window="_blank"], vous êtes de suite invités à le télécharger (clic sur le lien précédent ou sur l'image pour ouvrir un autre onglet).
+
+image::irfanview1.png[link="{uri_irfanview}",window="_blank"]
+
+. cliquez pour télécharger la version en 64-bits
+. double-cliquez pour installer en suivant les instructions
+. Version française :
+** télécharger l'installateur pour le http://www.irfanview.net/lang/irfanview_lang_french.exe[Français,window="_blank"]
+** double-cliquer sur l'exécutable pour l'installer
+** configuration : voir le § <<lang-fr>>
+
+
+
+
+
+== Bonnes pratiques / Configuration
+
+
+.Visualisation d'image : navigation
+[.compact]
+* Ouvrez une image en double-cliquant dessus : cela ouvre le visualisateur {irfanview}
+* passez d'une image à l'autre, _vers l'avant_ : appui sur kbd:[espace]
+* passez d'une image à l'autre, _vers l'arrière_ : appui sur kbd:[Retour]
+
+
+[[lang-fr]]
+.Langue Française
+[.compact]
+* préalable : rendre le fichier de configuration modifiable par l'utilisateur de base
+** atteindre le fichier `C:\Program Files\IrfanView\i_view64.ini` -> link:++C:\Program Files\IrfanView\++[i_view64.ini]
+** menu:ClicDroit[Propriétés > Sécurité > Utilisateurs > Modifier] : donner les droits de modification par l'utilisateur à ce fichier
+* ouvrir {irfanview} et menu:Options[Changer la langue > langage] : clic sur *FRENCH.DLL*
+
+
+Profitons que la fenêtre de réglage des propriétés soit ouverte  pour faire d'autres réglages importants :
+
+
+.JPG, PCD, GIG
+[.compact]
+* [x] Rotation automatique des images conformément aux infos EXIF (si disponibles)
+* [X] Jouer les GIFs animés
+
+
+.Extensions
+[.compact]
+* [x] images seules ({irfanview} ouvrira tous les fichiers images)
+* [x] sous Windows 10, cliquez aussi sur le bouton *Apps par défaut* , vous serez amenés automatiquement à menu:Réglage système[Applications par défaut] et indiquez {irfanview} comme visionneuse d'images
+
+
+
+.Afficher
+[.compact]
+* [x] Afficher PNG.....couleur transparente
+* [x] afficher le chemin complet dans la barre de titre
+* [x] utiliser le bouton droit de la souris pour afficher le menu contextuel
+
+
+.Divers : liens vers des programmes externes
+Lorsque une image est ouverte dans {irfanview}, que le clic-droit est activé pour faire apparaître le menu contextuel, vous pourrez ouvrir l'image visualisée avec *Gimp* ou *Inkscape* après avoir configuré comme ceci la partie *Divers*
+
+* éditeur externe n^o^1 : *Gimp* , indiquez le chemin : `C:\Program Files\GIMP 2\bin\gimp-2.10.exe`
+* éditeur externe n^o^2 : *Inkscape* , indiquez le chemin : `C:\Program Files\Inkscape\inkscape.exe`
+
+[NOTE]
+====
+Il faut avoir installé ces programmes auparavant :
+
+* *Gimp* éditeur d'image (équivalent à _Photoshop_), fonctionnalités très suffisantes (et parfois meilleures...) pour emploi en milieu pro dessin bâtiment & génie-civil
+* *Inkscape* éditeur vectoriel (équivalent à _Illustrator_), idem dito
+====
+
+[cols="^.^1a,^.^1a,^.^1a",frame="none",grid="none"]
+|====
+
+|image:irfanview2.png[]
+|image:irfanview3.png[]
+|image:grenshot4.png[]
+
+|====
+
+
+
+== Test
+
+[cols="^.^1a,^.^1a",frame="none",grid="none"]
+|====
+
+|image:irfanview1.png[]
+|image:https://i.imgur.com/AEkqoRn.jpg[alt="not bad.",width=128,height=128]
+
+|====
+
+
+== Utilisation
+
+{irfanview} est plus qu'un simple visualiseur d'images, vous pouvez notamment :
+
+* convertir ou renommer en masse
+* éditer des images
+* créer des "planches contact" à partir d'un lot d'images, etc.
+* installer des https://www.irfanview.com/plugins.htm[plugins,window="_blank"]
+* (en) https://www.irfanview.com/faq.htm[lien,window="_blank"] vers les multiples possibilités
+
+
+.Petit tuto sur le renommage en série (on peut déjà le  faire avec {dblcdr}...)
+video::QTGU-SguYt0[youtube,width=800,height=450,opts="autoplay,loop,modest"]
+// https://www.youtube.com/watch?v=QTGU-SguYt0
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+.résultat de la commande `gem list | grep ascii* | more`
+
+image::asciidoctor1.png[]
+
+Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.
+
+
+
+
+.Windtrainer workouts
+[width="80%",cols="3,^2,^2,10",options="header"]
+|====
+|Date |Duration |Avg HR |Notes
+
+|22-Aug-08 |10:24 | 157 |
+Worked out MSHR (max sustainable heart rate) by going hard
+for this interval.
+
+|22-Aug-08 |23:03 | 152 |
+Back-to-back with previous interval.
+
+|24-Aug-08 |40:00 | 145 |
+Moderately hard interspersed with 3x 3min intervals (2min
+hard + 1min really hard taking the HR up to 160).
+
+|====
+
+
+
+//link://server/share/path%20with%20space/doc.adoc[]
+//link:++\\server\share\path with space\document.adoc++[Click here]
+link:++C:\Users\olivier\Pictures\captures++[]
+
+
+////////////////////////////////////////////////////////////////////////////////
+

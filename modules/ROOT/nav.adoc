@@ -1,0 +1,5 @@
+//* xref:index-suma-webui.adoc[What is SUSE Manager?]
+//* xref:release-notes-version-4.0.adoc[Doc Release Notes]
+//* xref:index.adoc[Index]
+* xref:cc-by-nc-sa.adoc[Lic. CC-BY-NC-SA 4.0]
+* xref:common_gfdl1.2_i.adoc[Lic. GFDL]

@@ -1,0 +1,74 @@
+// ne pas laisser plus d'une ligne vide entre les xref: ... sinon la liste de nav s'indente toute seule ..
+// Tutoriels Navigation List
+ifndef::backend-pdf[]
+* Tutoriels
+** xref:tutoriels-intro.adoc[Intro install & config]
+** Installation & configuration
+*** xref:inst+conf_pandoc.adoc[Pandoc]
+*** xref:inst+conf_imagick.adoc[ImageMagick]
+*** xref:inst+conf_wget.adoc[Wget]
+*** xref:inst+conf_git.adoc[Git]
+*** xref:inst+conf_asciidoctor.adoc[Asciidoctor]
+*** xref:inst+conf_antora.adoc[Antora]
+*** xref:inst+conf_dblcder.adoc[Double Commander]
+*** xref:inst+conf_grenshot.adoc[Greenshot]
+*** xref:inst+conf_irfwiew.adoc[Irfanview]
+*** xref:inst+conf_notpad.adoc[Notepad++]
+*** xref:inst+conf_subl.adoc[Sublime text]
+*** xref:inst+conf_vscode.adoc[Visual Studio Code]
+*** xref:inst+conf_atom.adoc[Atom]
+*** xref:inst+conf_ascidocfx.adoc[AsciiDocFX]
+endif::[]
+//
+// PDF version
+ifdef::backend-pdf[]
+= Tutoriels {productname} {productnumber}
+include::./branding/pdf/entities.adoc[]
+:toclevels: 3
+:doctype: book
+// // License
+// include::modules/tutoriels/pages/common_gfdl1.2_i.adoc[leveloffset=+1]
+// Introduction
+include::modules/tutoriels/pages/tutoriels-intro.adoc[leveloffset=+1]
+== Installation & configuration
+//=== Logiciels utilitaires en ligne de commande
+// Pandoc
+include::modules/tutoriels/pages/inst+conf_pandoc.adoc[leveloffset=+2]
+// Image Magick
+include::modules/tutoriels/pages/inst+conf_imagick.adoc[leveloffset=+2]
+// Wget
+include::modules/tutoriels/pages/inst+conf_wget.adoc[leveloffset=+2]
+// Git
+include::modules/tutoriels/pages/inst+conf_git.adoc[leveloffset=+2]
+// Asciidoctor
+include::modules/tutoriels/pages/inst+conf_asciidoctor.adoc[leveloffset=+2]
+// Antora
+include::modules/tutoriels/pages/inst+conf_antora.adoc[leveloffset=+2]
+// Double Commander
+include::modules/tutoriels/pages/inst+conf_dblcder.adoc[leveloffset=+2]
+//=== Editeurs de texte
+// Notepad++
+//include::modules/tutoriels/pages/inst+conf_notpad.adoc[leveloffset=+2]
+// Sublime 3
+//include::modules/tutoriels/pages/inst+conf_subl.adoc[leveloffset=+2]
+// addons FF & Chrom
+//include::modules/tutoriels/pages/inst+conf_addons-ff+chrom.adoc[leveloffset=+2]
+// Atom
+//include::modules/tutoriels/pages/inst+conf_atom.adoc[leveloffset=+2]
+// AsciidocFX
+//include::modules/tutoriels/pages/inst+conf_ascidocfx.adoc[leveloffset=+2]
+// LibreOffice 6.4
+//include::modules/tutoriels/pages/inst+conf_loo[leveloffset=+2]
+// version résumée ici, complète dans les guides
+//== Tests de bon fonctionnement post-install
+// Edition d'une ressource avec {loo}
+//include::modules/tutoriels/pages/edition_loo64[leveloffset=+2]
+// Conversion word vers asciidoc
+//include::modules/tutoriels/pages/conversion_pandoc[leveloffset=+2]
+// === Édition premier doc ascii
+//include::modules/tutoriels/pages/edition_asciidoc[leveloffset=+2]
+// === Publication locale en html & pdf
+//include::modules/tutoriels/pages/asciidoctor_html+pdf[leveloffset=+2]
+// === Publication distante pour le www
+//include::modules/tutoriels/pages/asciidoc_antora[leveloffset=+2]
+endif::[]

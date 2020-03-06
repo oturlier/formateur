@@ -1,0 +1,392 @@
+= TEB : Worflow éditorial 2020
+Olivier TURLIER <o.turlier@gmail.com>
+v.1.01, 13 janvier 2020, édition initale
+//
+:keywords: TEB, ressources, documentation, web, éditeurs texte, asciidoc, git, pandoc, antora
+//
+:description: Méthode alternative pour la production et la diffusion des ressources formatives TEB dans l'optique d'un renforcement du travail par projets en formation pro TEB
+//
+////////////////////////////////////////////////////////////////////////////////
+:doctype: article
+:encoding: utf-8
+:source-language: asciidoc
+//:outfilesuffix: .txt
+:lang: fr
+ifndef::env-github[:icons: font]
+:filesdir: {docdir}/fichiers-support
+ifndef::imagesdir[:imagesdir: {filesdir}/images]
+:experimental:
+:numbered:
+:toc: left
+:toclevels: 2
+:toc-title: Sommaire
+:data-uri:
+:allow-uri-read:
+:sectnums:
+:stem:
+////////////////////////////////////////////////////////////////////////////////
+// URL's
+:asc: Asciidoc
+:teb: pass:q[T__e__B]
+:fablab: pass:q[*FAB__e__LAB__e__*]
+:checkedbox: pass:normal[{startsb}&#10004;{endsb}]
+:acad: AutoCAD
+:uri-pandoc: https://pandoc.org
+:uri-mcneel-docalgogh: https://www.rhino3d.com/download/rhino/6.0/essential-algorithms
+:uri-antora: https://antora.org/
+:url_nai: https://newalchemists.net/
+
+
+
+:toc:
+
+// write here
+
+.icon:graduation-cap[] Clés
+****
+[abstract]
+{description}
+
+//[.text-center]
+//*Worflow éditorial* = *Flux documentaire* +
+
+[cols="1a,1a",frame="none",grid="none",stripes="all"]
+|===
+
+|icon:check[role="green"] Conversion des ressources existantes (word & pdf) vers *Asciidoc*
+|icon:check[role="gray"] _Publication_ des ressources, sur intra- ou inter-net avec {uri-antora}[antora]
+
+|icon:check[role="green"] _Édition_ d'un cours avec *Asciidoc*, puis conversion en *html* et en *pdf*
+|icon:tags[role="blue"] {keywords}
+
+|===
+
+//icon:check[role="green"] Conversion des ressources existantes (word & pdf) vers *Asciidoc* +
+//icon:check[role="green"] Édition d'un cours avec *Asciidoc*, puis conversion en *html* et en *pdf* +
+//icon:check[role="gray"] Mise à disposition des ressources, sur intra- ou inter-net avec {uri-antora}[antora] +
+//icon:tags[role="blue"] {keywords}
+****
+
+== Introduction
+
+Le workflow éditorial proposé :
+
+* permet _la libération_ du formateur des tâches répétitives d'édition, de mise en page puis impression des ressources
+* implique un _changement radical_ quant à l'édition puis à la diffusion des documents et impose une certaine _mise à jour_ des compétences informatiques, et
+* permet d'organiser librement le contenu des ressources publiées par le jeu d'un simple fichier de configuration comme l'édition collaborative à partir de répertoires/dépôts distants.
+
+=== Constat et proposition de changement de forme & d'accès aux ressources
+
+Le constat d'une part importante d'échec dans l'implantation durable du métier {teb} questionne l'organisation de la formation actuelle.
+
+En partant de l'idée qu'il serait bon de _renforcer le caractère professionnel de la formation_ en axant le déroulé principal sur la _réalisation de projets réels_ et non pas sur l'acquisition de connaissances, il devient important de réviser en profondeur la manière d'accéder aux ressources pour les stagiaires, celles-ci devenant un simple support à l'activité principale qui est de réaliser une tâche, le formateur étant transformé en facilitateur, _au service_ des réalisateurs-stagiaires!
+
+L'accès à l'intégralité des ressources est donc permanent, et ce dès le début de la formation. Ces ressources doivent être accessibles à distance, le week-end, sur smartphone comme sur station de travail ...
+
+
+
+=== Contributeurs initiaux et secondaires
+
+
+.formateurs
+Cet article est avant-tout destiné à tout contributeur souhaitant participer à l'effort d'alimentation de la base des ressources formatives {teb}, celles-ci étant vues comme des _supports_ à une formation quasiment entièrement basée sur la réalisation effective de projets. +
+Ce sont donc principalement les formateurs qui contribuent à l'effort de création initial des ressources, assistés des divers supports existants au préalable
+
+
+.stagiaires
+Par un mécanisme de REX (lecture, application de consignes, etc.), les stagiaires seront capables d'émettre tout type de remarque, celles-ci permettant l'amélioration de la qualité des ressources (orthographe, application à la nouvelle version d'un logiciel, incompréhension, etc.)
+
+.gestionnaires
+Le formatage et la publication des ressources sont des processus impliquant de nouvelles compétences informatiques. Soit le formateur les acquiert peu à peu, soit il fait appel à une compétence externe de gestion de ces ressources. +
+L'idée est que le taux de cette gestion/assistance externe décroisse avec le temps pour que le formateur devienne totalement maître de l'aspect "gestion" des ressources à terme. Pouvant être perçu comme une barrière infranchissable au début (manque de temps ou de motivation, incompréhension de concepts jugés ésotériques ...),
+
+
+=== Pratique courante actuelle
+
+Il s'agit d'observer les pratiques courantes ... et de voir comment on pourrait les améliorer!
+
+. pratiques courantes :
+** édition des ressources
+** publication (intra- & inter-net)
+. ce que le "marché" propose
+** édition de ressources formatives
+** publication intra/internet
+
+Nous proposerons ensuite un système complet, de l'édition à la publication, permettant une totale maîtrise du processus d'édition et de publication
+
+. édition des ressources au format *asciidoc* & publication avec {uri-antora}[antora]
+
+==== Édition des ressources au quotidien
+
+****
+[align=center]
+Le règne de la "suite bureautique"
+****
+
+.Word mon amour!
+Heu ... qui ne s'en sert pas pour éditer les cours ? Il y a un correcteur orthographique & grammatical tout a fait correct, l'affichage est bon ... et on y est habitué depuis qu'on a commencé l'informatique!
+
+.LibreOffice, le concurrent "libre"
+Plus "rustique" que Word, il a le mérite de ne rien coûter, de faire moins de modifications _automatiques_ ... (indentation des listes à puces, etc.) et son interface reste plus proche de la logique d'édition (menu:Format[page] pour modifier une page, menu:Insertion[champ] pour insérer un champ, format de page de titre différent des pages suivantes, etc.)
+
+Ces logiciels sont destinés _in fine_ à l'impression papier, tout le travail de formatage des textes et des pages est visible instantanément.
+On en connaît tous les avantages et les limites, car dès que l'on veut commencer un nouveau document, on prend un ancien et on le renomme ... preuve que l'on a passé trop de temps à configurer le rendu graphique ...
+
+
+==== Partage des ressources
+
+Quand il s'agit de mettre les dispositions à disposition des bénéficiaires, plusieurs solutions _classiques_ s'offrent à nous :
+
+Répertoire commun (= public) sur le réseau interne ::
+Accessible depuis tous les postes "stagiaires" & alimenté par les formateurs, ce répertoire réseau regroupe tous les fichiers mis à disposition _à l'instant t_, le contenu évoluant au fur et à mesure de l'avancement de la formation. +
+Il s'agit d'un répertoire réseau sur lequel on fait _glisser_ des données pour les faire _apparaître_ aux stagiaires, en leur donnant les consignes appropriées pour aller les récupérer. +
+Les données sont des fichiers de divers type : documents word, dessins autocad de référence, etc. Ils sont _rarement_ regroupés dans un index commun permettant une navigation aisée. Au mieux, l'organisation de fichiers copie les pratiques courantes en BET : 1 dossier _parent_ par (affaire>tâche>)notion regroupant divers sous-dossiers _enfants_, au stagiaire de se débrouiller pour s'y retrouver ... ah oui, on lui en a parlé il y a 6 mois de l'organisation des fichiers, ça doit être assimilé maintenant!
+
+
+
+
+* Avantage(s) :
+** facilité d'usage par duplication du répertoire personnel de travail vers le répertoire public de partage
+* Inconvénient(s) :
+** travail _quotidien_ du formateur
+** pas de visibilité d'ensemble du point de vue stagiaire
+** gestion des droits d'accès aux ressources (lecture/écriture pour les formateurs, lecture seule pour les stagiaires) nécessitant une infrastructure serveur + annuaire (en me connectant sur l'ordinateur, je suis identifié comme stagiaire ou comme formateur) -> besoin d'un administrateur réseau qui configure au début et éffectue la maintance quotidienne par la suite -> €€€ !
+** plusieurs formations en décalé : risque de partage des ressources non désiré (tests, fichiers exemples que cette promo _n+1_ a obtenu de la promo _n_ alors qu'elle aurait pas du, etc.)
+
+
+
+== Le futur, en mieux
+
+
+//.
+// [%collapsible]
+// ====
+****
+[options="interactive",align=center]
+.Avant d'aller plus loin entre nous ... je certifie :
+* [ ] avoir plus de 18 ans, bien mangé ce matin ... et pas trop à midi !
+* [ ] vouloir me faire mal au cerveau & désirer ardemment me faire plaisir au travail ensuite
+* [ ] savoir qu'il me sera difficile de faire un retour en arrière ... avec les technologies du siècle dernier !
+****
+
+
+=== WYSIWYG & WYSIWYM
+
+
+Adoptons le paradigme du *_WYSIWYM_* ([underline]##W##hat [underline]##Y##ou [underline]##S##ee [underline]##I##s [underline]##W##hat [underline]##Y##ou [underline]##M##ean -- _Ce que vous voyez est ce que vous voulez exprimer_) basé sur la syntaxe du balisage (((Asciidoc)))Asciidoc, permettant d'atteindre les standards d'édition avec une sortie (à peu près) comme on la désire mais sans souci excessif de mise en page.
+
+_That also means it is not WYSIWYG — you’ll be dealing with a plain-text editor and the command-line interface, rather than something that resembles, say, a Microsoft Word document. It might be confusing at first, but the upsides far outweigh the difficulty in learning how to use Metanorma._
+
+For example, Metanorma facilitates machine-readability, automation, validation, automatic formatting, auto-numbering, and enables using a single canonical format for the re-generation of all document output formats.
+
+
+=== Types de ressources à créer
+
+En se basant sur une formation TEB (=formation pratique pour adulte), les ressources peuvent être listées ci-dessous :
+
+. ressources _écrites_ :
+.. documents `html`  & `pdf`
+[horizontal]
+Notions:: document _long_ (= **livre** ~ 300 p.) +
+-> Cours TEB (techniques bâtiment, règlementations, etc.), que l'on peut considérer comme "immuables", à moins de changer de réglementation thermique ... icon:smile-o[] +
+-> Compilation de toutes les informations sur le logiciel AutoCAD (démarrage, pratique courante, collaborations, configuration experte, index & glossaire, ...)
++
+Notices:: document _court_ (= *article* ~ 5/35 p.) +
+-> guides complets "autoportants" (= notions simples + tutoriel/example d'application) +
+-> tutoriels pas à pas (étapes de réalisation d'une seule tâche)
++
+.. documents `html`
+[horizontal]
+Présentations:: document _court_ (= *article* ~ 3/10 p.) +
+-> résumé notion
+-> résumé projet à réaliser
++
+. ressources _vidéo_ :
+** vidéos _remarquées_ sur internet, dont il suffira de copier l'URL pour l'afficher ...
+** vidéos réalisées par capture d'écran (avec https://www.techsmith.fr/camtasia.html[camtasia 2019] par exemple) que vous aurez ensuite _uploadé_ (_téléversé_ en Français ... c'est moins "hightec" non? icon:smile-o[]) sur _Youtube/Viméo/Screencast_ avec le même logiciel ...
+
+
+NOTE: La majorité des documents à produire ne dépasse pas les 50 pages, avec une moyenne à 25 pages (_sinon on perd le stagiaire ..._)
+
+
+Les documents longs on tout intérêt à résulter d'un assemblage des documents courts précédents. Tout ceci est parfaitement réalisable avec ce nouveau système (_à l'image des xrefs que l'on insère dans AutoCAD_). Ci-dessous un exemple de ce qui pourrait être la compilation des notions de réglemention utiles aux TEB
+
+[source,asciidoc]
+----
+= Réglementations pour formation TEB
+
+Ce qui suit est l'ensemble des notions couvrant les réglementations principales necessaires à la pratique courante du métier de TEB ...
+
+== Réglementation thermique 2020
+
+=== Evolution des réglementations thermique en France (présentation)
+
+\include::reglementations/RT2006a2020_pres.adoc
+
+=== Réglementation actuelle : **R**églementation **E**nvironnementale 2020 (notice)
+
+\include::reglementations/RE2020_not.adoc[]
+
+== Réglementation électrique
+
+\include::reglementations/RT2020.adoc[]
+
+\include::reglementations/NFC15-100.adoc[]
+
+....
+
+----
+
+Le "squelette" de ce "livre" reste inchangé, il suffit d'éditer les documents situés dans le sous-répertoire `reglementations` pour le faire évoluer (le parralèlle avec AutoCAD & les xrefs s'applique encore ...)
+
+////////////////////////////////////////////////////////////////////////////////
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[headerrows=2,alt=Table of maximum mass fraction of defects in husked rice,summary=Table enumerating the permissible mass fraction of defects in husked and various classes of milled rice]
+|===
+.2+|Defect 4+^| Maximum permissible mass fraction of defects in husked rice +
+stem:[w_max]
+| in husked rice | in milled rice (non-glutinous) | in husked parboiled rice | in milled parboiled rice
+
+| Extraneous matter: organic footnote:[Organic extraneous matter includes foreign seeds, husks, bran, parts of straw, etc.] | 1,0 | 0,5 | 1,0 | 0,5
+|===
+
+
+Formulae are marked up as [stem] blocks. Any explanation of symbols in the formula is given as a “where” paragraph, followed by a definition list.
+
+[[formulaA-1]]
+[stem]
+++++
+w = (m_D) / (m_s)
+++++
+
+where
+
+stem:[w]:: is the mass fraction of grains with a particular defect in the test sample;
+stem:[m_D]:: is the mass, in grams, of grains with that defect;
+stem:[m_S]:: is the mass, in grams, of the test sample.
+
+Inequalities are indicated through the option attribute `inequality`
+
+[stem%inequality]
+++++
+A < B
+++++
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[[tableD-1]]
+[cols="<,^,^,^,^",headerrows=2]
+.Repeatability and reproducibility of husked rice yield
+|===
+.2+| Description 4+| Rice sample
+| Arborio | Drago footnote:[Parboiled rice.] | Balilla | Thaibonnet
+
+| Number of laboratories retained after eliminating outliers | 13 | 11 | 13 | 13
+| Mean value, g/100 g | 81,2 | 82,0 | 81,8 | 77,7
+| Standard deviation of repeatability, stem:[s_r], g/100 g | 0,41 | 0,15 | 0,31 | 0,53
+| Coefficient of variation of repeatability, % | 0,5 | 0,2 | 0,4 | 0,7
+| Repeatability limit, stem:[r] (= 2,83 stem:[s_r]) | 1,16 | 0,42 | 0,88 | 1,50
+| Standard deviation of reproducibility, stem:[s_R], g/100 g | 1,02 | 0,20 | 0,80 | 2,14
+| Coefficient of variation of reproducibility, % | 1,3 | 0,2 | 1,0 | 2,7
+| Reproducibility limit, stem:[R] (= 2,83 stem:[s_R]) | 2,89 | 0,57 | 2,26 | 6,06
+|===
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+[[figureC-2]]
+.Stages of gelatinization
+====
+.Initial stages: No grains are fully gelatinized (ungelatinized starch granules are visible inside the kernels)
+image::c2-a.png[Alt3]
+
+.Intermediate stages: Some fully gelatinized kernels are visible
+image::c2-b.png[Alt4]
+
+.Final stages: All kernels are fully gelatinized
+image::c2-c.png[Alt5]
+
+====
+
+
+
+//.Fichier asccidoc créé par Pandoc à partir du word : c'est pas bô!
+//image::create-ligne.png[,link="fichiers-support/images/create-ligne.png"]
+
+//** menu:Fichier[Télécharger]
+
+
+=== test tablo
+
+// First column is  horizontally left and centered vertically
+// Second column is horizontally centered and centered vertically
+// [caption="Table A. "]
+[caption=]
+.un formal table
+[cols="<.^30a,^.^70a",width=100%]
+|===
+
+|
+. *connect* your Android device to internet
+** *open* Play Store
+** and *Ios* one
+. type *geopaparazzi* within the Search textbox
+. *Lorem* ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+. kbd:[Ctrl+D]
+
+| image:p40.png[width=70%]
+
+|===
+
+
+== Diagram
+
+[plantuml, diagram-classes, png]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
+
+
+. {blank}
++
+----
+print("one")
+----
+. {blank}
++
+----
+print("one")
+----
+
+////////////////////////////////////////////////////////////////////////////////
+
+

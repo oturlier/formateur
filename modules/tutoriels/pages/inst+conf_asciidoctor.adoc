@@ -1,0 +1,100 @@
+//[[inst+conf-asciidoctor]]
+= Asciidoctor
+
+:linkattrs:
+:ascdoc: Asciidoctor
+:ruby: Ruby
+:uri_asc: https://asciidoctor.org/
+:uri_rubyinstalr: https://rubyinstaller.org/downloads/
+
+
+* {ascdoc} est *le* logiciel qui permettra de transformer un document _source_ au format asciidoc `.adoc`  en fichier de _sortie_ `.html`
+* {ascdoc}-pdf est son _cousin_, il permettra de créer un `.pdf` à partir d'un fichier `asciidoc`
+* tous les autres logiciels installés dans ce tuto servent à l'un ou à l'autre des logiciels pré-cités
+
+
+Pour les ressources formatives TEB :
+
+* {ascdoc} & {ascdoc}-pdf permettront d'effectuer une sortie `.html` ou `.pdf` _fidèles_ aux résultats finaux attendus, en local. Il pourront être utilisés pour disposer d'une ressource de façon unitaire
+* ces logiciels constituent d'autres "briques" du système https://antora.org/[Antora] mais ils n'apparaissent pas dans les commandes à effectuer
+
+
+== Installation
+
+=== {ruby}
+
+en préalable à l'installation de {ascdoc}, il faut installer *{ruby}*.
+
+.Procédure : installation de {ruby} sur Windows 10
+
+. Parmi les nombreuses solutions, {uri_rubyinstalr}[RubyInstaller,window="_blank"] génère peu d'erreurs, il est donc préférable de suivre cette méthode ...
+
+
+.(clic ->) Site Web pour télécharger le *bon* exécutable {win} de {ruby}
+image::ruby1.png[link="{uri_rubyinstalr}",window="_blank"]
+
+. acceptez toutes les options cochées par défaut
+
+. en post-installation, une fenêtre de ligne de commande s'ouvre, faites 2 fois kbd:[Entrée]
+
+. test de bonne installation :
++
+.vérification de la version de Ruby
+----
+ruby -v
+----
++
+.résultat de la commande `ruby -v`
+image::ruby2.png[]
+
+=== {ascdoc}
+
+.Procédure : installation de l'ensemble d'outils {ascdoc}
+
+. {ascdoc} & consorts : rentrer cette commande dans la ligne de commande/Powershell pour permettre d'exporter du format "texte" `.adoc` vers le format `.html` visualisable par un navigateur internet
++
+----
+gem install asciidoctor
+----
+
+Certains logiciels complémentaires apportent différentes possibilités intéressantes, n'hésitez pas à les installer :
++
+----
+gem install graphviz # <.>
+gem install asciidoctor-diagram # <.>
+gem install rouge # <.>
+gem install pygments.rb # <.>
+----
+<.> moteur graphique
+<.> visualisation de diagrammes
+<.> coloration syntaxique n1
+<.> coloration syntaxique n2
+
+[#inst-asciidoctor-pdf]
+. {ascdoc}-pdf & consorts : rentrer cette commande dans la ligne de commande/Powershell pour permettre d'exporter du format "texte" `.adoc` vers le format `.pdf` pour impression
++
+----
+gem install asciidoctor-pdf --pre
+----
++
+ajout d'un utilitaire d'optimisation des pdfs générés par {ascdoc}-pdf
++
+----
+gem install hexapdf
+----
+
+
+== Test post-install
+
+Le test consistera à vérifier la version des logiciels précédemment installés par la commande `gem install ...`, comme il peut y en avoir beaucoup, nous filtrerons les résultats pour ne voir que les logiciels `ascii*` et afficherons page/page au cas où ... Si un numéro de version apparaît, c'est que l'installation est OK. +
+_NB : les loficiels importants sont {ascdoc} et {ascdoc}-pdf_
+
+----
+gem list | grep ascii* | more # <.>
+----
+<.> le résultat peut varier d'un poste à l'autre, en fonction de toutes les multiples installations comme sur le mien ...
+
+.résultat de la commande `gem list | grep ascii* | more`
+image::asciidoctor1.png[]
+
+// Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

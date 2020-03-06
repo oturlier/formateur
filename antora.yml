@@ -1,0 +1,31 @@
+# Uncomment name and title to build 
+name: ressourcesFormateurs
+title: Ressources Formateurs
+
+# Which branch is the default for this playbook.
+version: master
+
+# Starting page or home
+start_page: ROOT:index
+
+# Links to book navigation files. These nav files are used to build the left navigation sidebar in the form of asciidoctor lists.
+# We also keep our PDF lists in these files. Which one is used depends on what backend is selected via our Makefile. If you select to build pdf
+# the backend-pdf ifdef statement will take effect and include all necessary files and images.
+
+# WARNING: IF YOU ADD A NEW TOPIC TO THE ANTORA NAV LISTS YOU MUST ADD IT TO THE PDF LIST AS WELL!
+
+nav:
+  # ROOT Modules (release notes, introduction and resource links)
+  - modules/ROOT/nav.adoc
+
+  # Tutoriels initiation
+  - modules/tutoriels/nav-tutoriels.adoc
+
+  # Guides pratiques
+  - modules/guides/nav-guides.adoc
+
+  # Notions concrètes
+  - modules/notions/nav-notions.adoc
+
+  # Références techniques
+  - modules/references/nav-references.adoc

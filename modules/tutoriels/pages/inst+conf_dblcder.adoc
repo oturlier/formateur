@@ -1,0 +1,99 @@
+//[[inst+conf-asciidoctor]]
+= DoubleCommander
+
+:linkattrs:
+//:dblcdr: DoubleCommander
+:ruby: Ruby
+:dblcdr: Double Commander
+:uri_dblcdr: https://doublecmd.sourceforge.io/
+:uri_dblcdr-dl: https://sourceforge.net/p/doublecmd/wiki/Download/
+
+
+{uri_dblcdr}[{dblcdr},window="_blank"] est un explorateur de fichiers à *double panneaux* aux multiples fonctionnalités.
+L'installation de cet utilitaire permettra de bien meilleures capacités de visualisation, opérations sur les fichiers, etc.
+
+L'usage de {dblcdr} mérite une période (courte) d'adaptation, réduite d'autant si la configuration a été bien faite auparavant...
+Ce genre d'explorateur de fichiers à double panneaux existe depuis fort longtemps, sur Windows nous avons *Totalcommander*, *Nortoncommander* ... qui eux-mêmes imitent *MidnightCommander* qui est l'initiateur du principe de navigateur à double panneaux, un aperçu : image:mc1.png[]
+
+
+== Installation
+
+.Procédure : installation de {dblcdr}
+
+. se rendre sur {uri_dblcdr}[le site web de {dblcdr},window="_blank"], un bref résumé des capacités (_en Shakespearien_) vous y attend
+
+image::doublecommander0.png[link="{uri_dblcdr}",window="_blank"]
+
+. cliquez sur l'onglet `download`, vous atterrirez sur la page {uri_dblcdr-dl}[Sourceforge dédiée,window="_blank"]
+. choisissez la version adaptée à votre système, pour du 64 bit normalement, peut importe que cela soit un `.exe` ou un `.msi`. Lors de l'écriture de ce tutoriel, c'est la version `doublecmd-0.9.8.x86_64-win64.exe` qui semble adaptée à la plupart des configurations récentes
++
+. version de {dblcdr} à télécharger sur (clic sur l'image ouvre un autre onglet)
+
+image::doublecommander1.png[link="{uri_dblcdr-dl}",window="_blank"]
+
+
+. cliquez pour télécharger
+. double-cliquez pour installer en suivant les instructions
+
+
+
+
+== Bonnes pratiques / Configuration
+
+
+.Clics sur symboles du bandeau supérieur
+* `*` affiche la liste des dossiers favoris et permet d'en créer de nouveaux
+* `\` va au dossier "racine" (C:\)
+* `..` va au dossier supérieur
+* `~` va au dossier "personnel", du type `C:\Users\olivier\`
+* `<` ou `>` affiche le même dossier que celui actif dans le panneau opposé
+
+.Clavier > Raccourcis clavier
+* kbd:[Ctrl+Entrée] : ajouter le nom du fichier sélectionné dans la ligne de commande <- pratique si ce fichier est un exécutable (fichier `.bat` ou `.exe`)
+* kbd:[Ctrl+T] : nouvel onglet
+* kbd:[Ctrl+W] : fermer l'onglet
+* kbd:[Ctrl+Tab] : onglet suivant
+* kbd:[F2] : renommer
+* kbd:[F3] : voir fichier texte, sans l'ouvrir. On ferme la fenêtre par kbd:[Echap]
+* kbd:[F4] : éditer directement le fichier texte, soit avec l'éditeur intégré, soit avec l'éditeur de votre choix si vous l'avez configuré. Dans ce cas, choisissez un éditeur au lancement rapide, comme *NotePad++*
+* kbd:[F5] : copier vers l'autre panneau (= kbd:[Ctrl+C] kbd:[Ctrl+V]) du panneau actif vers l'autre
+* kbd:[Maj+F5] : copie dans le même panneau
+* kbd:[F6] : déplacer (= kbd:[Ctrl+X] kbd:[Ctrl+V]) du panneau actif vers l'autre
+* kbd:[F7] : nouveau dossier
+* kbd:[Alt+F7] : chercher (par nom de fichier ou dossier ou recherche en plein texte)
+* kbd:[F8] : supprimer en envoyant dans la corbeille
+* kbd:[F9] : ouvrir un terminal dans le répertoire spécifié, équivalent d'écrire `cmd` dans la barre d'adresse de l'explorateur Windows, mais plus pratique...
+* kbd:[Ctrl+M] : renommer par lots
+* kbd:[Alt+F5] : compresser les fichiers
+* kbd:[Ctrl+U] : permuter les panneaux
+* kbd:[Alt+Z] : panneau cible = panneau source, équivalent à cliquer sur le "caret" `<` ou `>` du bandeau supérieur
+
+
+.Comportement
+* [x] autoriser une seule instance de Double Commander à la fois
+
+
+.Configuration
+* [x] Sauvegardez la configuration
+* [x] Main window state
+* [x] Folder tabs
+
+
+.Disposition
+* [x] Afficher l'étiquette avec l'espace libre
+* [x] Afficher l'étiquette d'espace libre restant
+* [x] Afficher l'espace disponible sur l'étiquette des volumes/disques
+* [ ] Afficher la fenêtre de terminal
+
+.Outils > Éditeur : choix
+* interne ou
+* externe (best = NotePad{plus}{plus}), il faut aller dans menu:Configuration[Options > Outils > Editeur > Utiliser un programme externe] et indiquer le chemin de l'exécutable de Notepad{plus}{plus} (C:\Program Files\Notepad{plus}{plus}\notepad{plus}{plus}.exe)
+
+
+
+
+
+//.résultat de la commande `gem list | grep ascii* | more`
+//image::asciidoctor1.png[]
+
+// Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.

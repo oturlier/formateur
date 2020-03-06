@@ -1,0 +1,92 @@
+//[[inst+conf-notpad]]
+= Notepad{plus}{plus}
+
+:linkattrs:
+//:dblcdr: DoubleCommander
+:notpad: Notepad{plus}{plus}
+:uri_notpad: https://notepad-plus-plus.org/
+:uri_dl-notepad: https://notepad-plus-plus.org/downloads/
+
+
+
+{uri_notpad}[{notpad},window="_blank"] est un *éditeur de texte* léger et puissant
+
+L'usage de {notpad} est simple dès le premier abord et puissant lorsque configuré!
+
+
+== Installation
+
+.Procédure : installation de {notpad}
+
+. se rendre sur {uri_notpad}[le site web de {notpad},window="_blank"] (clic sur le lien précédent ou sur l'image pour ouvrir un autre onglet).
+
+image::notpad++1.png[link="{uri_notpad}",window="_blank"]
+
+. cliquez sur *Download* pour télécharger la dernière version, à date c'est _Notepad++7.8.4_, choisir la version *Installer* en 64 bit
+
+image::notpad++2.png[link="{uri_dl-notepad},window="_blank"]
+
+. double-cliquez pour installer en suivant les instructions
+
+.Petit tuto sur l'installation de {notpad}
+video::PJ_bjU7Db6U[youtube,width=800,height=450,opts="autoplay,loop,modest"]
+// https://www.youtube.com/watch?v=PJ_bjU7Db6U
+
+
+
+
+== Bonnes pratiques / Configuration
+
+{notpad} s'ouvre vite, permet d'ouvrir de nombreux fichiers (disposés en onglets), il conserve par défaut tous les fichiers ouverts, même ceux qui n'ont pas été enregistrés lors de la fermeture ...
+
+Sa rapidité d'ouverture en font un candidat idéal pour remplacer l'éditeur par défaut du navigateur de fichier *{dblcdr}*. Ainsi, après configuration de {dblcdr}, vous lancerez (rapidement, par comparaison avec *Atom* par exemple) {notpad} avec kbd:[F4]
+
+.Ouverture de {notpad} sur le fichier de ce tuto : {doctitle}, avec kbd:[F4] depuis {dblcdr}
+image::notpad++3.png[]
+
+.Site Web complet sur {notpad}, notamment sur une configuration _poussée_ (clic -> autre onglet)
+https://nppmanuel.nliautaud.fr/preferences[manuel configuration {notpad},window="_blank"]
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+.résultat de la commande `gem list | grep ascii* | more`
+
+image::asciidoctor1.png[]
+
+Quand cette installation est terminée, vous pouvez aller voir la page xref:conversion_pandoc.adoc[Conversions avec {pdoc}] pour tester le bon fonctionnement de {pdoc}.
+
+
+
+
+.Windtrainer workouts
+[width="80%",cols="3,^2,^2,10",options="header"]
+|====
+|Date |Duration |Avg HR |Notes
+
+|22-Aug-08 |10:24 | 157 |
+Worked out MSHR (max sustainable heart rate) by going hard
+for this interval.
+
+|22-Aug-08 |23:03 | 152 |
+Back-to-back with previous interval.
+
+|24-Aug-08 |40:00 | 145 |
+Moderately hard interspersed with 3x 3min intervals (2min
+hard + 1min really hard taking the HR up to 160).
+
+|====
+
+
+
+//link://server/share/path%20with%20space/doc.adoc[]
+//link:++\\server\share\path with space\document.adoc++[Click here]
+link:++C:\Users\olivier\Pictures\captures++[]
+
+
+////////////////////////////////////////////////////////////////////////////////
+
