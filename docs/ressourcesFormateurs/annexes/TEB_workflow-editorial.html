@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TEB : Worflow éditorial 2020 :: Ressources Formateur</title>
+    <link rel="canonical" href="https://oturlier.github.io/formateur/ressourcesFormateurs/annexes/TEB_workflow-editorial.html">
+    <meta name="description" content="Méthode alternative pour la production et la diffusion des ressources formatives TEB dans l&#x27;optique d&#x27;un renforcement du travail par projets en formation pro TEB">
+    <meta name="keywords" content="CRM, TEB, Ressources, édition, publication, asciidoc, antora">
+    <meta name="generator" content="Antora 2.2.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/search.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159951047-1"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-159951047-1')</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://oturlier.github.io/formateur">Ressources Formateur</a>
+        <div class="navbar-item">
+		  <!-- <i class="fas fa-search"></i>&nbsp; -->
+          <input id="search-input" type="text" placeholder="Recherche">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Support</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/formateurs"><i 
+              class="fab fa-github"></i>&nbsp;Ressources TeB</a>
+            <a class="navbar-item" href="https://github.com/formateurs/issues"><i
+              class="fab fa-github"></i>&nbsp;Observation</a>
+            <a class="navbar-item" href="https://github.com/formateurs/wiki#contributing"><i
+              class="fas fa-user-edit"></i>&nbsp;Contribuer</a>
+          </div>
+        </div>
+        <a id="twitter-link" class="navbar-item" href="https://twitter.com/antropyk?lang=fr">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 512 512">
+              <path fill="#57aaee"
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ressourcesFormateurs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Ressources Formateurs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cc-by-nc-sa.html">Lic. CC-BY-NC-SA 4.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../common_gfdl1.2_i.html">Lic. GFDL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutoriels</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutoriels/tutoriels-intro.html">Intro install &amp; config</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Installation &amp; configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_pandoc.html">Pandoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_imagick.html">ImageMagick</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_wget.html">Wget</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_git.html">Git</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_asciidoctor.html">Asciidoctor</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_antora.html">Antora</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_dblcder.html">Double Commander</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_grenshot.html">Greenshot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_irfwiew.html">Irfanview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_notpad.html">Notepad++</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_subl.html">Sublime text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_vscode.html">Visual Studio Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_atom.html">Atom</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_ascidocfx.html">AsciiDocFX</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Guides pratiques</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#guide_git-premier-pas">Git : premier pas</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/guide_plantuml.html">PlantUML</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Notions</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Références techniques</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ressources Formateurs</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Ressources Formateurs</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Ressources Formateurs</a></li>
+    <li><a href="TEB_workflow-editorial.html">TEB : Worflow éditorial 2020</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///media/sf_virtualboxdossierspartage/ANTORA/github-oturlier_RessourcesTEB-all+CAD/formateur/modules/annexes/pages/TEB_workflow-editorial.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1 class="page">TEB : Worflow éditorial 2020</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title"><span class="icon"><i class="fa fa-graduation-cap"></i></span> Clés</div>
+<div class="quoteblock abstract">
+<blockquote>
+Méthode alternative pour la production et la diffusion des ressources formatives TEB dans l&#8217;optique d&#8217;un renforcement du travail par projets en formation pro TEB
+</blockquote>
+</div>
+<table class="tableblock frame-none grid-none stripes-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon green"><i class="fa fa-check"></i></span> Conversion des ressources existantes (word &amp; pdf) vers <strong>Asciidoc</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon gray"><i class="fa fa-check"></i></span> <em>Publication</em> des ressources, sur intra- ou inter-net avec <a href="https://antora.org/">antora</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon green"><i class="fa fa-check"></i></span> <em>Édition</em> d&#8217;un cours avec <strong>Asciidoc</strong>, puis conversion en <strong>html</strong> et en <strong>pdf</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon blue"><i class="fa fa-tags"></i></span> CRM, TEB, Ressources, édition, publication, asciidoc, antora</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a><a class="link" href="#_introduction">Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Le workflow éditorial proposé :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>permet <em>la libération</em> du formateur des tâches répétitives d&#8217;édition, de mise en page puis impression des ressources</p>
+</li>
+<li>
+<p>implique un <em>changement radical</em> quant à l&#8217;édition puis à la diffusion des documents et impose une certaine <em>mise à jour</em> des compétences informatiques, et</p>
+</li>
+<li>
+<p>permet d&#8217;organiser librement le contenu des ressources publiées par le jeu d&#8217;un simple fichier de configuration comme l&#8217;édition collaborative à partir de répertoires/dépôts distants.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_constat_et_proposition_de_changement_de_forme_daccès_aux_ressources"><a class="anchor" href="#_constat_et_proposition_de_changement_de_forme_daccès_aux_ressources"></a><a class="link" href="#_constat_et_proposition_de_changement_de_forme_daccès_aux_ressources">Constat et proposition de changement de forme &amp; d&#8217;accès aux ressources</a></h3>
+<div class="paragraph">
+<p>Le constat d&#8217;une part importante d&#8217;échec dans l&#8217;implantation durable du métier T<em>e</em>B questionne l&#8217;organisation de la formation actuelle.</p>
+</div>
+<div class="paragraph">
+<p>En partant de l&#8217;idée qu&#8217;il serait bon de <em>renforcer le caractère professionnel de la formation</em> en axant le déroulé principal sur la <em>réalisation de projets réels</em> et non pas sur l&#8217;acquisition de connaissances, il devient important de réviser en profondeur la manière d&#8217;accéder aux ressources pour les stagiaires, celles-ci devenant un simple support à l&#8217;activité principale qui est de réaliser une tâche, le formateur étant transformé en facilitateur, <em>au service</em> des réalisateurs-stagiaires!</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;accès à l&#8217;intégralité des ressources est donc permanent, et ce dès le début de la formation. Ces ressources doivent être accessibles à distance, le week-end, sur smartphone comme sur station de travail &#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_contributeurs_initiaux_et_secondaires"><a class="anchor" href="#_contributeurs_initiaux_et_secondaires"></a><a class="link" href="#_contributeurs_initiaux_et_secondaires">Contributeurs initiaux et secondaires</a></h3>
+<div class="paragraph">
+<div class="title">formateurs</div>
+<p>Cet article est avant-tout destiné à tout contributeur souhaitant participer à l&#8217;effort d&#8217;alimentation de la base des ressources formatives T<em>e</em>B, celles-ci étant vues comme des <em>supports</em> à une formation quasiment entièrement basée sur la réalisation effective de projets.<br>
+Ce sont donc principalement les formateurs qui contribuent à l&#8217;effort de création initial des ressources, assistés des divers supports existants au préalable</p>
+</div>
+<div class="paragraph">
+<div class="title">stagiaires</div>
+<p>Par un mécanisme de REX (lecture, application de consignes, etc.), les stagiaires seront capables d&#8217;émettre tout type de remarque, celles-ci permettant l&#8217;amélioration de la qualité des ressources (orthographe, application à la nouvelle version d&#8217;un logiciel, incompréhension, etc.)</p>
+</div>
+<div class="paragraph">
+<div class="title">gestionnaires</div>
+<p>Le formatage et la publication des ressources sont des processus impliquant de nouvelles compétences informatiques. Soit le formateur les acquiert peu à peu, soit il fait appel à une compétence externe de gestion de ces ressources.<br>
+L&#8217;idée est que le taux de cette gestion/assistance externe décroisse avec le temps pour que le formateur devienne totalement maître de l&#8217;aspect "gestion" des ressources à terme. Pouvant être perçu comme une barrière infranchissable au début (manque de temps ou de motivation, incompréhension de concepts jugés ésotériques &#8230;&#8203;),</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pratique_courante_actuelle"><a class="anchor" href="#_pratique_courante_actuelle"></a><a class="link" href="#_pratique_courante_actuelle">Pratique courante actuelle</a></h3>
+<div class="paragraph">
+<p>Il s&#8217;agit d&#8217;observer les pratiques courantes &#8230;&#8203; et de voir comment on pourrait les améliorer!</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>pratiques courantes :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>édition des ressources</p>
+</li>
+<li>
+<p>publication (intra- &amp; inter-net)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ce que le "marché" propose</p>
+<div class="ulist">
+<ul>
+<li>
+<p>édition de ressources formatives</p>
+</li>
+<li>
+<p>publication intra/internet</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Nous proposerons ensuite un système complet, de l&#8217;édition à la publication, permettant une totale maîtrise du processus d&#8217;édition et de publication</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>édition des ressources au format <strong>asciidoc</strong> &amp; publication avec <a href="https://antora.org/">antora</a></p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_édition_des_ressources_au_quotidien"><a class="anchor" href="#_édition_des_ressources_au_quotidien"></a><a class="link" href="#_édition_des_ressources_au_quotidien">Édition des ressources au quotidien</a></h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Le règne de la "suite bureautique"</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Word mon amour!</div>
+<p>Heu &#8230;&#8203; qui ne s&#8217;en sert pas pour éditer les cours ? Il y a un correcteur orthographique &amp; grammatical tout a fait correct, l&#8217;affichage est bon &#8230;&#8203; et on y est habitué depuis qu&#8217;on a commencé l&#8217;informatique!</p>
+</div>
+<div class="paragraph">
+<div class="title">LibreOffice, le concurrent "libre"</div>
+<p>Plus "rustique" que Word, il a le mérite de ne rien coûter, de faire moins de modifications <em>automatiques</em> &#8230;&#8203; (indentation des listes à puces, etc.) et son interface reste plus proche de la logique d&#8217;édition (<span class="menuseq"><b class="menu">Format</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">page</b></span> pour modifier une page, <span class="menuseq"><b class="menu">Insertion</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">champ</b></span> pour insérer un champ, format de page de titre différent des pages suivantes, etc.)</p>
+</div>
+<div class="paragraph">
+<p>Ces logiciels sont destinés <em>in fine</em> à l&#8217;impression papier, tout le travail de formatage des textes et des pages est visible instantanément.
+On en connaît tous les avantages et les limites, car dès que l&#8217;on veut commencer un nouveau document, on prend un ancien et on le renomme &#8230;&#8203; preuve que l&#8217;on a passé trop de temps à configurer le rendu graphique &#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_partage_des_ressources"><a class="anchor" href="#_partage_des_ressources"></a><a class="link" href="#_partage_des_ressources">Partage des ressources</a></h4>
+<div class="paragraph">
+<p>Quand il s&#8217;agit de mettre les dispositions à disposition des bénéficiaires, plusieurs solutions <em>classiques</em> s&#8217;offrent à nous :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Répertoire commun (= public) sur le réseau interne </dt>
+<dd>
+<p>Accessible depuis tous les postes "stagiaires" &amp; alimenté par les formateurs, ce répertoire réseau regroupe tous les fichiers mis à disposition <em>à l&#8217;instant t</em>, le contenu évoluant au fur et à mesure de l&#8217;avancement de la formation.<br>
+Il s&#8217;agit d&#8217;un répertoire réseau sur lequel on fait <em>glisser</em> des données pour les faire <em>apparaître</em> aux stagiaires, en leur donnant les consignes appropriées pour aller les récupérer.<br>
+Les données sont des fichiers de divers type : documents word, dessins autocad de référence, etc. Ils sont <em>rarement</em> regroupés dans un index commun permettant une navigation aisée. Au mieux, l&#8217;organisation de fichiers copie les pratiques courantes en BET : 1 dossier <em>parent</em> par (affaire&gt;tâche&gt;)notion regroupant divers sous-dossiers <em>enfants</em>, au stagiaire de se débrouiller pour s&#8217;y retrouver &#8230;&#8203; ah oui, on lui en a parlé il y a 6 mois de l&#8217;organisation des fichiers, ça doit être assimilé maintenant!</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Avantage(s) :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>facilité d&#8217;usage par duplication du répertoire personnel de travail vers le répertoire public de partage</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Inconvénient(s) :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>travail <em>quotidien</em> du formateur</p>
+</li>
+<li>
+<p>pas de visibilité d&#8217;ensemble du point de vue stagiaire</p>
+</li>
+<li>
+<p>gestion des droits d&#8217;accès aux ressources (lecture/écriture pour les formateurs, lecture seule pour les stagiaires) nécessitant une infrastructure serveur + annuaire (en me connectant sur l&#8217;ordinateur, je suis identifié comme stagiaire ou comme formateur) &#8594; besoin d&#8217;un administrateur réseau qui configure au début et éffectue la maintance quotidienne par la suite &#8594; €€€ !</p>
+</li>
+<li>
+<p>plusieurs formations en décalé : risque de partage des ressources non désiré (tests, fichiers exemples que cette promo <em>n+1</em> a obtenu de la promo <em>n</em> alors qu&#8217;elle aurait pas du, etc.)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_futur_en_mieux"><a class="anchor" href="#_le_futur_en_mieux"></a><a class="link" href="#_le_futur_en_mieux">Le futur, en mieux</a></h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist checklist">
+<div class="title">Avant d&#8217;aller plus loin entre nous &#8230;&#8203; je certifie :</div>
+<ul class="checklist">
+<li>
+<p><input type="checkbox" data-item-complete="0"> avoir plus de 18 ans, bien mangé ce matin &#8230;&#8203; et pas trop à midi !</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> vouloir me faire mal au cerveau &amp; désirer ardemment me faire plaisir au travail ensuite</p>
+</li>
+<li>
+<p><input type="checkbox" data-item-complete="0"> savoir qu&#8217;il me sera difficile de faire un retour en arrière &#8230;&#8203; avec les technologies du siècle dernier !</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wysiwyg_wysiwym"><a class="anchor" href="#_wysiwyg_wysiwym"></a><a class="link" href="#_wysiwyg_wysiwym">WYSIWYG &amp; WYSIWYM</a></h3>
+<div class="paragraph">
+<p>Adoptons le paradigme du <strong><em>WYSIWYM</em></strong> (<span class="underline">W</span>hat <span class="underline">Y</span>ou <span class="underline">S</span>ee <span class="underline">I</span>s <span class="underline">W</span>hat <span class="underline">Y</span>ou <span class="underline">M</span>ean&#8201;&#8212;&#8201;<em>Ce que vous voyez est ce que vous voulez exprimer</em>) basé sur la syntaxe du balisage Asciidoc, permettant d&#8217;atteindre les standards d&#8217;édition avec une sortie (à peu près) comme on la désire mais sans souci excessif de mise en page.</p>
+</div>
+<div class="paragraph">
+<p><em>That also means it is not WYSIWYG — you’ll be dealing with a plain-text editor and the command-line interface, rather than something that resembles, say, a Microsoft Word document. It might be confusing at first, but the upsides far outweigh the difficulty in learning how to use Metanorma.</em></p>
+</div>
+<div class="paragraph">
+<p>For example, Metanorma facilitates machine-readability, automation, validation, automatic formatting, auto-numbering, and enables using a single canonical format for the re-generation of all document output formats.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_types_de_ressources_à_créer"><a class="anchor" href="#_types_de_ressources_à_créer"></a><a class="link" href="#_types_de_ressources_à_créer">Types de ressources à créer</a></h3>
+<div class="paragraph">
+<p>En se basant sur une formation TEB (=formation pratique pour adulte), les ressources peuvent être listées ci-dessous :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ressources <em>écrites</em> :</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>documents <code>html</code>  &amp; <code>pdf</code></p>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Notions
+</td>
+<td class="hdlist2">
+<p>document <em>long</em> (= <strong>livre</strong> ~ 300 p.)<br>
+&#8594; Cours TEB (techniques bâtiment, règlementations, etc.), que l&#8217;on peut considérer comme "immuables", à moins de changer de réglementation thermique &#8230;&#8203; <span class="icon"><i class="fa fa-smile-o"></i></span><br>
+&#8594; Compilation de toutes les informations sur le logiciel AutoCAD (démarrage, pratique courante, collaborations, configuration experte, index &amp; glossaire, &#8230;&#8203;)</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Notices
+</td>
+<td class="hdlist2">
+<p>document <em>court</em> (= <strong>article</strong> ~ 5/35 p.)<br>
+&#8594; guides complets "autoportants" (= notions simples + tutoriel/example d&#8217;application)<br>
+&#8594; tutoriels pas à pas (étapes de réalisation d&#8217;une seule tâche)</p>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>documents <code>html</code></p>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Présentations
+</td>
+<td class="hdlist2">
+<p>document <em>court</em> (= <strong>article</strong> ~ 3/10 p.)<br>
+&#8594; résumé notion
+&#8594; résumé projet à réaliser</p>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>ressources <em>vidéo</em> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>vidéos <em>remarquées</em> sur internet, dont il suffira de copier l&#8217;URL pour l&#8217;afficher &#8230;&#8203;</p>
+</li>
+<li>
+<p>vidéos réalisées par capture d&#8217;écran (avec <a href="https://www.techsmith.fr/camtasia.html">camtasia 2019</a> par exemple) que vous aurez ensuite <em>uploadé</em> (<em>téléversé</em> en Français &#8230;&#8203; c&#8217;est moins "hightec" non? <span class="icon"><i class="fa fa-smile-o"></i></span>) sur <em>Youtube/Viméo/Screencast</em> avec le même logiciel &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+La majorité des documents à produire ne dépasse pas les 50 pages, avec une moyenne à 25 pages (<em>sinon on perd le stagiaire &#8230;&#8203;</em>)
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Les documents longs on tout intérêt à résulter d&#8217;un assemblage des documents courts précédents. Tout ceci est parfaitement réalisable avec ce nouveau système (<em>à l&#8217;image des xrefs que l&#8217;on insère dans AutoCAD</em>). Ci-dessous un exemple de ce qui pourrait être la compilation des notions de réglemention utiles aux TEB</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Réglementations pour formation TEB
+
+Ce qui suit est l'ensemble des notions couvrant les réglementations principales necessaires à la pratique courante du métier de TEB ...
+
+== Réglementation thermique 2020
+
+=== Evolution des réglementations thermique en France (présentation)
+
+\include::reglementations/RT2006a2020_pres.adoc
+
+=== Réglementation actuelle : **R**églementation **E**nvironnementale 2020 (notice)
+
+include::reglementations/RE2020_not.adoc[]
+
+== Réglementation électrique
+
+include::reglementations/RT2020.adoc[]
+
+include::reglementations/NFC15-100.adoc[]
+
+....</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Le "squelette" de ce "livre" reste inchangé, il suffit d&#8217;éditer les documents situés dans le sous-répertoire <code>reglementations</code> pour le faire évoluer (le parralèlle avec AutoCAD &amp; les xrefs s&#8217;applique encore &#8230;&#8203;)</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script>
+    tippy.setDefaults({
+        placement: 'bottom',
+        arrow: true,
+        arrowType: 'sharp',
+        delay: 800,
+        theme: 'light',
+    });
+
+    tippy('#previousPage', {
+        content: "Page Pr�c�dente",
+    });
+
+    tippy('#nextPage', {
+        content: "Page Suivante",
+    });
+
+    tippy('#createIssue', {
+        content: "Cr�er une Observation",
+    });
+
+    tippy('#submitPR', {
+        content: "Editer cette page et soumettre une requ�te de "pull"",
+    });
+
+    /* Testing tooltips for terms */
+    tippy('#ubuntu', {
+        content: "Ubuntu is an open-source operating system (OS) based on the Debian GNU/Linux distribution.",
+
+    });
+
+    tippy('#salt', {
+        content: "Salt is a Python-based, open-source software for event-driven IT automation, remote task execution, and configuration management.",
+
+    });
+
+    tippy('#sle', {
+        content: "SUSE Linux Enterprise, or SLE, is the enterprise-grade version of SUSE's open source Linux operating system distribution.",
+
+    });
+
+    tippy('#rhel', {
+        content: "Red Hat Enterprise Linux, or RHEL, is the enterprise-grade version of Red Hat's open source Linux operating system distribution. ",
+
+    });
+
+    tippy('#centos', {
+        content: "Community Enterprise Operating System, or CentOS, is a distribution of the Linux operating system based on RHEL (Red Hat Enterprise Linux).",
+
+    });
+
+    tippy('#sl', {
+        content: "Scientific Linux (SL) is a Linux distribution produced by Fermilab, CERN, DESY and by ETH Zurich.",
+
+
+    });
+</script>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '../..'
+  window.antora.pagePath = '/ressourcesFormateurs/annexes/TEB_workflow-editorial.html'
+</script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/search.js"></script>
+<script async src="../../_/../search-index.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script src="../../_/js/vendor/tocbot.min.js"></script>
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h2, h3, h4, h5, h6',
+        collapseDepth: 6,
+        positionFixedSelector: '#article-toc',
+        scrollSmooth: false
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>  </body>
+</html>
