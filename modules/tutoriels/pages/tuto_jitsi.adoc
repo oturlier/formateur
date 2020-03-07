@@ -1,0 +1,188 @@
+[#tuto_visio]
+= Visioconférence
+ifndef::env-site,env-github[]
+include::../_attributes.adoc[]
+endif::[]
+:experimental:
+:linkattrs:
+:icons: font
+// attributes
+:ascfx: AsciiDocFX
+:subl: Sublime Text
+:vscod: Visual Studio Code
+:win10: Windows 10
+:y: icon:check[role=green]
+:n: icon:times[role=red]
+:uri_ascfx: https://asciidocfx.com/
+:uri_graphviz: https://www.graphviz.org/
+:uri_dl-graphviz: https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi
+
+
+== Description
+
+*Jitsi meet* est une application de visioconférence qui ne requiert aucune installation, seulement la caméra et le micro de votre ordinateur.
+
+== Accès au service
+
+. se rendre sur la page Internet https://meet.jit.si/[Jitsi Meet^] (meilleur navigateur : https://www.google.com/intl/fr_fr/chrome/[Chrome ?], avec https://www.opera.com/fr[Opera] le paramétrage de base a fonctionné totalement)
+. paramétrages de base (clic sur roue dentée en haut à droite) :
+** périphériques vidéo et voix : accepter les demandes d'accès à votre caméra et votre micro ...
+** nom d'utilisateur (pseudo) et mail -> (`olitur` et `o.turlier@gmail.com`)
+** Calendrier (efficace en "_conf call_" pro) -> j'ai autorisé jitsi à accéder à mon calendrier google ...
+** Langue de l'interface : Anglais -> Français
+
+.interface après les paramétrages de base (on aperçoit les items de mon calendrier perso...)
+image::jitsimee_02.png[]
+
+
+
+
+== Création d'une visio conférence et invitation d'autres participants
+
+. réfléchir à un *titre* _explicite_ relatif à la visioconférence -> `notions BIM`
+. l'écrire dans la ligne située sous le titre *Démarrer une nouvelle réunion*
+. clic sur le bouton *Créer*
+
+.visioconférence "notions BIM" en instance de "création"
+image::jitsimee_03.png[]
+
+.visioconférence "notions BIM" créé à l'instant
+image::jitsimee_04.png[]
+
+
+Au bout d'1 ou 2 secondes, vous vous voyez vous même...Il est temps de vous détourner de cette contemplation pour noter les paramètres d'accès à ce "salon" virtuel de visio afin de pouvoir inviter les collègues
+
+
+Auparavant, on peut configurer plus en avant cette visio
+
+== Paramétrage supplémentaire
+
+* *Activer le flou d'arrière plan* :
+pratique lorsqu'on travaille depuis chez soi et qu'on a pas rangé, ou que votre maman passe derrière pour le faire... !
+
+.avant paramétrage du flou
+image::jitsimee_05.png[]
+
+.après activation du flou d'arrière-plan
+image::jitsimee_06.png[]
+
+
+== Invitation d'autres membres
+
+
+*Copier les infos d'invitation* : diriger la souris vers le coin bas à droite et cliquer sur l'icône en forme de point d'exclamation :   
+
+* les propriétés s'affichent
+* cliquer sur copier
+* vous obtiendrez ce type de texte en le collant dans un mail d'invitation
+====
+olitur vous invite à une réunion.
+
+Rejoindre la réunion:
+https://meet.jit.si/notionsBIM
+
+Pour rejoindre depuis un téléphone, saisissez : +1.512.402.2718,,619067009#
+
+Vous cherchez un numéro d'appel différent?
+Afficher les numéros d'appel de la réunion: https://meet.jit.si/static/dialInInfo.html?room=notionsBIM
+
+
+Si vous appelez également via un téléphone de salle, vous pouvez vous connecter sans audio: https://meet.jit.si/notionsBIM#config.startSilent=true
+
+====
+
+
+== Usage courant
+
+Vous avez :
+
+* [x] créé une visioconférence avec un titre _explicite_
+* [x] invité vos collègues par mail, évènement calendrier, etc. à rejoindre cette visio
+
+Vous commencez la visio conférence et souhaitez :
+
+=== Activer le partage d'écran
+
+* soit par le raccourci kbd:[D]
+* soit en cliquant sur le bouton _adhoc_ en bas à gauche 
+* choix de ce que vous voulez partager :
+** le ou les ou tous les écrans (en cas de double ou triple écran)
+** ou l'application de votre choix
+
+
+=== Echanger en "privé" avec un membre distant
+
+* soit par le raccourci kbd:[C]
+* soit en cliquant sur le bouton _adhoc_ en bas à gauche 
+* et commencer à _chatter_ avec cette personne tout en écoutant les autres... (àla "djeun")
+
+
+=== Echanger en privé avec des membres présents
+
+Il suffit de couper le micro...
+
+* soit par le raccourci kbd:[M]
+* soit en cliquant sur le bouton _adhoc_ en bas au milieu gauche (micro) 
+
+
+=== Prendre la parole
+
+Comme dans une réunion physique, il suffit de lever la main et de parler ... D'autres parlent sans avoir levé la main au préalable ...
+
+* soit par le raccourci kbd:[R] (_Request_ Demande de parler) puis kbd:[Espace] pour parler
+* soit en cliquant sur les boutons _adhoc_ : *main* en bas à gauche puis barre d'kbd:[Espace] pour parler (= activation/désactivation du micro)
+
+
+
+
+=== Raccourcis au complet
+
+On peut afficher les raccourcis en cliquant sur le bouton des propriétés (en bas à droite, 3 points), soit menu:Propriétés[Afficher les raccourcis], mais il faut s'en souvenir _pendant_ la visio, ou les afficher de nouveau
+
+Récap des raccourcis ci-dessous, que l'on pourra afficher avec kbd:[?] : image:jitsimee_07.png[200,300]
+
+* kbd:[F] Afficher ou masquer les vignettes vidéos _des autres participants_
+* kbd:[M] Activer ou désactiver le microphone _pour parler en privé_
+* kbd:[V] Démarrer ou arrêter votre caméra
+* kbd:[A] Accorder la qualité des appels
+* kbd:[C] Ouvrir ou fermer le panneau de conversation _"chat" en ligne_
+* kbd:[D] Basculer entre la caméra et le partage d'écran
+* kbd:[R] Lever ou baisser la main _pour prendre la parole_
+* kbd:[S] Activer/désactiver le mode plein écran
+* kbd:[w] Activer/désactiver la vue mosaïque
+* kbd:[?] Afficher ou masquer les raccourcis clavier
+* kbd:[Espace] Appuyer pour parler
+* kbd:[T] Afficher les statistiques de l'interlocuteur
+* kbd:[O] Epingler ma vidéo _?_
+* kbd:[1-9]  Epingler la vidéo de quelqu'un d'autre
+
+
+
+
+== Aller plus loin : Partager des fichiers
+
+Les systèmes sont nombreux, la sécurité plus ou moins bonne et selon les configurations (pare feu d'entreprise) vous pourrez plus ou moins y accéder ...
+
+Les 2 systèmes ci-dessous ont le mérite de crypter les infos qui circulent. Je n'ose pas décrire leur utilisation, à vous de voir!
+
+Un clic sur l'image et vous y êtes...
+
+=== Firefox Send
+
+* URL : https://send.firefox.com/[]
+
+.Firefox Send
+image::ffsend01.png[link="https://send.firefox.com/", window="_blank"]
+
+
+
+=== Smash
+*Smash* à le mérite d'être Français (ça vous évitera d'utiliser _Wetransfer_ et ses relations avec le _NSA_ ...)
+
+* URL : https://www.fromsmash.com/[]
+
+.Smash : panneau d'accueuil
+image::smash01.png[link="https://www.fromsmash.com/", window="_blank"]
+
+.Smash : interface après avoir accepté les CGU
+image::smash02.png[]

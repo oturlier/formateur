@@ -18,6 +18,8 @@ ifndef::backend-pdf[]
 *** xref:inst+conf_vscode.adoc[Visual Studio Code]
 *** xref:inst+conf_atom.adoc[Atom]
 *** xref:inst+conf_ascidocfx.adoc[AsciiDocFX]
+** Situation PRO
+*** xref:tuto_jitsi.adoc[Visioconférence]
 endif::[]
 //
 // PDF version
