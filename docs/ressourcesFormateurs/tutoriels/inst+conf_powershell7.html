@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Powershell 7 :: Ressources Formateur</title>
+    <link rel="canonical" href="https://oturlier.github.io/formateur/ressourcesFormateurs/tutoriels/inst+conf_powershell7.html">
+    <meta name="keywords" content="CRM, TEB, Ressources, édition, publication, asciidoc, antora">
+    <meta name="generator" content="Antora 2.2.0">
+<link rel="stylesheet" href="../../_/css/site.css">
+<!--
+ Algolia
+<link
+ rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/>
+-->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:creator" content="@antropyk"/>
+<meta property="og:url" content="https://oturlier.github.io/formateur/"/>
+<meta property="og:title" content="Ressources formateurs TEBIM"/>
+<meta property="og:description" content="Ressources pour les formateurs"/>
+<meta property="og:image" content="https://oturlier.github.io/formateur/_/img/bitcoin-studio-bridge.jpg"/>
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a class="navbar-logo" href="https://oturlier.github.io/formateur/" target="_blank">
+          <img class="logo" alt="logo" src="../../_/img/CRM_logo2.svg"/>
+        </a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Resources</div>
+          <div class="navbar-dropdown">
+            <!-- <a class="navbar-item"
+            href="/_attachments/bitcoin_core_cli_help.pdf"
+            target="_blank"> -->
+            <a class="navbar-item" href="https://oturlier.github.io/formateur/ressourcesFormateurs/master/_attachments/ressources-formateurs.pdf" target="_blank">
+              <i class="fas fa-terminal"></i>&nbsp;PDF
+            </a>
+            <a class="navbar-item" href="https://github.com/oturlier/formateur" target="_blank">
+              <i class="fab fa-github"></i>&nbsp;Github Repo
+            </a>
+            <a class="navbar-item" href="https://github.com/oturlier/formateur/issues" target="_blank">
+              <i class="fab fa-github"></i>&nbsp;Signalement Problème
+            </a>
+            <a class="navbar-item" href="https://paypal.me/antropyk?locale.x=fr_FR" target="_blank">
+              <i class="fab fa-btc"></i>&nbsp;Pourboire
+            </a>
+          </div>
+        </div>
+        <a id="twitter-link" class="navbar-item" href="https://twitter.com/antropyk" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ressourcesFormateurs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+      <div class="navbar-item">
+  <input id="search-input" type="text" placeholder="Recherche">
+</div>
+
+      <div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Ressources Formateurs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cc-by-nc-sa.html">Lic. CC-BY-NC-SA 4.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../common_gfdl1.2_i.html">Lic. GFDL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tutoriels</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tutoriels-intro.html">Intro install &amp; config</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Installation &amp; configuration</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="inst+conf_powershell7.html">Powershell 7</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_pandoc.html">Pandoc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_imagick.html">ImageMagick</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_wget.html">Wget</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_git.html">Git</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_asciidoctor.html">Asciidoctor</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_antora.html">Antora</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_dblcder.html">Double Commander</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_grenshot.html">Greenshot</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_irfwiew.html">Irfanview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_notpad.html">Notepad++</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_subl.html">Sublime text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_vscode.html">Visual Studio Code</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_atom.html">Atom</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inst+conf_ascidocfx.html">AsciiDocFX</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Situation PRO</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tuto_jitsi.html">Visioconférence</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Guides pratiques</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/guide_diagrammes.html">Diagrammes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/guide_git-premier-pas.html">Git</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Notions</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Références techniques</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Ressources Formateurs</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Ressources Formateurs</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+  <button class="nav-toggle"></button>
+    <a href="../index.html" class="home-link"></a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Ressources Formateurs</a></li>
+    <li>Tutoriels</li>
+    <li>Installation &amp; configuration</li>
+    <li><a href="inst+conf_powershell7.html">Powershell 7</a></li>
+  </ul>
+</nav>
+  
+
+
+  <div class="quicklink quicklink__bug">
+    <a href="https://github.com/bitcoin-studio/Bitcoin-Programming-with-BitcoinJS/issues" target="_blank">
+      <i class="fas fa-bug"></i>
+    </a>
+  </div>
+
+  <div class="quicklink quicklink__edit">
+    <a href="https://github.com/oturlier/formateur/edit/master/modules/tutoriels/pages/inst+conf_powershell7.adoc" target="_blank">
+      <i class="fas fa-edit"></i>
+    </a>
+  </div>
+</div>
+<article class="doc">
+      <h1 class="page">Powershell 7</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image right"><a class="image" href="_images/pwrshl04.png"><img src="_images/pwrshl04.png" alt="Powershell 7" width="300"></a></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Powershell 7 exécute toutes les commandes de compilation des documents sources Asciidoc vers les documents de sortie PDF &amp; HTML</p>
+</li>
+<li>
+<p>Powershell 7 exécute une grande partie des commandes utilisées sous linux/Unix. Ainsi, si vous trouvez une documentation vous indiquant une compilation destinée à effectuer un téléchargment (wget, curl), une transformation d&#8217;image (imagemagick), une mise à jour de dépôt (git) etc. et que cela concerne un ordinateur sous linux ou apple, cela sera <em>potentiellement</em> réalisable avec Powershell 7</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Attention"></i>
+</td>
+<td class="content">
+Powershell 7 est <em>différent</em> de Windows Powershell qui lui est installé par défaut dans Windows10 : pour nous, simples "rédacteurs" de ressources, il fait <strong>la même chose</strong> (exécuter des commandes), <strong>mais en mieux</strong>. Son comportement se rapproche de la ligne de commande sous linux, l&#8217;historique de ces commandes persiste entre chaque sessions, etc.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+l&#8217;intégration de Powershell 7 avec Visual Studio Code est <strong>idéale</strong>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a><a class="link" href="#_installation">Installation</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_prérequis"><a class="anchor" href="#_prérequis"></a><a class="link" href="#_prérequis">Prérequis</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows10</p>
+</li>
+<li>
+<p>et quoi d&#8217;autre ?</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_téléchargement"><a class="anchor" href="#_téléchargement"></a><a class="link" href="#_téléchargement">Téléchargement</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Lien vers le paquet <code>.msi</code> de la toute dernière version <a href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-rc.3/PowerShell-7.0.0-rc.3-win-x64.msi" target="_blank" rel="noopener">Powershell 7.0.0.0.rc3</a></p>
+</li>
+<li>
+<p>Télécharger &amp; installer <span class="menuseq"><b class="menu">Clic</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Clic</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Clic</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Clic</b></span></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a><a class="link" href="#_usage">Usage</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On dispose maintenant de 3 type de ligne de commande sur Windows :</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> <code>cmd.exe</code></p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> <code>Windows Powershell</code></p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> <code>Powershell 7</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il s&#8217;agit de configurer les logiciels importants afin qu&#8217;ils utilisent Powershell 7.</p>
+</div>
+<div class="sect2">
+<h3 id="dblcder+pwrshl7"><a class="anchor" href="#dblcder+pwrshl7"></a><a class="link" href="#dblcder+pwrshl7">Powershell 7 avec Double Commander</a></h3>
+<div class="paragraph">
+<p>Le raccourci <b class="button">F9</b> lance <code>cmd.exe</code> par défaut &#8594; indiquons à Double Commander d&#8217;utiliser Powershell 7</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Accès par le menu : <span class="menuseq"><b class="menu">Configuration</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Options</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Terminal</b></span>
+<span class="image"><img src="_images/pwrshl01.png" alt="pwrshl01"></span></p>
+</li>
+<li>
+<p>Changement de l&#8217;exécutable par défaut pour Powershell 7
+<span class="image"><img src="_images/pwrshl02.png" alt="pwrshl02"></span></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Un redémarrrage de l&#8217;application est nécessaire pour que ces modifications prennent effet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="vscode+pwrshl7"><a class="anchor" href="#vscode+pwrshl7"></a><a class="link" href="#vscode+pwrshl7">Powershell 7 avec Visual Studio Code</a></h3>
+<div class="paragraph">
+<p>En affichage plein écran, le "terminal" se trouve en bas.</p>
+</div>
+<div class="paragraph">
+<p>Pour passer à Powershell 7, un menu déroulant permet de choisir cet "interpréteur de commandes" par défaut.</p>
+</div>
+<div class="paragraph">
+<p>Un redémarrage de l&#8217;application est nécessaire pour que ces modifications prennent effet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="_images/pwrshl03.png"><img src="_images/pwrshl03.png" alt="pwrshl03"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="tutoriels-intro.html">&laquo; Intro install &amp; config</a>
+        <a class="article-footer-nav-next" href="inst+conf_pandoc.html">Pandoc &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title"><i class="fas fa-align-left fa-rotate-180"></i> Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+</main>
+</div>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '../..'
+  window.antora.pagePath = '/ressourcesFormateurs/tutoriels/inst+conf_powershell7.html'
+</script>
+<script type="text/javascript" src="../../_/js/site.js"></script>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript" src="../../_/js/vendor/search-lunr.js"></script>
+<script type="text/javascript" src="../../_/../search-index.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/highlight.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/clipboard.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/tippy.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/tocbot.js"></script>
+<script>
+  tocbot.init( {
+    tocSelector: '#article-toc',
+    contentSelector: 'article',
+    headingSelector: 'h2, h3, h4, h5, h6',
+    collapseDepth: 6,
+    positionFixedSelector: '#article-toc',
+    scrollSmooth: false
+  } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+
+  </body>
+</html>

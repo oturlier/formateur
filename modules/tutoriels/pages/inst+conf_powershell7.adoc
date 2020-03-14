@@ -1,0 +1,69 @@
+[#inst+conf-powershell7]
+= Powershell 7
+:linkattrs:
+:experimental:
+:pwrshl: Powershell 7
+:uri_pwrshl: https://github.com/PowerShell/PowerShell
+:uri_get-pwrshl: https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-rc.3/PowerShell-7.0.0-rc.3-win-x64.msi
+
+
+
+image:pwrshl04.png[Powershell 7,300,float=right,link="_images/pwrshl04.png"]
+
+* {pwrshl} exécute toutes les commandes de compilation des documents sources {asc} vers les documents de sortie PDF & HTML
+* {pwrshl} exécute une grande partie des commandes utilisées sous linux/Unix. Ainsi, si vous trouvez une documentation vous indiquant une compilation destinée à effectuer un téléchargment (wget, curl), une transformation d'image (imagemagick), une mise à jour de dépôt (git) etc. et que cela concerne un ordinateur sous linux ou apple, cela sera _potentiellement_ réalisable avec {pwrshl}
+
+
+
+
+
+WARNING: {pwrshl} est _différent_ de Windows Powershell qui lui est installé par défaut dans {win}10 : pour nous, simples "rédacteurs" de ressources, il fait *la même chose* (exécuter des commandes), *mais en mieux*. Son comportement se rapproche de la ligne de commande sous linux, l'historique de ces commandes persiste entre chaque sessions, etc.
+
+NOTE: l'intégration de {pwrshl} avec {vscode} est *idéale*
+
+== Installation
+
+=== Prérequis
+
+* {win}10
+* et quoi d'autre ?
+
+=== Téléchargement
+
+
+. Lien vers le paquet `.msi` de la toute dernière version {uri_get-pwrshl}[{pwrshl}.0.0.0.rc3,window="_blank"]
+. Télécharger & installer menu:Clic[Clic>Clic>Clic]
+
+
+== Usage
+
+On dispose maintenant de 3 type de ligne de commande sur {win} :
+
+* [ ] `cmd.exe`
+* [ ] `Windows Powershell`
+* [x] `{pwrshl}`
+
+Il s'agit de configurer les logiciels importants afin qu'ils utilisent {pwrshl}.
+
+[#dblcder+pwrshl7]
+=== {pwrshl} avec {dblcdr}
+
+Le raccourci btn:[F9] lance `cmd.exe` par défaut -> indiquons à {dblcdr} d'utiliser {pwrshl}
+
+. Accès par le menu : menu:Configuration[Options>Terminal]
+image:pwrshl01.png[]
+. Changement de l'exécutable par défaut pour {pwrshl}
+image:pwrshl02.png[]
+
+Un redémarrrage de l'application est nécessaire pour que ces modifications prennent effet.
+
+[#vscode+pwrshl7]
+=== {pwrshl} avec {vscode}
+
+En affichage plein écran, le "terminal" se trouve en bas.
+
+Pour passer à {pwrshl}, un menu déroulant permet de choisir cet "interpréteur de commandes" par défaut.
+
+Un redémarrage de l'application est nécessaire pour que ces modifications prennent effet.
+
+image::pwrshl03.png[link="_images/pwrshl03.png"]

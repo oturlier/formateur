@@ -7,20 +7,31 @@
     <link rel="canonical" href="https://oturlier.github.io/formateur/ressourcesFormateurs/annexes/same-page-xrefs.html">
     <meta name="keywords" content="CRM, TEB, Ressources, édition, publication, asciidoc, antora">
     <meta name="generator" content="Antora 2.2.0">
-    <link rel="stylesheet" href="../../_/css/site.css">
-<link rel="stylesheet" href="../../_/css/search.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159951047-1"></script>
-    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','UA-159951047-1')</script>
+<link rel="stylesheet" href="../../_/css/site.css">
+<!--
+ Algolia
+<link
+ rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/>
+-->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:creator" content="@antropyk"/>
+<meta property="og:url" content="https://oturlier.github.io/formateur/"/>
+<meta property="og:title" content="Ressources formateurs TEBIM"/>
+<meta property="og:description" content="Ressources pour les formateurs"/>
+<meta property="og:image" content="https://oturlier.github.io/formateur/_/img/bitcoin-studio-bridge.jpg"/>
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
 <header class="header" role="banner">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://oturlier.github.io/formateur">Ressources Formateur</a>
-        <div class="navbar-item">
-		  <!-- <i class="fas fa-search"></i>&nbsp; -->
-          <input id="search-input" type="text" placeholder="Recherche">
-        </div>
+      <div class="navbar-item">
+        <a class="navbar-logo" href="https://oturlier.github.io/formateur/" target="_blank">
+          <img class="logo" alt="logo" src="../../_/img/CRM_logo2.svg"/>
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -29,26 +40,28 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Support</a>
+          <div class="navbar-link">Resources</div>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/formateurs"><i 
-              class="fab fa-github"></i>&nbsp;Ressources TeB</a>
-            <a class="navbar-item" href="https://github.com/formateurs/issues"><i
-              class="fab fa-github"></i>&nbsp;Observation</a>
-            <a class="navbar-item" href="https://github.com/formateurs/wiki#contributing"><i
-              class="fas fa-user-edit"></i>&nbsp;Contribuer</a>
+            <!-- <a class="navbar-item"
+            href="/_attachments/bitcoin_core_cli_help.pdf"
+            target="_blank"> -->
+            <a class="navbar-item" href="https://oturlier.github.io/formateur/ressourcesFormateurs/master/_attachments/ressources-formateurs.pdf" target="_blank">
+              <i class="fas fa-terminal"></i>&nbsp;PDF
+            </a>
+            <a class="navbar-item" href="https://github.com/oturlier/formateur" target="_blank">
+              <i class="fab fa-github"></i>&nbsp;Github Repo
+            </a>
+            <a class="navbar-item" href="https://github.com/oturlier/formateur/issues" target="_blank">
+              <i class="fab fa-github"></i>&nbsp;Signalement Problème
+            </a>
+            <a class="navbar-item" href="https://paypal.me/antropyk?locale.x=fr_FR" target="_blank">
+              <i class="fab fa-btc"></i>&nbsp;Pourboire
+            </a>
           </div>
         </div>
-        <a id="twitter-link" class="navbar-item" href="https://twitter.com/antropyk?lang=fr">
-          <span class="icon">
-            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 512 512">
-              <path fill="#57aaee"
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
-            </svg>
-          </span>
+        <a id="twitter-link" class="navbar-item" href="https://twitter.com/antropyk" target="_blank">
+          <i class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
@@ -58,7 +71,11 @@
 <div class="nav-container" data-component="ressourcesFormateurs" data-version="master">
   <aside class="nav">
     <div class="panels">
-<div class="nav-panel-menu is-active" data-panel="menu">
+      <div class="navbar-item">
+  <input id="search-input" type="text" placeholder="Recherche">
+</div>
+
+      <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <h3 class="title"><a href="../index.html">Ressources Formateurs</a></h3>
 <ul class="nav-list">
@@ -85,6 +102,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Installation &amp; configuration</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../tutoriels/inst+conf_powershell7.html">Powershell 7</a>
+  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../tutoriels/inst+conf_pandoc.html">Pandoc</a>
   </li>
@@ -149,10 +169,10 @@
     <span class="nav-text">Guides pratiques</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="#guide_git-premier-pas">Git : premier pas</a>
+    <a class="nav-link" href="../guides/guide_diagrammes.html">Diagrammes</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../guides/guide_plantuml.html">PlantUML</a>
+    <a class="nav-link" href="../guides/guide_git-premier-pas.html">Git</a>
   </li>
 </ul>
   </li>
@@ -175,7 +195,7 @@
 </ul>
   </nav>
 </div>
-<div class="nav-panel-explore" data-panel="explore">
+      <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Ressources Formateurs</span>
     <span class="version">master</span>
@@ -196,19 +216,32 @@
 </div>
 <main>
 <div class="toolbar" role="navigation">
-<button class="nav-toggle"></button>
-  <a href="../index.html" class="home-link"></a>
-<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <button class="nav-toggle"></button>
+    <a href="../index.html" class="home-link"></a>
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Ressources Formateurs</a></li>
     <li><a href="same-page-xrefs.html">Reference Sections in a Page</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///media/sf_virtualboxdossierspartage/ANTORA/github-oturlier_RessourcesTEB-all+CAD/formateur/modules/annexes/pages/same-page-xrefs.adoc">Edit this Page</a></div>
+  
+
+
+  <div class="quicklink quicklink__bug">
+    <a href="https://github.com/bitcoin-studio/Bitcoin-Programming-with-BitcoinJS/issues" target="_blank">
+      <i class="fas fa-bug"></i>
+    </a>
+  </div>
+
+  <div class="quicklink quicklink__edit">
+    <a href="https://github.com/oturlier/formateur/edit/master/modules/annexes/pages/same-page-xrefs.adoc" target="_blank">
+      <i class="fas fa-edit"></i>
+    </a>
+  </div>
 </div>
 <article class="doc">
-<h1 class="page">Reference Sections in a Page</h1>
-<div class="sect1">
+      <h1 class="page">Reference Sections in a Page</h1>
+    <div class="sect1">
 <h2 id="_reference_a_section_in_the_same_page"><a class="anchor" href="#_reference_a_section_in_the_same_page"></a><a class="link" href="#_reference_a_section_in_the_same_page">Reference a section in the same page</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -268,96 +301,44 @@ For more information &lt;&lt;name-me, see example&gt;&gt;.</pre>
 </div>
 </div>
 </div>
+
 </article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title"><i class="fas fa-align-left fa-rotate-180"></i> Contents</h3>
+  <div id="article-toc"></div>
+</aside>
 </main>
 </div>
-<footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
-</footer>
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@4"></script>
-<script>
-    tippy.setDefaults({
-        placement: 'bottom',
-        arrow: true,
-        arrowType: 'sharp',
-        delay: 800,
-        theme: 'light',
-    });
-
-    tippy('#previousPage', {
-        content: "Page Pr�c�dente",
-    });
-
-    tippy('#nextPage', {
-        content: "Page Suivante",
-    });
-
-    tippy('#createIssue', {
-        content: "Cr�er une Observation",
-    });
-
-    tippy('#submitPR', {
-        content: "Editer cette page et soumettre une requ�te de "pull"",
-    });
-
-    /* Testing tooltips for terms */
-    tippy('#ubuntu', {
-        content: "Ubuntu is an open-source operating system (OS) based on the Debian GNU/Linux distribution.",
-
-    });
-
-    tippy('#salt', {
-        content: "Salt is a Python-based, open-source software for event-driven IT automation, remote task execution, and configuration management.",
-
-    });
-
-    tippy('#sle', {
-        content: "SUSE Linux Enterprise, or SLE, is the enterprise-grade version of SUSE's open source Linux operating system distribution.",
-
-    });
-
-    tippy('#rhel', {
-        content: "Red Hat Enterprise Linux, or RHEL, is the enterprise-grade version of Red Hat's open source Linux operating system distribution. ",
-
-    });
-
-    tippy('#centos', {
-        content: "Community Enterprise Operating System, or CentOS, is a distribution of the Linux operating system based on RHEL (Red Hat Enterprise Linux).",
-
-    });
-
-    tippy('#sl', {
-        content: "Scientific Linux (SL) is a Linux distribution produced by Fermilab, CERN, DESY and by ETH Zurich.",
-
-
-    });
-</script>
 <script type="text/javascript">
   window.antora = window.antora || {}
   window.antora.basePath = '../..'
   window.antora.pagePath = '/ressourcesFormateurs/annexes/same-page-xrefs.html'
 </script>
-<script src="../../_/js/site.js"></script>
-<script src="../../_/js/vendor/lunr.js"></script>
-<script src="../../_/js/vendor/search.js"></script>
-<script async src="../../_/../search-index.js"></script>
-<script src="../../_/js/vendor/highlight.js"></script>
-<script>hljs.initHighlighting()</script>
-<script src="../../_/js/vendor/tocbot.min.js"></script>
+<script type="text/javascript" src="../../_/js/site.js"></script>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript" src="../../_/js/vendor/search-lunr.js"></script>
+<script type="text/javascript" src="../../_/../search-index.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/highlight.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/clipboard.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/tippy.js"></script>
+<script type="text/javascript" src="../../_/js/vendor/tocbot.js"></script>
 <script>
-    tocbot.init( {
-        tocSelector: '#article-toc',
-        contentSelector: 'article',
-        headingSelector: 'h2, h3, h4, h5, h6',
-        collapseDepth: 6,
-        positionFixedSelector: '#article-toc',
-        scrollSmooth: false
-    } );
-    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
-    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
-        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
-    }
-</script>  </body>
+  tocbot.init( {
+    tocSelector: '#article-toc',
+    contentSelector: 'article',
+    headingSelector: 'h2, h3, h4, h5, h6',
+    collapseDepth: 6,
+    positionFixedSelector: '#article-toc',
+    scrollSmooth: false
+  } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+
+  </body>
 </html>

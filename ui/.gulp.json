@@ -1,0 +1,4 @@
+{
+  "description": "Build tasks for the BitcoinJS Guide UI project",
+  "flags.tasksDepth": 1
+}

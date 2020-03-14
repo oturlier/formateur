@@ -1,0 +1,9 @@
+.vscode/
+.history/
+teb-res-formateurs.code-workspace
+node_modules/
+package-lock.json
+yarn.lock
+.gitlab-ci.yml
+
+

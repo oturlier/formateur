@@ -1,8 +1,8 @@
 // Client Configuration Guide Antora Navivation List
 ifndef::backend-pdf[]
 * Guides pratiques
-** xref:guide_git-premier-pas[Git : premier pas]
-** xref:guide_plantuml.adoc[PlantUML]
+** xref:guide_diagrammes.adoc[Diagrammes]
+** xref:guide_git-premier-pas.adoc[Git]
 //*** xref:supported-features-sles.adoc[SLES Supported Features]
 //*** xref:supported-features-es.adoc[SLES-ES Supported Features]
 endif::[]

@@ -4,6 +4,7 @@ ifndef::backend-pdf[]
 * Tutoriels
 ** xref:tutoriels-intro.adoc[Intro install & config]
 ** Installation & configuration
+*** xref:inst+conf_powershell7.adoc[Powershell 7]
 *** xref:inst+conf_pandoc.adoc[Pandoc]
 *** xref:inst+conf_imagick.adoc[ImageMagick]
 *** xref:inst+conf_wget.adoc[Wget]
