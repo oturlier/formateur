@@ -134,7 +134,6 @@ Comme dans une réunion physique, il suffit de lever la main et de parler ... D'
 
 
 
-
 === Raccourcis au complet
 
 On peut afficher les raccourcis en cliquant sur le bouton des propriétés (en bas à droite, 3 points), soit menu:Propriétés[Afficher les raccourcis], mais il faut s'en souvenir _pendant_ la visio, ou les afficher de nouveau
@@ -156,18 +155,71 @@ Récap des raccourcis ci-dessous, que l'on pourra afficher avec kbd:[?] : image:
 * kbd:[O] Epingler ma vidéo _?_
 * kbd:[1-9]  Epingler la vidéo de quelqu'un d'autre
 
+=== Conditions idéales
 
+Une visioconférence, c'est se présenter aux autres...
+
+Essayons de le faire sous le meilleur angle en tentant de se rapprocher des conditions idéales correspondant à un environnement "serein"
+
+==== A éviter
+
+. *Eclairage de dos* +
+La lumière dans le dos, c'est parfait pour voir l'écran, mais totalement inapproprié pour effectuer une visio! L'exemple ci-dessous se passe de commentaires !
++
+.mode "agent secret" `on` -> **à éviter!**
+image::jitsimee_08.png[]
++
+Il faut donc que votre visage soit éclairé par [line-through]#votre foi# une icon:lightbulb-o[] [underline]#lumière douce# (on évite le mode icon:bolt[] "gestapo"  donc icon:smile-o[] ouf!)
++
+. *Regard désaxé*
+Savez-vous où est implantée la caméra de votre ordinateur ?
++
+Si c'est *en haut* de l'écran, et que vous regardez *le clavier* ça donne un bel aperçu de votre chevelure abondante ...
++
+.mode "tête baissée" `on` -> **à éviter!**
+image::jitsimee_09.png[]
++
+. *Ambiance sonore*
++
+Un environnement globalement *silencieux* est _préférable_ à un milieu *bruyant* (quelle idée de faire une visio dans un TGV ... déjà vu!) ou *très silencieux* (les auditeurs risquent alors d'entendre votre respiration, les clics de souris ou tout autre bruit anodin rendu important par son émergence)
++
+Tout dépend de la qualité de votre micro, du bruit émis par le ventilateur de l'ordinateur, etc.
+
+==== A privilégier
+
+. éclairage naturel
+. _normalement_ silencieux
+. regard _dans l'axe_ de la caméra
++
+.Je vous écoute, à vous
+image::jitsimee_10.png[]
 
 
 == Aller plus loin : Partager des fichiers
 
 Les systèmes sont nombreux, la sécurité plus ou moins bonne et selon les configurations (pare feu d'entreprise) vous pourrez plus ou moins y accéder ...
 
-Les 2 systèmes ci-dessous ont le mérite de crypter les infos qui circulent. Je n'ose pas décrire leur utilisation, à vous de voir!
+Le principe repose sur 2 étapes :
 
-Un clic sur l'image et vous y êtes...
+. *téléversement* (ou _upload_) par *l'auteur* du fichier (idéalement "encapsulé" dans une archive `.zip` vers "Internet" (ou le _cloud_ )
+** récupération du lien de téléchargment une fois celui-ci effectué
+** envoi de ce lien par mail à vos destinataires
+. *téléchargement* (ou _upload_) par *le destinataire* depuis "Internet"
+** le destinataire clique sur le lien
+** il choisit l'emplacement du téléchargement et lance celui-ci
+** il dézippe l'archive (logiciel idéal -> *7zip*) dans un dossier éponyme et accède au fichier en se déplaçant dans le dossier nouvellement créé
 
-=== Firefox Send
+=== Envoi "unique" par interface WEB
+
+Parfait pour envoyer ponctuellement des archives. 
+Les 2 systèmes ci-dessous ont au moins 2 avantages :
+[compact]
+. crypage des données de bout en bout 
+. rien à installer sur l'ordinateur
+
+Je n'ose pas décrire leur utilisation, à vous de voir! Un clic sur l'image et vous y êtes...
+
+==== Firefox Send
 
 * URL : https://send.firefox.com/[]
 
@@ -175,8 +227,7 @@ Un clic sur l'image et vous y êtes...
 image::ffsend01.png[link="https://send.firefox.com/", window="_blank"]
 
 
-
-=== Smash
+==== Smash
 *Smash* à le mérite d'être Français (ça vous évitera d'utiliser _Wetransfer_ et ses relations avec le _NSA_ ...)
 
 * URL : https://www.fromsmash.com/[]
@@ -186,3 +237,38 @@ image::smash01.png[link="https://www.fromsmash.com/", window="_blank"]
 
 .Smash : interface après avoir accepté les CGU
 image::smash02.png[]
+
+=== Dossier synchronisé sur le "Cloud"
+
+Les services sont nombreux et offrent , en version _gratuite_ , un espace de stockage qui peut être intéressant . Le premier stade des versions _payantes_ l'est encore plus au niveau espace de stockage, toutes les offres étant équivalantes : 100 GO / 2 € / mois (Icloud / Google Drive / Dropbox / PCloud / Microsoft Onedrive)
+
+Si vous vous sentez concernés par la sécurité de vos données, plusieurs services commerciaux proposent de chiffer vos données _à la volée_, mais les offres sont moins intéressantes, sauf celle de https://mega.nz/[Mega^] (Kim Dotcom ...) qui offre *50 GO* (au lieu de 2 GO pour Dropbox ...)
+
+.Page d'accueil de https://mega.nz/[^]
+image::mega01.png[]
+
+
+
+==== Démarrage du service
+* inscription sur le site du fournisseur (Dropbox, Mega, Drive ...)
+* téléchargement & installation du client de synchronisation
+* configuration de ce logiciel : lui indiquer le dossier à synchroniser
+
+==== Utilisation basique
+* tout fichier/dossier que vous créez/modifiez/supprimez en _local_ sera créé/modifié/supprimé dans le "cloud"
+
+==== Transfert de fichier
+* déposer l'archive à transmettre
+* sur l'archive, effectuer un menu:clic-droit[partager un lien]
++
+[width="80%",cols="^.^1a,^.^1a,^.^1a",options="header"]
+|====
+|Dropbox
+|Mega
+|PCloud
+
+|image:dropbox01.png[width=128,height=128,link="_images/dropbox01.png"]
+|image:mega02.png[width=128,height=128,link="_images/mega02.png"]
+|image:pcloud01.png[width=128,height=128,link="_images/pcloud01.png"]
+
+|====

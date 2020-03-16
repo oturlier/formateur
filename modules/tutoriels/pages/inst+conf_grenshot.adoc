@@ -52,9 +52,9 @@ ${YYYY}-${MM}-${DD}\${NUM}_${hh}h-${mm}m-${ss}s
 [width="80%",cols="^.^1a,^.^1a,^.^1a"]
 |====
 
-|image:grenshot2.png[width=128,height=128]
-|image:grenshot3.png[width=128,height=128]
-|image:grenshot4.png[width=128,height=128]
+|image:grenshot2.png[width=128,height=128,link="_images/grenshot2.png"]
+|image:grenshot3.png[width=128,height=128,link="_images/grenshot3.png"]
+|image:grenshot4.png[width=128,height=128,link="_images/grenshot4.png"]
 
 |====
 

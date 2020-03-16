@@ -139,6 +139,7 @@ bob -> alice
 
 
 
+
 .classes, encore
 [plantuml, diagram-classes, png]
 ....
@@ -180,7 +181,7 @@ endif
 [plantuml, cv-generation, svg]
 ....
 @startuml
-skinparam monochrrome true
+skinparam monochrome true
 |local (git)|
 start
 :modify laTeX file;
@@ -199,6 +200,194 @@ treating CV (PDF) as an artifact;
 stop
 @enduml
 ....
+
+
+=== e
+
+// #skinparam monochrome false #true
+.Worflow édition
+[plantuml, edition1, svg]
+....
+@startuml
+|#dee4e8|Auteur (interne)|
+start
+:édite document;
+:envoie au **Vérificateur**>
+|#c4c9cd|Vérificateur (interne)|
+:vérifie **le fond** du document;
+if (OK) then 
+  :envoie au **Contrôleur**>
+  else
+  :formule des remarques à l'auteur;
+|Auteur (interne)|
+:modifie doc;
+:envoie au **Vérificateur**>
+endif
+|Vérificateur (interne)|
+:valide les modifications
+effectuées suite à
+ses remarques;
+|#daf0fe|Contrôleur (interne)|
+:vérifie **la forme** du document;
+:formule des remarques
+à l'auteur;
+:valide les modifications
+effectuées suite à
+ses remarques;
+|Client (externe)|
+:reçoit le document
+vérifié (fond & forme);
+:formule des remarques
+à l'auteur;
+:valide les modifications
+effectuées suite à
+ses remarques;
+stop
+@enduml
+....
+
+=== r
+
+
+.process21
+[plantuml, process21, svg]
+....
+@startuml
+(*) --> "Initialization"
+
+if "Some Test" then
+  -->[true] "Some Activity"
+  --> "Another activity"
+  -right-> (*)
+else
+  ->[false] "Something else"
+  -->[Ending process] (*)
+endif
+@enduml
+....
+
+=== tu
+
+.process31
+[plantuml, process31, svg]
+....
+@startuml
+partition Conductor {
+  (*) --> "Climbs on Platform"
+  --> === S1 ===
+  --> Bows
+}
+
+partition Audience #LightSkyBlue {
+  === S1 === --> Applauds
+}
+
+partition Conductor {
+  Bows --> === S2 ===
+  --> WavesArmes
+  Applauds --> === S2 ===
+}
+
+partition Orchestra #CCCCEE {
+  WavesArmes --> Introduction
+  --> "Play music"
+}
+@enduml
+....
+
+
+
+
+=== ho
+
+.process8
+[plantuml, process8, svg]
+....
+@startuml
+actor Bob #red
+' The only difference between actor
+'and participant is the drawing
+participant Alice
+participant "I have a really\nlong name" as L #99FF99
+/' You can also declare:
+participant L as "I have a really\nlong name" #99FF99
+'/
+Alice ->Bob: Authentication Request
+Bob->Alice: Authentication Response
+Bob->L: Log transaction
+@enduml
+....
+
+=== ji
+
+.process1
+[plantuml, process1, svg]
+....
+@startuml
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+@enduml
+....
+
+
+
+=== lif
+
+
+.Worflow édition78
+[plantuml, edition78, svg]
+....
+@startuml
+scale 1.5
+== document état PREL ==
+Auteur -> Vérificateur: envoi pour vérification **fond**
+Vérificateur --> Auteur: émission remarques
+Auteur -> Vérificateur: renvoi modifications
+Vérificateur --> Auteur: avis OK
+Auteur -> Contrôleur: envoi pour vérification **forme**
+Contrôleur --> Auteur: émission remarques
+Auteur -> Contrôleur: renvoi modifications
+Contrôleur --> Auteur: avis OK
+Auteur -> Client: envoi version **PREL** pour avis
+Client --> Auteur: émission remarques
+Auteur -> Client: renvoi modifications
+Client --> Auteur: avis OK
+== document état BPE ==
+Auteur -> Client: renvoi version **BPE** pour utilisation
+@enduml
+....
+
+=== maa
+
+.Worflow3
+[plantuml, workflow3, svg]
+....
+@startuml
+scale 1.5
+start
+:édition;
+:envoi;
+fork
+:Vérificateur;
+fork again
+:Contrôleur;
+end fork
+while (OK) is (NOK)
+:modifications;
+endwhile
+fork
+:envoi client;
+while (OK) is (NOK)
+:modifications;
+endwhile
+:renvoi;
+end fork
+stop
+@enduml
+....
+
+
+
 
 
 === icon:poop[] Let's go wide icon:bicycle[]?
@@ -244,9 +433,9 @@ skinparam activity {
 "x64 Bins" --> ===B2===
 "Switch Bins" --> ===B2===
 ===B2=== --> (*)
-
 @enduml
 ....
+
 
 === Component diagram
 
@@ -340,6 +529,31 @@ WU -> WB : URL
 @200 <-> @+150 : {150 ms}
 ....
 
+
+
+
+
+.time6
+[plantuml, timing6, svg]
+....
+@startuml
+robust "Web Browser" as WB
+concise "Web User" as WU
+
+@2019/07/02
+WU is Idle
+WB is Idle
+
+@2019/07/04
+WU is Waiting : some note
+WB is Processing : some other note
+
+@2019/07/05
+WB is Waiting
+@enduml
+....
+
+
 === Mind Map
 
 .mind
@@ -364,7 +578,7 @@ WU -> WB : URL
 === Gantt diagram
 
 .gantt
-[plantuml, gantt, svg]
+[plantuml, gantt01, svg]
 ....
 @startgantt
 [Test prototype] lasts 10 days
@@ -373,6 +587,66 @@ WU -> WB : URL
 [Setup assembly line] starts at [Test prototype]'s end
 @endgantt
 ....
+
+
+
+.gantt2
+[plantuml, gantt2, svg]
+....
+@startgantt
+[Design du prototype] lasts 13 days and is colored in Lavender/LightBlue
+[Test du prototype] lasts 9 days and is colored in Coral/Green and starts 3 days after [Design du prototype]'s end
+[Écriture des tests] lasts 5 days and ends at [Design du prototype]'s end
+[Embauche des rédacteurs] lasts 6 days and ends at [Écriture des tests]'s start
+[Écriture des rapports] is colored in Coral/Green
+[Écriture des rapports] starts 1 day before [Test du prototype]'s start and ends at [Test du prototype]'s end
+@endgantt
+....
+
+.gantt3
+[plantuml, gantt3, svg]
+....
+@startgantt
+scale 1.5
+[Task1] lasts 10 days
+then [Task2] lasts 4 days
+-- Phase Two --
+then [Task3] lasts 5 days
+then [Task4] lasts 6 days
+@endgantt
+....
+
+// .gantt4
+// [plantuml, gantt4, svg]
+// ....
+// @startgantt
+// [Prototype design] lasts 14 days
+// [Build prototype] lasts 4 days
+// [Prepare test] lasts 6 days
+// [Prototype design] -> [Build prototype]
+// [Prototype design] -> [Prepare test]
+// @endgantt
+// ....
+
+
+
+.gantt5
+[plantuml, gantt5, svg]
+....
+@startgantt
+printscale daily
+Project starts the 16th of mars 2020
+saturday are closed
+sunday are closed
+[Test du prototype] lasts 18 days and is 100% completed
+[Prototype terminé] happens at [Test du prototype]'s end
+[Mise en place production] lasts 19 days and is 30% completed
+[Mise en place production] starts at [Test du prototype]'s end
+@endgantt
+....
+
+
+
 
 == Chimie
 

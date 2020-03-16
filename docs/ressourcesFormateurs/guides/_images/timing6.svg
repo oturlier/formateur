@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="202px" preserveAspectRatio="none" style="width:306px;height:202px;" version="1.1" viewBox="0 0 306 202" width="306px" zoomAndPan="magnify"><defs/><g><line style="stroke: #000000; stroke-width: 1.7;" x1="10" x2="10" y1="10" y2="171.875"/><line style="stroke: #000000; stroke-width: 1.7;" x1="289" x2="289" y1="10" y2="171.875"/><line style="stroke: #AAAAAA; stroke-width: 0.5; stroke-dasharray: 3.0,5.0;" x1="84" x2="84" y1="10" y2="171.875"/><line style="stroke: #AAAAAA; stroke-width: 0.5; stroke-dasharray: 3.0,5.0;" x1="134" x2="134" y1="10" y2="171.875"/><line style="stroke: #AAAAAA; stroke-width: 0.5; stroke-dasharray: 3.0,5.0;" x1="184" x2="184" y1="10" y2="171.875"/><line style="stroke: #AAAAAA; stroke-width: 0.5; stroke-dasharray: 3.0,5.0;" x1="234" x2="234" y1="10" y2="171.875"/><line style="stroke: #AAAAAA; stroke-width: 0.5; stroke-dasharray: 3.0,5.0;" x1="284" x2="284" y1="10" y2="171.875"/><line style="stroke: #000000; stroke-width: 1.7;" x1="10" x2="289" y1="10" y2="10"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="15" y="21.1387">Web Browser</text><line style="stroke: #000000; stroke-width: 1.0;" x1="10" x2="97" y1="24.9688" y2="24.9688"/><line style="stroke: #000000; stroke-width: 1.0;" x1="97" x2="107" y1="24.9688" y2="10"/><line style="stroke: #038048; stroke-width: 1.5;" x1="84" x2="184" y1="77.9375" y2="77.9375"/><line style="stroke: #038048; stroke-width: 1.5;" x1="184" x2="234" y1="57.9375" y2="57.9375"/><line style="stroke: #038048; stroke-width: 1.5;" x1="234" x2="284" y1="37.9375" y2="37.9375"/><line style="stroke: #038048; stroke-width: 1.5;" x1="184" x2="184" y1="57.9375" y2="77.9375"/><line style="stroke: #038048; stroke-width: 1.5;" x1="234" x2="234" y1="37.9375" y2="57.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="105" x="186" y="55.1074">some other note</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="22" x="15" y="75.1074">Idle</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="69" x="15" y="55.1074">Processing</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="15" y="35.1074">Waiting</text><line style="stroke: #000000; stroke-width: 1.7;" x1="10" x2="289" y1="107.9375" y2="107.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="15" y="119.0762">Web User</text><line style="stroke: #000000; stroke-width: 1.0;" x1="10" x2="76" y1="122.9063" y2="122.9063"/><line style="stroke: #000000; stroke-width: 1.0;" x1="76" x2="86" y1="122.9063" y2="107.9375"/><polygon fill="#D7E0F2" points="96,129.875,172,129.875,184,141.875,172,153.875,96,153.875,84,141.875" style="stroke: #038048; stroke-width: 1.5;"/><polygon fill="#D7E0F2" points="196,129.875,284,129.875,284,153.875,196,153.875,184,141.875" style="stroke: #D7E0F2; stroke-width: 1.5;"/><path d="M284,129.875 L196,129.875 L184,141.875 L196,153.875 L284,153.875 " fill="#D7E0F2" style="stroke: #038048; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="22" x="123" y="146.0293">Idle</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="196" y="146.0293">Waiting</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="196" y="127.0449">some note</text><line style="stroke: #000000; stroke-width: 2.0;" x1="84" x2="84" y1="171.875" y2="176.875"/><line style="stroke: #000000; stroke-width: 2.0;" x1="134" x2="134" y1="171.875" y2="176.875"/><line style="stroke: #000000; stroke-width: 2.0;" x1="184" x2="184" y1="171.875" y2="176.875"/><line style="stroke: #000000; stroke-width: 2.0;" x1="234" x2="234" y1="171.875" y2="176.875"/><line style="stroke: #000000; stroke-width: 2.0;" x1="284" x2="284" y1="171.875" y2="176.875"/><line style="stroke: #000000; stroke-width: 2.0;" x1="84" x2="284" y1="171.875" y2="171.875"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="66" y="189.0137">07/02</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="166" y="189.0137">07/04</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="216" y="189.0137">07/05</text><!--MD5=[3d7f1ef7b5db1da5c329a41dea2c710e]
+@startuml
+robust "Web Browser" as WB
+concise "Web User" as WU
+
+@2019/07/02
+WU is Idle
+WB is Idle
+
+@2019/07/04
+WU is Waiting : some note
+WB is Processing : some other note
+
+@2019/07/05
+WB is Waiting
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 10:22:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
